@@ -1,19 +1,27 @@
-// Core
-import React, { useRef } from 'react';
+/* Core */
+import { useRef, useEffect } from 'react';
 import { render } from 'react-dom';
 
 const Example = () => {
-  const inputEl = useRef(null);
-  const onButtonClick = () => {
-    inputEl.current.focus();
-  };
+    const inputRef = useRef();
 
-  return (
-    <>
-      <input ref={inputEl} type="text" />
-      <button onClick={onButtonClick}>Фокусуватись на полі вводу</button>
-    </>
-  );
+    console.log(inputRef);
+
+    const focusOnClick = () => {
+        inputRef.current.focus();
+        console.log(inputRef.current.value);
+    };
+
+    useEffect(() => {
+        console.log(inputRef);
+    }, []);
+
+    return (
+        <>
+            <input ref={inputRef} type="text" />
+            <button onClick={focusOnClick}>Input focus</button>
+        </>
+    );
 };
 
 render(<Example />, document.getElementById('root'));

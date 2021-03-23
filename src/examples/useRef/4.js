@@ -1,31 +1,38 @@
-// Core
-import React, { useRef, useEffect } from 'react';
+/* Core */
+import { useRef, useEffect } from 'react';
 import { render } from 'react-dom';
 
 const Example = () => {
-  const intervalRef = useRef(null);
+    const intervalRef = useRef(null);
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      console.log('execute');
-    },1000);
+    const start = () => {
+        console.log('START');
+        const id = setInterval(() => {
+            console.log('Tick...');
+        }, 1000);
 
-    intervalRef.current = id;
-
-    return () => {
-      clearInterval(intervalRef.current);
+        intervalRef.current = id;
     };
-  });
 
-  const stop = () => {
-    clearInterval(intervalRef.current);
-  };
+    const stop = () => {
+        console.log('STOP');
+        clearInterval(intervalRef.current);
+    };
 
-  return (
-    <>
-      <button onClick={ stop }>Stop</button>
-    </>
-  );
+    useEffect(() => {
+        start();
+
+        return () => {
+            clearInterval(intervalRef.current);
+        };
+    });
+
+    return (
+        <>
+            <button onClick={start}>Start Interval</button>
+            <button onClick={stop}>Stop Interval</button>
+        </>
+    );
 };
 
 render(<Example />, document.getElementById('root'));

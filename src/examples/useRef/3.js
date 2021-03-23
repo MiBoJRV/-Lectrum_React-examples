@@ -1,19 +1,15 @@
-// Core
-import React, { useRef } from 'react';
+/* Core */
+import { useRef } from 'react';
 import { render } from 'react-dom';
 
 const Example = () => {
-  const val = useRef(0);
+    const numberRef = useRef('hello');
 
-  val.current += 1;
+    console.log(numberRef.current);
+    numberRef.current += ' world';
+    console.log(numberRef.current);
 
-  console.log('Render');
-
-  return (
-    <>
-      <h1>{ val.current }</h1>
-    </>
-  );
+    return <h1>{numberRef.current}</h1>;
 };
 
 render(<Example />, document.getElementById('root'));

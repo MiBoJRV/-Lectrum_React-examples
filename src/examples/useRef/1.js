@@ -1,22 +1,20 @@
-// Core
-import React, { useRef, useState } from 'react';
+/* Core */
+import { useRef } from 'react';
 import { render } from 'react-dom';
 
 const Example = () => {
-  const [count, setCount] = useState(0);
-  const counterEl = useRef(null);
+    const inputRef = useRef();
 
-  const increment = () => {
-    setCount(count + 1);
-    console.log(counterEl.current);
-  };
+    const focusOnClick = () => {
+        inputRef.current.focus();
+    };
 
-  return (
-    <>
-      Count: <span ref={counterEl}>{count}</span>
-      <button onClick={increment}>+</button>
-    </>
-  )
+    return (
+        <>
+            <input ref={inputRef} type="text" />
+            <button onClick={focusOnClick}>Input focus</button>
+        </>
+    );
 };
 
 render(<Example />, document.getElementById('root'));

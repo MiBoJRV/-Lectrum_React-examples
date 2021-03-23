@@ -1,1 +1,1 @@
-import './useEffect';
+import './_next';
