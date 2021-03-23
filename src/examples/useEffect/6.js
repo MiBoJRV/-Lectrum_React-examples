@@ -3,26 +3,29 @@ import { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 
 const Counter = () => {
-    const [count1, setCount1] = useState(0);
-    const [count2, setCount2] = useState(1);
+    const [count, setCount] = useState(0);
 
-    console.log('component render');
+    const increment = () => setCount(count + 1);
+
+    console.log(count);
 
     useEffect(() => {
-        console.log(count1, 'useEffect delayed execution');
-    }, [count1]);
+        const timerId = setTimeout(() => {
+            increment();
+        }, 1000);
+
+        return () => {
+            // ? Triggers after each render
+            // ? But before new useEffect
+            console.log('🗑 Clean up some trash...');
+            clearTimeout(timerId);
+        };
+    });
 
     return (
         <>
-            <h1>Count 1: {count1}</h1>
-            <button onClick={() => setCount1(count1 + 1)}>
-                Increment Counter 1
-            </button>
-
-            <h1>Count 1: {count2}</h1>
-            <button onClick={() => setCount2(count2 + 1)}>
-                Increment Counter 2
-            </button>
+            <h1>{count}</h1>
+            <button onClick={increment}>Increment +</button>
         </>
     );
 };

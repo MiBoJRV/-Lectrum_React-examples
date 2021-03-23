@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 const Example = () => {
     const inputRef = useRef();
 
-    console.log(inputRef);
+    console.log(1, inputRef);
 
     const focusOnClick = () => {
         inputRef.current.focus();
@@ -13,7 +13,7 @@ const Example = () => {
     };
 
     useEffect(() => {
-        console.log(inputRef);
+        console.log(2, inputRef);
     }, []);
 
     return (

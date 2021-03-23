@@ -5,13 +5,13 @@ import { render } from 'react-dom';
 const Counter = () => {
     const [count, setCount] = useState(0);
 
-    console.log(count, 'component render');
-    // document.title = count; // ! Wrong ⛔️
-
     useEffect(() => {
         console.log(count, 'useEffect execution');
         document.title = count; // ? Correct ✅
     });
+
+    console.log(count, 'component render');
+    // document.title = count; // ! Wrong ⛔️
 
     return (
         <>

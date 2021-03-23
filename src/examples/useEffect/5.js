@@ -5,24 +5,21 @@ import { render } from 'react-dom';
 const Counter = () => {
     const [count, setCount] = useState(0);
 
-    console.log(count);
+    console.log('component render');
 
     useEffect(() => {
-        const timerId = setTimeout(() => {
-            setCount(count + 1);
-        }, 1000);
+        console.log('useEffect execution');
 
         return () => {
-            // ? Triggers after each render
-            console.log('🗑 Clean up some trash...');
-            clearTimeout(timerId);
+            // ? cleanup old timer ids, stop data fetching, remove event listeners...
+            console.log('useEffect cleanup function');
         };
-    }, [count]);
+    });
 
     return (
         <>
             <h1>{count}</h1>
-            <button onClick={() => setCount(count + 1)}>Increment +</button>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
         </>
     );
 };

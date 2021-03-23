@@ -3,23 +3,26 @@ import { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 
 const Counter = () => {
-    const [count, setCount] = useState(0);
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
 
     console.log('component render');
 
     useEffect(() => {
-        console.log('useEffect execution');
-
-        return () => {
-            // ? cleanup old timer ids, stop data fetching, remove event listeners...
-            console.log('useEffect cleanup function');
-        };
-    });
+        console.log(count1, 'useEffect delayed execution');
+    }, [count1]);
 
     return (
         <>
-            <h1>{count}</h1>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <h1>Count 1: {count1}</h1>
+            <button onClick={() => setCount1(count1 + 1)}>
+                Increment Counter 1
+            </button>
+
+            <h1>Count 1: {count2}</h1>
+            <button onClick={() => setCount2(count2 + 1)}>
+                Increment Counter 2
+            </button>
         </>
     );
 };
