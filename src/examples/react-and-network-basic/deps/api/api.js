@@ -3,7 +3,7 @@ import waait from 'waait';
 import axios from 'axios';
 
 const TODO_API_URL = process.env.REACT_APP_TODO_API_URL;
-const headers = { 'x-user': '@TEST_USER_XXX' };
+const headers = { 'x-user': 'f5104d90-e639-415b-9788-f134346fdb8f' };
 
 export const api = {
     async getTodos() {

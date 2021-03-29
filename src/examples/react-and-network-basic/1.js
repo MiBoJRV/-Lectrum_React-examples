@@ -14,7 +14,7 @@ const Example = () => {
                 'https://lab.lectrum.io/rtx/api/todos',
                 {
                     headers: {
-                        'x-user': '@TEST_USER_XXX',
+                        'x-user': 'f5104d90-e639-415b-9788-f134346fdb8f',
                     },
                 },
             );

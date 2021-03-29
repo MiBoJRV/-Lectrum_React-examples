@@ -6,15 +6,15 @@ export const Todo = props => {
 
     const deleteTodo = async () => {
         setIsFetching(true);
-        props.deleteTodo(props.todo.hash);
+        await props.deleteTodo(props.todo.hash);
     };
 
     return (
         <li>
             {props.todo.title}
-            {props.editable && (
+            {props.deleteTodo && (
                 <button disabled={isFetching} onClick={deleteTodo}>
-                    ❌
+                    X
                 </button>
             )}
         </li>

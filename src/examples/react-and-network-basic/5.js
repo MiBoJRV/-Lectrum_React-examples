@@ -8,11 +8,15 @@ import { TodoList } from './deps';
 import { useTodos, api } from './deps';
 
 const Example = () => {
-    const [todos, setTodos] = useTodos();
+    const [todos, setTodos] = useTodos(null);
     const [newTodo, setNewTodo] = useState('');
     const [isFetching, setIsFetching] = useState(false);
 
     const createTodo = async () => {
+        if (newTodo.length < 3) {
+            return null;
+        }
+
         setIsFetching(true);
 
         const { todo } = await api.createTodo({
@@ -36,7 +40,7 @@ const Example = () => {
     };
 
     return (
-        <TodoList editable todos={todos} deleteTodo={deleteTodo}>
+        <TodoList todos={todos} deleteTodo={deleteTodo}>
             <div>
                 <input
                     disabled={isFetching}

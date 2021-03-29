@@ -7,16 +7,11 @@ import './styles.scss';
 export const TodoList = props => {
     let todosJSX = props.todos?.map(todo => {
         return (
-            <Todo
-                key={todo.hash}
-                editable={props.editable}
-                todo={todo}
-                deleteTodo={props.deleteTodo}
-            />
+            <Todo key={todo.hash} todo={todo} deleteTodo={props.deleteTodo} />
         );
     }) ?? <h2>Загрузка...</h2>;
 
-    if (props.todos !== null && !todosJSX?.length) {
+    if (props.todos !== null && props.todos?.length === 0) {
         todosJSX = <h2>✅ Задач нет</h2>;
     }
 
