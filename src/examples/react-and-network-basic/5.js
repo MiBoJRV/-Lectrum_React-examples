@@ -19,16 +19,20 @@ const Example = () => {
 
         setIsFetching(true);
 
-        const { todo } = await api.createTodo({
-            title: newTodo,
-            deadline: '2025-03-07T23:59:59+02:00',
-            tag: 'UX',
-        });
-
-        setTodos([todo, ...todos]);
-
-        setNewTodo('');
-        setIsFetching(false);
+        try {
+            const { todo } = await api.createTodo({
+                title: newTodo,
+                deadline: '2025-03-07T23:59:59+02:00',
+                tag: 'UX',
+            });
+            setTodos([todo, ...todos]);
+            setNewTodo('');
+        } catch (error) {
+            // ? Обработка ошибок
+            alert(`Упс! Что-то пошло не так: ${error.message}`);
+        } finally {
+            setIsFetching(false);
+        }
     };
 
     const deleteTodo = async todoId => {
