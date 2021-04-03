@@ -52,7 +52,8 @@ const Example = () => {
             isFetching={isFetching}
             newTodo={newTodo}
             setNewTodo={setNewTodo}
-            createTodo={createTodo}></TodoList>
+            createTodo={createTodo}
+        />
     );
 };
 

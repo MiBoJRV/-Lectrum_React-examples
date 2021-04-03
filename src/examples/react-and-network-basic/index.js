@@ -3,5 +3,12 @@ import { render } from 'react-dom';
 
 /* Instruments */
 import Example from './5';
+import { DarkModeToggle } from '../../theme/DarkModeToggle';
 
-render(<Example />, document.getElementById('root'));
+render(
+    <>
+        <DarkModeToggle />
+        <Example />
+    </>,
+    document.getElementById('root'),
+);

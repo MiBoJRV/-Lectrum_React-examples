@@ -1,12 +1,26 @@
+@use './palette.scss';
+
 /* Core */
 @import 'normalize.css';
 @import 'water.css/out/water.min.css';
 
-/* Instruments */
-@import './palette-light.scss';
-@import './palette-dark.scss';
-
 :root {
+    @media (prefers-color-scheme: light) {
+        @include palette.light;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        @include palette.dark;
+    }
+
+    &[data-theme='light'] {
+        @include palette.light;
+    }
+
+    &[data-theme='dark'] {
+        @include palette.dark;
+    }
+
     font-family: system-ui, sans-serif;
 
     & body {
@@ -27,4 +41,10 @@
             background-color: var(--background);
         }
     }
+}
+
+.dark-mode-portal {
+    position: fixed;
+    top: 15px;
+    right: 15px;
 }
