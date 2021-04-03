@@ -19,7 +19,21 @@ export const TodoList = props => {
         <section className="todo-list">
             <h1>📩 Мои задачи</h1>
 
-            {props.children}
+            {props.createTodo && (
+                <div>
+                    <input
+                        disabled={props.isFetching}
+                        value={props.newTodo}
+                        placeholder="Новая задача..."
+                        onChange={e => props.setNewTodo(e.target.value)}
+                    />
+                    <button
+                        disabled={props.isFetching}
+                        onClick={props.createTodo}>
+                        Создать задачу
+                    </button>
+                </div>
+            )}
 
             <ul>{todosJSX}</ul>
         </section>

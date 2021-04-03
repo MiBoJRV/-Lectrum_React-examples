@@ -13,6 +13,8 @@ const Example = () => {
     const [isFetching, setIsFetching] = useState(false);
 
     const createTodo = async () => {
+        document.documentElement.setAttribute('data-theme', 'light');
+
         if (newTodo.length < 3) {
             return null;
         }
@@ -44,19 +46,13 @@ const Example = () => {
     };
 
     return (
-        <TodoList todos={todos} deleteTodo={deleteTodo}>
-            <div>
-                <input
-                    disabled={isFetching}
-                    value={newTodo}
-                    placeholder="Новая задача..."
-                    onChange={e => setNewTodo(e.target.value)}
-                />
-                <button disabled={isFetching} onClick={createTodo}>
-                    Создать задачу
-                </button>
-            </div>
-        </TodoList>
+        <TodoList
+            todos={todos}
+            deleteTodo={deleteTodo}
+            isFetching={isFetching}
+            newTodo={newTodo}
+            setNewTodo={setNewTodo}
+            createTodo={createTodo}></TodoList>
     );
 };
 

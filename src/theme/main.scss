@@ -1,12 +1,16 @@
+/* Core */
 @import 'normalize.css';
+@import 'water.css/out/water.min.css';
+
+/* Instruments */
+@import './palette-light.scss';
+@import './palette-dark.scss';
 
 :root {
     font-family: system-ui, sans-serif;
-    background-color: #f0f8ff;
-    color: #161619;
 
     & body {
-        min-height: 100vh;
+        min-height: calc(100vh - 40px);
     }
 
     & ul {
@@ -15,6 +19,12 @@
         & li {
             list-style: none;
             font-weight: 500;
+        }
+    }
+
+    & button {
+        &:disabled:hover {
+            background-color: var(--background);
         }
     }
 }
