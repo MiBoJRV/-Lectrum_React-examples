@@ -7,6 +7,7 @@ const darkModeToggleRef = document.getElementById('dark-mode-toggle');
 
 export const DarkModeToggle = () => {
     const [theme, setTheme] = useState('dark');
+    const [isVisible, setVisible] = useState(false);
 
     const switchTheme = () => {
         if (theme === 'light') {
@@ -27,13 +28,21 @@ export const DarkModeToggle = () => {
 
             // TODO: add listener for OS-wide theme change.
         })();
+
+        const timerId = setTimeout(() => {
+            setVisible(true);
+        }, 0);
+
+        return () => {
+            clearTimeout(timerId);
+        };
     }, []);
 
     return createPortal(
         <ReactDarkModeToggle
             onChange={switchTheme}
             checked={theme === 'dark'}
-            className="dark-mode-portal"
+            className={`dark-mode-portal ${isVisible && 'visible'}`}
             size={50}
         />,
         darkModeToggleRef,

@@ -44,7 +44,14 @@
 }
 
 .dark-mode-portal {
+    --opacity: 0;
+
     position: fixed;
     top: 15px;
     right: 15px;
+    opacity: var(--opacity);
+
+    &.visible {
+        opacity: 1;
+    }
 }
