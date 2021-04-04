@@ -1,18 +1,11 @@
 /* Core */
-import { render } from 'react-dom';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    NavLink,
-    Navigate,
-} from 'react-router-dom';
+import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 
-const App = () => {
+const Example = () => {
     return (
-        <Router>
+        <>
             <nav>
-                <NavLink activeClassName="active" to="/" end>
+                <NavLink to="/" end>
                     Home
                 </NavLink>
                 <NavLink to="/about">About</NavLink>
@@ -23,10 +16,12 @@ const App = () => {
                 <Route path="/" element={<h1>Home</h1>} />
                 <Route path="/about" element={<h1>About</h1>} />
                 <Route path="/contacts" element={<h1>Contacts</h1>} />
+
+                {/* Redirect if no route match found. */}
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
-        </Router>
+        </>
     );
 };
 
-render(<App />, document.getElementById('root'));
+export default Example;

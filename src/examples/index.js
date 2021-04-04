@@ -1,1 +1,1 @@
-import './react-and-network-basic';
+export { default } from './routing';

@@ -1,23 +1,8 @@
 /* Core */
-import { render } from 'react-dom';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    NavLink,
-} from 'react-router-dom';
+import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 
-const Home = () => {
-    return (
-        <>
-            <h1>Home</h1>
-            <nav>
-                <NavLink to="/dashboard">Dashboard</NavLink>
-            </nav>
-            <hr />
-        </>
-    );
-};
+/* Components */
+import { Home } from './components';
 
 const Dashboard = () => {
     return (
@@ -43,18 +28,17 @@ const Dashboard = () => {
     );
 };
 
-const App = () => {
+const Example = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dashboard/*" element={<Dashboard />} />
+            <Route path="/" element={<Home />}>
+                <Route path="/dashboard/*" element={<Dashboard />} />
+            </Route>
+
+            {/* Redirect if no route match found. */}
+            <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     );
 };
 
-render(
-    <Router>
-        <App />
-    </Router>,
-    document.getElementById('root'),
-);
+export default Example;

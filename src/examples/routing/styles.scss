@@ -13,6 +13,12 @@ a {
     }
 
     &:hover:not(.active) {
-        color: darkviolet;
+        color: rebeccapurple;
+    }
+}
+
+button {
+    &:not(:last-child) {
+        margin-right: 5px;
     }
 }

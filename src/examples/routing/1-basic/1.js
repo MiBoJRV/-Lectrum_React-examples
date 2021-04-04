@@ -1,20 +1,22 @@
 /* Core */
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
-    Navigate,
-} from 'react-router-dom';
-import { render } from 'react-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 const Home = () => {
     return <h1>Home</h1>;
 };
 
-const App = () => {
+const _404 = () => {
     return (
-        <Router>
+        <>
+            <h1>404: Not Found 👽</h1>
+            <Link to="/">Back to Home!</Link>
+        </>
+    );
+};
+
+const Example = () => {
+    return (
+        <>
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
@@ -25,10 +27,12 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<h1>About</h1>} />
                 <Route path="/contacts" element={<h1>Contacts</h1>} />
-                <Route path="*" element={<h1>Not Found...</h1>} />
+
+                {/* Redirect if no route match found. */}
+                <Route path="*" element={<_404 />} />
             </Routes>
-        </Router>
+        </>
     );
 };
 
-render(<App />, document.getElementById('root'));
+export default Example;
