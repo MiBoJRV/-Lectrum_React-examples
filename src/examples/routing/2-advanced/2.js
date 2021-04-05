@@ -89,7 +89,9 @@ const Example = () => {
                     <Route path="list" element={<Outlet />} />
                     {/*
                         The <Outlet /> above renders the matched child for the route
-                        which in this case points to <UserOutlet />
+                        which in this case points to <UserOutlet />.
+
+                        In short: <Outlet /> render a route match!
                     */}
                 </Route>
 
