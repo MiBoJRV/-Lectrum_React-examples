@@ -1,15 +1,30 @@
 /* Core */
-import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
+import { Routes, Route, NavLink, Outlet, Navigate } from 'react-router-dom';
 
-/* Components */
-import { Home } from './components';
+const Home = () => {
+    return (
+        <>
+            <h1>Home</h1>
+
+            <nav>
+                <NavLink end to="/">
+                    Home
+                </NavLink>
+                <NavLink to="/dashboard">Dashboard</NavLink>
+            </nav>
+            <hr />
+
+            <Outlet />
+        </>
+    );
+};
 
 const Dashboard = () => {
     return (
         <div>
-            <h1>Look, more routes!</h1>
+            <h1>Dashboard</h1>
             <nav>
-                <NavLink end to="/">
+                <NavLink end to="..">
                     Home
                 </NavLink>
                 <NavLink end to=".">
@@ -17,11 +32,14 @@ const Dashboard = () => {
                 </NavLink>
                 <NavLink to="invoices">Invoices</NavLink>
             </nav>
-
             <hr />
 
             <Routes>
-                <Route path="/" element={<h1>Dashboard!</h1>} />
+                {/*
+                    The «/» address is relative to parent route
+                    but not the the website root address.
+                */}
+                <Route path="/" element={<h1>Dashboard Home</h1>} />
                 <Route path="invoices" element={<h1>Invoices</h1>} />
             </Routes>
         </div>

@@ -18,9 +18,7 @@ export const DarkModeToggle = () => {
     };
 
     const switchTheme = () => {
-        if (isSystem) {
-            setSystem(false);
-        }
+        setSystem(false);
 
         if (theme === 'light') {
             saveTheme('dark');
@@ -41,9 +39,9 @@ export const DarkModeToggle = () => {
 
     useEffect(() => {
         (async () => {
-            const { initialTheme, isSystem } = detectInitialTheme();
+            const { initialTheme, persistedIsSystem } = detectInitialTheme();
             saveTheme(initialTheme);
-            setSystem(isSystem);
+            setSystem(persistedIsSystem);
 
             // TODO: add listener for OS-wide theme change.
         })();
@@ -102,17 +100,17 @@ function detectInitialTheme() {
     let initialTheme: Theme = 'light';
 
     const persistedTheme = localStorage.getItem('theme') ?? 'system';
-    const isSystem = persistedTheme === 'system';
+    const persistedIsSystem = persistedTheme === 'system';
 
     if (persistedTheme === 'dark') {
         initialTheme = 'dark';
-    } else if (isSystem) {
+    } else if (persistedIsSystem) {
         initialTheme = detectOSTheme();
     }
 
     document.documentElement.setAttribute('data-theme', initialTheme);
 
-    return { initialTheme, isSystem };
+    return { initialTheme, persistedIsSystem };
 }
 
 /* Types */

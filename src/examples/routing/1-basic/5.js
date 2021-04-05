@@ -4,10 +4,14 @@ import { Routes, Route, NavLink, Outlet, Navigate } from 'react-router-dom';
 const MainNav = () => {
     return (
         <>
-            <h1>Home</h1>
             <nav>
+                <NavLink to="/" end>
+                    Home
+                </NavLink>
                 <NavLink to="/dashboard">Dashboard</NavLink>
             </nav>
+
+            <h1>Home</h1>
             <hr />
 
             <Outlet />
@@ -18,17 +22,12 @@ const MainNav = () => {
 const Dashboard = () => {
     return (
         <>
-            <h1>Dashboard</h1>
-
             <nav>
-                <NavLink to="/" end>
-                    Home
-                </NavLink>
-                &nbsp;| &nbsp;
-                <NavLink to="invoices">Invoices</NavLink>&nbsp;| &nbsp;
+                <NavLink to="invoices">Invoices</NavLink>
                 <NavLink to="team">Team</NavLink>
             </nav>
 
+            <h1>Dashboard</h1>
             <hr />
 
             <Outlet />

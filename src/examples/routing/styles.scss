@@ -1,6 +1,4 @@
 a {
-    font-size: 21px;
-    color: darkslateblue;
     text-decoration: none;
 
     &.active {
@@ -10,10 +8,6 @@ a {
 
     &:not(:last-child) {
         margin-right: 5px;
-    }
-
-    &:hover:not(.active) {
-        color: rebeccapurple;
     }
 }
 

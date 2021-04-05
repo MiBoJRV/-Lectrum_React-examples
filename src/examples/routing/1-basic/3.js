@@ -12,6 +12,7 @@ const Nav = () => {
                 <button onClick={() => navigate('/contacts')}>Contacts</button>
             </nav>
 
+            {/* Placeholder component */}
             <Outlet />
         </>
     );
