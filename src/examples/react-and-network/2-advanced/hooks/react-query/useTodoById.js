@@ -11,11 +11,11 @@ export const useTodoById = todoId => {
 
     const query = useQuery(
         ['todos', todoId],
-        // async () => {
-        //     const todoById = await api.fetchTodoById(todoId);
+        async () => {
+            const todoById = await api.fetchTodoById(todoId);
 
-        //     return todoById;
-        // },
+            return todoById;
+        },
         {
             placeholderData() {
                 const todoPreview = client

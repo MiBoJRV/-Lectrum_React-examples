@@ -6,9 +6,13 @@ import waait from 'waait';
 const defaultQueryFn = async options => {
     const { queryKey } = options;
 
-    let endpoint = '';
+    let endpoint = queryKey?.[0];
 
-    queryKey?.forEach(key => (endpoint += `/${key}`));
+    if (queryKey && queryKey?.length > 1) {
+        for (const key of queryKey.slice(1)) {
+            endpoint += `/${key}`;
+        }
+    }
 
     const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/${endpoint}`,
