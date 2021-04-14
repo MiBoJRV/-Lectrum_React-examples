@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import { api } from '../../../api';
 
 export const useFetchTodos = () => {
+    // const query = useQuery('todos');
     const query = useQuery('todos', api.fetchTodos);
 
     return query;

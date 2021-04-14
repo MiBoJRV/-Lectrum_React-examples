@@ -16,6 +16,7 @@ export const ManageTodoForm = props => {
             await props.onSubmit(values);
         } finally {
             setFetching(false);
+
             if (!props.initialValues) {
                 setValues(defaultFormValues);
             }

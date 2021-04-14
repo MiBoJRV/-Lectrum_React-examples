@@ -22,12 +22,12 @@ export const useTodoById = todoId => {
                     .getQueryData('todos')
                     ?.find(todo => todo.id === todoId);
 
-                // const todoPreview = {
-                //     title: 'запрашиваю данные 👩🏼‍🚀',
-                //     body: '...давным давно, в далёкой галактике...',
-                // };
-
-                return todoPreview;
+                return (
+                    todoPreview ?? {
+                        title: 'запрашиваю данные 👩🏼‍🚀',
+                        body: '...давным давно, в далёкой галактике...',
+                    }
+                );
             },
             onError() {
                 navigate('/'); // ? If no todo by id found.

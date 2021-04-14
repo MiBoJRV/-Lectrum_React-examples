@@ -2,7 +2,8 @@
 import { Outlet, NavLink } from 'react-router-dom';
 
 /* Components */
-import { STATUS, useFetchTodos } from '../hooks/rest';
+import { STATUS } from '../hooks/rest';
+import { useFetchTodos } from '../hooks/react-query';
 
 export const Layout = () => {
     return (
@@ -21,7 +22,7 @@ export const Layout = () => {
 };
 
 const Stats = () => {
-    const { todos, status: fetchTodosStatus } = useFetchTodos();
+    const { data: todos, status: fetchTodosStatus } = useFetchTodos();
 
     return (
         <div>

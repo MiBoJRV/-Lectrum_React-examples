@@ -9,7 +9,6 @@ export const useUpdateTodo = () => {
 
     const mutation = useMutation(values => api.updateTodo(values), {
         async onMutate(newTodo) {
-            console.log('onMutate', newTodo);
             const cacheKey = ['todos', newTodo.id];
 
             const prevTodo = await client.getQueryData(cacheKey);

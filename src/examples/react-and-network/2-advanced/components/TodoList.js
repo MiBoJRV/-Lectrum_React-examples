@@ -43,9 +43,9 @@ const Todo = props => {
     };
 
     const prefetch = () => {
-        client.prefetchQuery(['todos', props.todo.id], () =>
-            api.fetchTodoById(props.todo.id),
-        );
+        // client.prefetchQuery(['todos', props.todo.id], () =>
+        //     api.fetchTodoById(props.todo.id),
+        // );
     };
 
     return (

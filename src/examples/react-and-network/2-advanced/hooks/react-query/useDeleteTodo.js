@@ -1,10 +1,12 @@
 /* Core */
-import { useMutation } from 'react-query';
+import { useMutation, useQueryClient } from 'react-query';
 
 /* Instruments */
 import { api } from '../../../api';
 
 export const useDeleteTodo = () => {
+    const client = useQueryClient();
+
     const mutation = useMutation(todoId => api.deleteTodo(todoId), {
         onMutate(...params) {
             console.log('1. onMutate', params);
@@ -21,6 +23,7 @@ export const useDeleteTodo = () => {
         onSettled(...params) {
             console.log('3. onSettled', params);
             console.log('🏁 delete todo operation completed');
+            client.invalidateQueries('todos');
         },
     });
 

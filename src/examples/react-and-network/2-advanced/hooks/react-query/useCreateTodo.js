@@ -19,7 +19,7 @@ export const useCreateTodo = () => {
                 },
             ]);
 
-            return () => queryCache.setQueryData('todos', prevTodos);
+            return () => client.setQueryData('todos', prevTodos);
         },
         onError: (error, values, rollback) => rollback(),
         onSettled: () => client.invalidateQueries('todos'),

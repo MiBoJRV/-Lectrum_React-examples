@@ -86,15 +86,11 @@ export const TodoByIdView = () => {
 
             const todoById = await api.fetchTodoById(todoId);
 
-            if (!todoById) {
-                navigate('/', { replace: true });
-                return null;
-            }
-
             setTodo(todoById);
             setError(null);
             setFetchTodoStatus(STATUS.SUCCESS);
         } catch (err) {
+            // navigate('/', { replace: true });
             setError(err);
             setFetchTodoStatus(STATUS.ERROR);
         }
@@ -104,7 +100,7 @@ export const TodoByIdView = () => {
         fetchTodoByIdAsync();
     }, []);
 
-    const submitUpdateTodo = async values => {
+    const updateTodoAsync = async values => {
         try {
             setUpdateTodoStatus(STATUS.LOADING);
             await api.updateTodo(values);
@@ -124,7 +120,7 @@ export const TodoByIdView = () => {
                 title="Обновить задачу"
                 status={updateTodoStatus}
                 initialValues={todo}
-                onSubmit={submitUpdateTodo}
+                onSubmit={updateTodoAsync}
             />
         </>
     );
