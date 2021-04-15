@@ -89,10 +89,17 @@ export const TodoByIdView = () => {
             setTodo(todoById);
             setError(null);
             setFetchTodoStatus(STATUS.SUCCESS);
-        } catch (err) {
-            // navigate('/', { replace: true });
-            setError(err);
+        } catch (error) {
+            if (error.response) {
+                const {
+                    data: { statusCode: status, message },
+                } = error.response;
+
+                setError({ status, message });
+            }
+
             setFetchTodoStatus(STATUS.ERROR);
+            // navigate('/', { replace: true });
         }
     };
 
@@ -106,9 +113,9 @@ export const TodoByIdView = () => {
             await api.updateTodo(values);
             setUpdateTodoStatus(STATUS.SUCCESS);
             fetchTodoByIdAsync();
-        } catch (err) {
+        } catch (error) {
             setUpdateTodoStatus(STATUS.ERROR);
-            console.error(err);
+            console.error(error);
         }
     };
 

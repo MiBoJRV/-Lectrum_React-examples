@@ -17,13 +17,18 @@ export const TodoListView = () => {
         await fetchTodosQ.refetch();
     };
 
+    const deleteTodoAsync = async id => {
+        await deleteTodoM.deleteTodo(id);
+        await fetchTodosQ.refetch();
+    };
+
     return (
         <>
             <TodoList
                 todos={fetchTodosQ.todos}
                 status={fetchTodosQ.status}
                 error={fetchTodosQ.error}
-                deleteTodo={deleteTodoM.deleteTodo}
+                deleteTodo={deleteTodoAsync}
             />
 
             <ManageTodoForm

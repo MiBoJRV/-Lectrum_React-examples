@@ -17,7 +17,7 @@ export const ManageTodoForm = props => {
         } finally {
             setFetching(false);
 
-            if (!props.initialValues) {
+            if (props.title.toLowerCase().includes('создать')) {
                 setValues(defaultFormValues);
             }
         }
