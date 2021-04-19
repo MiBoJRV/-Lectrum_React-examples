@@ -30,6 +30,7 @@ const Form = () => {
             <h1>Регистрация</h1>
 
             <fieldset disabled={isFetching}>
+                <legend>Ваши данные</legend>
                 <input
                     required
                     name="email"
