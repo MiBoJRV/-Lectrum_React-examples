@@ -1,5 +1,3 @@
-// Intro to MobX with React
-
 /* Core */
 import { render } from 'react-dom';
 import { makeAutoObservable } from 'mobx';
@@ -40,7 +38,7 @@ const Timer = observer(() => {
  * The observer HoC automatically subscribes React components to any observables that are used during rendering.
  * As a result, components will automatically re-render when relevant observables change.
  * It also makes sure that components don't re-render when there are no relevant changes.
- * So, observables that are accessible by the component, but not actually read, won't ever cause a re-render.
+ * So, observables that are accessible by the component, but not actually read, won't ever cause a re-Рендер.
  */
 
 render(<Timer />, document.getElementById('root'));
