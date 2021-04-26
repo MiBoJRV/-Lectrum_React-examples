@@ -1,4 +1,4 @@
-const links = { dev: 'https://example.com/dev', prod: 'https://example.com/dev' };
+const links = { dev: 'https://example.com/dev', prod: 'https://example.com/prod' };
 
 // Оператор keyof формирует тип на основании ключей
 type LinksType = typeof links;

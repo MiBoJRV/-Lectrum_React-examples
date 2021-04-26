@@ -5,7 +5,7 @@ enum Roles {
 };
 
 const Component = () => {
-    const role: Roles = Roles.ADMIN;
+    const role: Roles = Roles.ADMIN; // after compile const role = 0;
 
     return (
         <>

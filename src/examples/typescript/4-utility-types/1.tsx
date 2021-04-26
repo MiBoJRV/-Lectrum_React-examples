@@ -6,6 +6,10 @@ type UserType = {
 }
 
 // const user: UserType = {};
+// type UserType = {
+//     name?: string;
+//     age?: number;
+// }
 const user: Partial<UserType> = {};
 
 user.name = 'Андрей';

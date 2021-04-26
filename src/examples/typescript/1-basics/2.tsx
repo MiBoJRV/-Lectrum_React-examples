@@ -1,8 +1,9 @@
-const Component = ({ title }: { title: string }) => {
+const Component = (props: { title: string }) => {
+    const { title } = props;
     let greeting = title;
 
     if(new Date().getHours() > 21) {
-        // greeting = 'До завтра Лектрум!';
+        greeting = 'До завтра Лектрум!';
         // greeting = 5; // ошибка
     }
 
@@ -12,6 +13,5 @@ const Component = ({ title }: { title: string }) => {
 const Parent = () => {
     return <Component title = "Привет Лектрум!" />
 }
-
 
 export default Parent;

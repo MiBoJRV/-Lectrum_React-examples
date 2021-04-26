@@ -1,6 +1,6 @@
 // Тип возвращаемого значения
 // Тип функции
-type UpperCasedNameFn = <T>(name: T[]) => T[];
+type UpperCasedNameFn = <T>(names: T[]) => T[];
 
 const getUpperCasedName: UpperCasedNameFn = (values) => values.sort((a,b) => a > b ? 1 : -1);
 

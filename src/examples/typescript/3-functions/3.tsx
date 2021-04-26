@@ -1,6 +1,7 @@
 // Базовый тип
 type UpperCasedNameFn = {
     version: number;
+    getMeta?: () => string
     (name: string): string;
 };
 

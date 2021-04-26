@@ -6,6 +6,7 @@ const Component = () => {
     useEffect(() => {
         // Утверждаем что объект пользователя является объектом с полями name и age
         const person = user as { name: string; age: number };
+        // const person = user;
 
         console.log(person.name);
     }, [user]);

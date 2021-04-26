@@ -1,11 +1,12 @@
-import {FC, ReactNode} from 'react';
+import {FC, ReactNode, ReactElement} from 'react';
 
 type GreetingPropTypes = {
     name: string;
 }
 
 type GreetingWrapperPropTypes = {
-    children: ReactNode;
+    // children: ReactNode;
+    children: ReactElement;
 }
 
 // Компонент

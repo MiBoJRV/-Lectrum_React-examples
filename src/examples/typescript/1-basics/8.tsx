@@ -1,8 +1,8 @@
-type User = { first: string; last: string };
+type UserType = { first: string; last: string };
 
 const Component = () => {
     // Дефолтные значения параметров функций определяют тип параметра
-    const getUserGreeting = (user: User): string => {
+    const getUserGreeting = (user: UserType): string => {
         return `${user.first.toUpperCase()} ${user.last.toUpperCase()}`;
     }
 

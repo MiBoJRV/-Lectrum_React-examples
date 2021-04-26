@@ -5,8 +5,11 @@ type UserType = {
     age?: number;
 }
 
-const user: UserType = {};
-// const user: Required<UserType> = {};
+// const user: UserType = {};
+const user: Required<UserType> = {
+    name: 'Андрей',
+    age: 30
+};
 
 user.name = 'Андрей';
 

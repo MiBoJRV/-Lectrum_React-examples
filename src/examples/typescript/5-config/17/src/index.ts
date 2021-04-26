@@ -22,7 +22,7 @@
 import { resolve } from 'path';
 
 // Helpers
-import { validate } from "helpers/validate";
+import { validate } from "app/validate";
 
 // Constants
 import { a } from "constants/numbers";

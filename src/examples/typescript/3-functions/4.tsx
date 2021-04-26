@@ -14,6 +14,7 @@ const getUpperCasedName: UpperCasedNameFn = (name, score) => ({
     name: name.toUpperCase(),
     score: typeof score === 'undefined'? 0 : score * 1.25,
 });
+
 getUpperCasedName.version = 1;
 
 const user = getUpperCasedName('Андрей');

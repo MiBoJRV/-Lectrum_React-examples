@@ -1,5 +1,5 @@
 const Component = () => {
-    let greeting = 'Привет Лектрум!'; // type interference
+    let greeting = 'Привет Лектрум!'; // type inference
     const time: number = 19;
     const isClosed = new Date().getHours() > 21;
 

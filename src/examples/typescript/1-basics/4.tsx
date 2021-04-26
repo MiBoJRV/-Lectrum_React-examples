@@ -1,8 +1,8 @@
 const Component = () => {
-    const userEntry: [string, number] = ['Саша', 25];
+    const userEntry: [string, number] = ['Саша', 25]; // tuple / кортеж
 
     if(userEntry.length) {
-        userEntry[0] = 'Максим';
+        // userEntry[0] = 'Максим';
         // userEntry[1] = 'Максим';
     }
 

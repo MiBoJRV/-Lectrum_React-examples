@@ -4,7 +4,7 @@ type Point = { x: number; y: number };
 type Coordinate = keyof Point;
 
 const Component = () => {
-    let axis: Coordinate = "x";
+    const axis: Coordinate = "x";
 
     return <h1>Ось: {axis}</h1>;
 };
