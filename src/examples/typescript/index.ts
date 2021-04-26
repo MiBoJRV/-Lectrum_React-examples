@@ -1,1 +1,1 @@
-export { default } from './2-basics/1';
+export { default } from './1-basics/1';
