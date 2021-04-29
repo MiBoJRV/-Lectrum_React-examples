@@ -2,7 +2,7 @@
 import { render } from 'react-dom';
 
 const element = (
-    <section className="newsFeed">
+    <form className="newsFeed">
         <h1>News Feed</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
@@ -31,7 +31,7 @@ const element = (
         </div>
         <br />
         <input type="submit" value="Submit" />
-    </section>
+    </form>
 );
 
 render(element, document.getElementById('root'));

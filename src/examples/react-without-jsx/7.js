@@ -8,12 +8,12 @@ const node3 = '!';
 render([node1, node2, node3], document.getElementById('root'));
 
 // render(
-//     <section>
+//     <div>
 //         <>
 //             {node1}
 //             {node2}
 //             {node3}
 //         </>
-//     </section>,
+//     </div>,
 //     document.getElementById('root'),
 // );

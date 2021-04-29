@@ -1,1 +1,1 @@
-import './react-without-jsx';
+import './jsx';

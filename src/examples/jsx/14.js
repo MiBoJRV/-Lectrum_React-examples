@@ -3,7 +3,7 @@ import { render, createPortal } from 'react-dom';
 
 const target = document.getElementById('root');
 
-const portal = createPortal(<span>Welcome!</span>, target);
+const portal = createPortal(<span>Welcome!</span>, document.getElementById('dark-mode-toggle'));
 
 const Book = () => {
     return (
@@ -14,4 +14,4 @@ const Book = () => {
     );
 };
 
-render(<Book />, document.getElementById(target));
+render(<Book />, target);
