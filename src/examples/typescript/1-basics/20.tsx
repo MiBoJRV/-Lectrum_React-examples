@@ -3,7 +3,9 @@ type UserType = {
     age?: number;
 }
 
-const user: { [key in keyof UserType]: string } = {};
+const user: UserType = {};
+
+// const user: { [key in keyof UserType]: string } = {};
 
 user.name = 'Андрей';
 

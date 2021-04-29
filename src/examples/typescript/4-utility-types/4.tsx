@@ -3,9 +3,10 @@
 type UserType = {
     name: string;
     age: number;
+    score?: number;
 }
 
-const user: Pick<UserType, 'name'> = {
+const user: Pick<UserType, 'name' | 'score'> = {
     name: 'Андрей',
     // age: 30 // ошибка
 };

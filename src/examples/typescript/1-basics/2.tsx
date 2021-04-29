@@ -14,4 +14,6 @@ const Parent = () => {
     return <Component title = "Привет Лектрум!" />
 }
 
+// props = { title: "Привет Лектрум!" }
+
 export default Parent;

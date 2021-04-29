@@ -2,7 +2,7 @@ import {FC, useState, useEffect} from 'react';
 
 // Компонент
 const Greeting: FC = () => {
-    // const [name, setName] = useState('');
+    // const [name, setName] = useState();
     const [name, setName] = useState<string>();
 
     useEffect(() => {

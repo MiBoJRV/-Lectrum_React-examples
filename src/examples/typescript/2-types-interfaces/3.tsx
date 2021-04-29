@@ -1,11 +1,11 @@
 // Базовый интерфейс
 interface UserType {
-    name: string
+    name: string;
 };
 
 // Расширение базового интерфейса
 interface UserType {
-    score: number
+    score: number;
 };
 
 const Component = () => {

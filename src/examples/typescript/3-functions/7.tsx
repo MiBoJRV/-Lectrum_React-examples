@@ -18,3 +18,6 @@ const Component = () => {
 }
 
 export default Component;
+
+
+new Date()

@@ -10,7 +10,7 @@ class User implements UserType<string> {
         this.name = name;
     }
 
-    getName() {
+    getName(): string {
         return this.name;
     }
 }
