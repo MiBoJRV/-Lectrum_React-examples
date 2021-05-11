@@ -1,25 +1,8 @@
 /* Core */
-import { render } from 'react-dom';
-import { makeAutoObservable } from 'mobx';
 import { observer } from 'mobx-react-lite';
 
-class TimerStore {
-    secondsPassed = 0;
-
-    constructor() {
-        makeAutoObservable(this);
-    }
-
-    increment() {
-        this.secondsPassed++;
-    }
-
-    reset() {
-        this.secondsPassed = 0;
-    }
-}
-
-const timerStore = new TimerStore();
+/* Store */
+import { timerStore } from './store';
 
 /**
  * An observer HOC converts React components into derivations of the data they render.
@@ -29,11 +12,17 @@ const timerStore = new TimerStore();
  */
 const Timer = observer(() => {
     return (
-        <button onClick={() => timerStore.reset()}>
-            Seconds passed: {timerStore.secondsPassed}
-        </button>
+        <>
+            <h1>Счётчик: {timerStore.secondsPassed}</h1>
+            <button onClick={() => timerStore.reset()}>
+                Сброс
+            </button>
+            <hr/>
+            <p>Обновлено: {new Date().toLocaleTimeString()}</p>
+        </>
     );
 });
+
 /**
  * The observer HoC automatically subscribes React components to any observables that are used during rendering.
  * As a result, components will automatically re-render when relevant observables change.
@@ -41,8 +30,12 @@ const Timer = observer(() => {
  * So, observables that are accessible by the component, but not actually read, won't ever cause a re-Рендер.
  */
 
-render(<Timer />, document.getElementById('root'));
+export default Timer;
 
+/**
+ * Изменяет свойство в хранилище,
+ * которое ПРИВОДИТ к перерисовке компонента
+ * */
 setInterval(() => {
     timerStore.increment();
 }, 1000);

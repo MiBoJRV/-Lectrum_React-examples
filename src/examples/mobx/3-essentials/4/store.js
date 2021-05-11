@@ -47,7 +47,7 @@ class ObservableTodoStore {
          * whenever any observable data that was used inside the function changes.
          * Because report uses the observable todos property, it will print the report whenever appropriate.
          */
-        autorun(() => console.log(this.report));
+        autorun(() => console.log(`%c[${new Date().toLocaleString()}] ${this.report}`, 'background: #222; color: #bada55'));
     }
 
     get completedTodosCount() {
@@ -55,12 +55,11 @@ class ObservableTodoStore {
     }
 
     get report() {
-        if (this.todos.length === 0) return '<none>';
-        const nextTodo = this.todos.find(todo => todo.completed === false);
-        return (
-            `Next todo: "${nextTodo ? nextTodo.task : '<none>'}". ` +
-            `Progress: ${this.completedTodosCount}/${this.todos.length}`
-        );
+        if (this.todos.length === 0) {
+            return 'Нет тудушек';
+        };
+
+        return `Прогресс всего/выполнено: ${this.completedTodosCount}/${this.todos.length}`;
     }
 
     addTodo(task) {
@@ -74,9 +73,4 @@ class ObservableTodoStore {
 
 const observableTodoStore = new ObservableTodoStore();
 
-observableTodoStore.addTodo('read MobX tutorial');
-observableTodoStore.addTodo('try MobX');
-
-observableTodoStore.todos[0].completed = true;
-observableTodoStore.todos[1].task = 'try MobX in own project';
-observableTodoStore.todos[0].task = 'grok MobX tutorial';
+export {observableTodoStore};

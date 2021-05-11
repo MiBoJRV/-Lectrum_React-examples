@@ -24,6 +24,6 @@
     "src"
   ],
   "exclude": [
-    "src/examples/typescript/5-config"
+    "src/examples/typescript/6-config"
   ]
 }
