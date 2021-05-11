@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 const Child = props => {
     /**
      * props.children — это непрозрачная структура данных.
@@ -28,4 +25,4 @@ const Parent = () => {
     );
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

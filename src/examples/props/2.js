@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 const Child = props => {
     const { firstName, lastName } = props;
 
@@ -23,4 +20,4 @@ const Parent = () => {
     );
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

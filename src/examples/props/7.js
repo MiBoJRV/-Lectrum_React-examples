@@ -1,5 +1,4 @@
 /* Core */
-import { render } from 'react-dom';
 import { string, bool } from 'prop-types';
 
 export const Parent = props => {
@@ -24,4 +23,4 @@ Parent.propTypes = {
     lastName: string.isRequired,
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

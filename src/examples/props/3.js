@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 const Child = props => {
     return (
         <h1>
@@ -22,4 +19,4 @@ const Parent = () => {
     return <Child {...profile2} {...profile1} />;
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

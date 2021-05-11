@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 const Child = props => {
     console.log(props);
 
@@ -11,4 +8,4 @@ const Parent = () => {
     return <Child>Avada kedavra!</Child>;
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 /* Instruments */
 import { data } from './data';
 
@@ -31,4 +28,8 @@ const Page = props => {
     );
 };
 
-render(<Library {...data} />, document.getElementById('root'));
+const Wrapper = () => {
+    return <Library {...data} />;
+};
+
+export default Wrapper;

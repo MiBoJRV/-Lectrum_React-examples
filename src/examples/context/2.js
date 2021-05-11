@@ -1,6 +1,5 @@
 /* Core */
 import { createContext, useContext } from 'react';
-import { render } from 'react-dom';
 
 /* Instruments */
 import { data } from './data';
@@ -36,9 +35,12 @@ const Page = () => {
     );
 };
 
-render(
-    <Context.Provider value={data}>
-        <Library />
-    </Context.Provider>,
-    document.getElementById('root'),
-);
+const Wrapper = () => {
+    return (
+        <Context.Provider value={data}>
+            <Library />
+        </Context.Provider>
+    );
+};
+
+export default Wrapper;

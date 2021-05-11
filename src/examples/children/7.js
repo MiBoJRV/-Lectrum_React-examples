@@ -1,6 +1,5 @@
 /* Core */
 import { Children } from 'react';
-import { render } from 'react-dom';
 
 const Child = props => {
     console.log(props);
@@ -22,4 +21,4 @@ const Parent = () => {
     );
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

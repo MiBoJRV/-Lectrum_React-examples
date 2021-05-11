@@ -1,7 +1,5 @@
-/* Core */
-import { render } from 'react-dom';
+const Wrapper = () => {
+    return <h1 children="Добро пожаловать в Лабораторию!" />;
+}
 
-render(
-    <h1 children="Добро пожаловать в Лабораторию!" />,
-    document.getElementById('root'),
-);
+export default Wrapper;

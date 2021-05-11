@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 const Child = props => {
     return (
         <footer>
@@ -17,4 +14,4 @@ const Parent = () => {
     return <Child year={year} />;
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

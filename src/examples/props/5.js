@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 const Child = props => {
     const profileJSX = props.visible
         ? `User name:
@@ -27,4 +24,4 @@ const Parent = () => {
     );
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

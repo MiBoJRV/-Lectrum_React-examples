@@ -1,6 +1,5 @@
 /* Core */
 import { Children } from 'react';
-import { render } from 'react-dom';
 
 const Child = props => {
     const childrenCount = Children.count(props.children);
@@ -24,4 +23,4 @@ const Parent = () => {
     );
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

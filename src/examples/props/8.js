@@ -1,5 +1,4 @@
 /* Core */
-import { render } from 'react-dom';
 import { string, number, shape, arrayOf } from 'prop-types';
 
 const Parent = props => {
@@ -49,4 +48,8 @@ const data = {
     ],
 };
 
-render(<Parent {...data} />, document.getElementById('root'));
+const Wrapper = () => {
+    return <Parent {...data} />;
+};
+
+export default Wrapper;

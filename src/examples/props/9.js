@@ -1,6 +1,3 @@
-/* Core */
-import { render } from 'react-dom';
-
 const Parent = props => {
     const {
         profile: { firstName, lastName },
@@ -26,4 +23,8 @@ const profile = {
     lastName: 'Granger',
 };
 
-render(<Parent profile={profile} />, document.getElementById('root'));
+const Wrapper = () => {
+    return <Parent profile={profile} />;
+};
+
+export default Wrapper;

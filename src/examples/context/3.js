@@ -1,6 +1,7 @@
 /* Core */
 import { createContext, useState, useContext } from 'react';
 import { render } from 'react-dom';
+import { data } from "./data";
 
 const Context = createContext();
 
@@ -45,10 +46,19 @@ const Page = () => {
             <p>
                 Page: <code>{context.page}</code>
             </p>
-            <button onClick={context._goPrevPage}>← Previous page</button>
-            <button onClick={context._goNextPage}>Next page →</button>
+            <div>
+                <button onClick={context._goPrevPage}>← Previous page</button>
+                <button onClick={context._goNextPage}>Next page →</button>
+            </div>
+
         </>
     );
 };
 
-render(<Library />, document.getElementById('root'));
+const Wrapper = () => {
+    return (
+        <Library />
+    );
+};
+
+export default Wrapper;
