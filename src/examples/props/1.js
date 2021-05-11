@@ -1,9 +1,10 @@
-const Child = props => {
+const Child = (props) => {
     console.log('props', props);
     return <h1>{props.message}</h1>;
 };
 
-const Parent = () => {
+const Parent = (props) => {
+    console.log('props Parent', props);
     return <Child message={'Hello'} />;
 };
 

@@ -1,7 +1,5 @@
 /* Core */
 import { createContext, useState, useContext } from 'react';
-import { render } from 'react-dom';
-import { data } from "./data";
 
 const Context = createContext();
 

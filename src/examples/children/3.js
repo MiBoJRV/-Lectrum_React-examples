@@ -1,4 +1,4 @@
-const Child = props => {
+const Child = (props) => {
     console.log(props);
 
     return <h1>{props.children.toUpperCase()}</h1>;

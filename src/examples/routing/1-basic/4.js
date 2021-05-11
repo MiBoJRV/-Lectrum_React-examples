@@ -13,7 +13,9 @@ const Layout = () => {
                 <NavLink to="/invoices">Invoices</NavLink>
             </nav>
 
-            <Outlet />
+            <main>
+                <Outlet />
+            </main>
         </>
     );
 };

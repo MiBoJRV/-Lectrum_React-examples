@@ -1,4 +1,4 @@
-const Child = props => {
+const Child = (props) => {
     return (
         <h1>
             Hi, {props.firstName} {props.lastName}!

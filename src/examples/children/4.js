@@ -1,4 +1,4 @@
-const Child = props => {
+const Child = (props) => {
     /**
      * props.children — это непрозрачная структура данных.
      * от англ. opaque data structure

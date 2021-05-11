@@ -1,1 +1,1 @@
-export { default } from './props';
+export { default } from './mobx';

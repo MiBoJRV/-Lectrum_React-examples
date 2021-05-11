@@ -28,7 +28,7 @@ const Example = () => {
                 <Route path="/about" element={<h1>About</h1>} />
                 <Route path="/contacts" element={<h1>Contacts</h1>} />
 
-                {/* Redirect if no route match found. */}
+                {/* Display 404 if no route match found. */}
                 <Route path="*" element={<_404 />} />
             </Routes>
         </>

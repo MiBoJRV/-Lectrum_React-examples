@@ -1,4 +1,4 @@
-const Child = props => {
+const Child = (props) => {
     const { firstName, lastName } = props;
 
     return (
@@ -11,12 +11,15 @@ const Child = props => {
 const profile = {
     firstName: 'Hermione',
     lastName: 'Granger',
+    age: 20,
 };
 
 const Parent = () => {
     return (
-        <Child {...profile} />
-        // <Child firstName = {profile.firstName} lastName={profile.lastName} />
+        <>
+            <Child {...profile} />
+            <Child firstName={profile.firstName} lastName={profile.lastName} />
+        </>
     );
 };
 

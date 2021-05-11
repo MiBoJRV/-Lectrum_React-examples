@@ -1,5 +1,6 @@
-const Child = props => {
+const Child = (props) => {
     console.log(props);
+    console.log(typeof props.children);
 
     return <h1>{props.children}</h1>;
 };

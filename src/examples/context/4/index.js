@@ -2,9 +2,8 @@
 import { createContext, useContext } from 'react';
 
 /* Instruments */
-import { data } from './data';
-
-const Context = createContext();
+import { data } from '../data';
+import { Context } from './context';
 
 const Library = () => {
     return <Room />;

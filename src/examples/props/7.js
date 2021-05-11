@@ -1,7 +1,7 @@
 /* Core */
 import { string, bool } from 'prop-types';
 
-export const Parent = props => {
+export const Parent = (props) => {
     return (
         props.visible && (
             <h1>

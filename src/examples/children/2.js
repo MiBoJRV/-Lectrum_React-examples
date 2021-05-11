@@ -6,6 +6,7 @@ const Child = props => {
 
 const Parent = () => {
     return <Child children="Avada kedavra!" />;
+    // return <Child children="Avada kedavra!">Avada kedavra!!!</Child>;
 };
 
 export default Parent;

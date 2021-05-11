@@ -1,4 +1,4 @@
-const Parent = props => {
+const Parent = (props) => {
     const {
         profile: { firstName, lastName },
     } = props;

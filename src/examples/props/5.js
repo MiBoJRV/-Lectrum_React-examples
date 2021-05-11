@@ -1,4 +1,4 @@
-const Child = props => {
+const Child = (props) => {
     const profileJSX = props.visible
         ? `User name:
             ${props.firstName} ${props.lastName}`
@@ -16,10 +16,10 @@ const Parent = () => {
     return (
         <>
             <Child visible {...profile} />
-            {/* <Child
-               visible = { false }
-               { ...profile }
-            /> */}
+            {/*<Child*/}
+            {/*   visible = { false }*/}
+            {/*   { ...profile }*/}
+            {/*/>*/}
         </>
     );
 };
