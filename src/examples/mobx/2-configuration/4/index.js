@@ -1,6 +1,7 @@
 // Core
 import { configure, makeAutoObservable } from 'mobx';
 import { useEffect } from 'react';
+import { observer } from "mobx-react-lite";
 
 /*
 * observableRequiresReaction
@@ -14,7 +15,7 @@ configure({
 });
 
 class Store {
-    title = '';
+    title = 'Тестовая задача';
 
     constructor() {
         makeAutoObservable(this);

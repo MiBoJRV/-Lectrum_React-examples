@@ -6,7 +6,7 @@ class TodoStore {
 
     constructor() {
         makeObservable(this, {
-            todos: observable,
+            todos: observable, // annotation
             pendingRequests: observable,
             completedTodosCount: computed,
             report: computed,

@@ -1,6 +1,9 @@
 /* Core */
 import { observer } from 'mobx-react-lite';
 
+// mobx-react-lite — only for functional components
+// mobx-react for FC & class components
+
 /* Store */
 import { timerStore } from './store';
 

@@ -1,5 +1,5 @@
 // Core
-import { configure, makeAutoObservable } from 'mobx';
+import { configure, makeAutoObservable, runInAction, autorun } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
@@ -37,10 +37,10 @@ const Todo = observer(() => {
         console.log(store.delayedTime);
 
         // V2
-        // runInAction(() => {
-        //     console.log(store.delayedTime);
-        //     console.log(store.delayedTime);
-        // });
+        runInAction(() => {
+            console.log(store.delayedTime);
+            console.log(store.delayedTime);
+        });
 
         // V3
         // autorun(() => {

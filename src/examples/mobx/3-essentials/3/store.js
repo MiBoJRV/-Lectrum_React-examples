@@ -5,7 +5,12 @@ class TimerStore {
     secondsPassed = 0;
 
     constructor() {
-        makeAutoObservable(this);
+        makeAutoObservable(this, {}, {
+            autoBind: true,
+            deep: true,
+            name: 'TimerStore',
+            proxy: true
+        });
     }
 
     increment() {

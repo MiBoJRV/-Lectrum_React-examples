@@ -13,9 +13,9 @@ configure({
     computedRequiresReaction: true,
     observableRequiresReaction: true,
     reactionRequiresObservable: true,
-    disableErrorBoundaries: true,
-    safeDescriptors: true,
-    reactionScheduler: (func) => {
+    disableErrorBoundaries: true, // true — for debugging
+    safeDescriptors: true, // false — for testing
+    reactionScheduler: (func) => { // по необходимости
         console.log('Запуск реакции с задержкой в 2000мс');
         setTimeout(func, 2000);
     }

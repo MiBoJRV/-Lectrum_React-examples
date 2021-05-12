@@ -11,6 +11,7 @@ export const TodoList = observer(({ store }) => {
 
     const asyncData = () => {
         todoStore.pendingRequests++;
+
         setTimeout(
             action(() => {
                 todoStore.addTodo('Рандомная задач ' + Math.round(Math.random() * 1000));
@@ -18,6 +19,13 @@ export const TodoList = observer(({ store }) => {
             }),
             2000,
         );
+        // setTimeout(
+        //     () => {
+        //         todoStore.addTodo('Рандомная задач ' + Math.round(Math.random() * 1000));
+        //         todoStore.pendingRequests--;
+        //     },
+        //     2000,
+        // );
     };
 
     return (
