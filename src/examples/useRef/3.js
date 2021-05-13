@@ -1,6 +1,5 @@
 /* Core */
 import { useRef } from 'react';
-import { render } from 'react-dom';
 
 const Example = () => {
     const stringRef = useRef('hello');
@@ -12,4 +11,4 @@ const Example = () => {
     return <h1>{stringRef.current}</h1>;
 };
 
-render(<Example />, document.getElementById('root'));
+export default Example;

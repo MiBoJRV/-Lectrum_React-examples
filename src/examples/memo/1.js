@@ -1,6 +1,5 @@
 // Core
 import React, { useState } from 'react';
-import { render } from 'react-dom';
 
 const Child = ({ count }) => {
   console.log('Child Render');
@@ -36,10 +35,10 @@ const Parent = () => {
 
 
 
-      
+
       <Child count={1}/>
     </>
   )
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

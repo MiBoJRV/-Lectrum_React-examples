@@ -1,6 +1,5 @@
 /* Core */
 import { useRef, useEffect } from 'react';
-import { render } from 'react-dom';
 
 const Example = () => {
     const inputRef = useRef();
@@ -24,4 +23,4 @@ const Example = () => {
     );
 };
 
-render(<Example />, document.getElementById('root'));
+export default Example;

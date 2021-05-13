@@ -1,6 +1,5 @@
 /* Core */
 import { useState } from 'react';
-import { render } from 'react-dom';
 
 export const Counter = () => {
     const [count, setCount] = useState(0);
@@ -22,4 +21,4 @@ export const Counter = () => {
     );
 };
 
-render(<Counter />, document.getElementById('root'));
+export default Counter;

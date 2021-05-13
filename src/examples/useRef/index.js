@@ -1,1 +1,1 @@
-import './4';
+export { default } from './1';

@@ -1,6 +1,5 @@
 /* Core */
 import { useState } from 'react';
-import { render } from 'react-dom';
 
 const Profile = () => {
     const [name, setName] = useState('');
@@ -19,4 +18,4 @@ const Profile = () => {
     );
 };
 
-render(<Profile />, document.getElementById('root'));
+export default Profile;

@@ -1,6 +1,5 @@
 /* Core */
 import { useRef, useEffect } from 'react';
-import { render } from 'react-dom';
 
 const Example = () => {
     const intervalRef = useRef(null);
@@ -35,4 +34,4 @@ const Example = () => {
     );
 };
 
-render(<Example />, document.getElementById('root'));
+export default Example;

@@ -1,6 +1,5 @@
 /* Core */
 import { useState, useEffect } from 'react';
-import { render } from 'react-dom';
 import wait from 'waait';
 
 const Counter = () => {
@@ -29,4 +28,4 @@ const Counter = () => {
     );
 };
 
-render(<Counter />, document.getElementById('root'));
+export default Counter;

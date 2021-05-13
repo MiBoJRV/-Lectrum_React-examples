@@ -1,13 +1,26 @@
 /* Core */
 import { useState } from 'react';
-import { render } from 'react-dom';
 
 const Counter = () => {
-    const [value, setValue] = useState(0);
+    const [count, setCount] = useState(0);
 
-    setValue(2); // ! Error
+    console.log(count);
 
-    return <h1>{value}</h1>;
+    const increment = () => {
+        setCount((prevValue) => prevValue + 1);
+    };
+
+    const decrement = () => {
+        setCount((prevValue) => prevValue - 1);
+    };
+
+    return (
+        <>
+            <h1>{count}</h1>
+            <button onClick={decrement}>Decrement -</button>
+            <button onClick={increment}>Increment +</button>
+        </>
+    );
 };
 
-render(<Counter />, document.getElementById('root'));
+export default Counter;

@@ -1,6 +1,5 @@
 // Core
 import React, { useMemo, useState } from 'react';
-import { render } from 'react-dom';
 
 const CalculateComponent = ({ a, b, text }) => {
     console.log('Render');
@@ -33,4 +32,4 @@ const Example = () => {
     return <CalculateComponent a={1} b={2} text="Sum" />;
 };
 
-render(<Example />, document.getElementById('root'));
+export default Example;

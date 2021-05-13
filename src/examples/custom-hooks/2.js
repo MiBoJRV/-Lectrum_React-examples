@@ -16,4 +16,4 @@ export const Counter = () => {
     );
 };
 
-render(<Counter />, document.getElementById('root'));
+export default Counter;

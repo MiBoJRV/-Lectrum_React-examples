@@ -1,2 +1,1 @@
-// Examples
-import './3';
+export { default } from './1';

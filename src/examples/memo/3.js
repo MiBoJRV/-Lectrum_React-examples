@@ -1,6 +1,5 @@
 // Core
 import React, { useState, memo } from 'react';
-import { render } from 'react-dom';
 
 const Child = memo(({ count }) => {
   console.log('Child Render');
@@ -36,4 +35,4 @@ const Parent = () => {
   )
 };
 
-render(<Parent />, document.getElementById('root'));
+export default Parent;

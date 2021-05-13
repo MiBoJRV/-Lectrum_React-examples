@@ -1,6 +1,5 @@
 /* Core */
 import { useState, useEffect } from 'react';
-import { render } from 'react-dom';
 
 const Clock = () => {
     const [seconds, setSeconds] = useState(0);
@@ -36,4 +35,4 @@ const Controller = () => {
     );
 };
 
-render(<Controller />, document.getElementById('root'));
+export default Controller;

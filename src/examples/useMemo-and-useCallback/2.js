@@ -1,6 +1,5 @@
 // Core
 import React, { useCallback, useState } from 'react';
-import { render } from 'react-dom';
 
 const CalculateComponent = ({ a, b, text }) => {
   console.log('Render');
@@ -37,4 +36,4 @@ const Example = () => {
   )
 };
 
-render(<Example />, document.getElementById('root'));
+export default Example;
