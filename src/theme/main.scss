@@ -53,4 +53,17 @@
     button {
         margin-right: 10px;
     }
+
+    li {
+        cursor: pointer;
+    }
+
+    .selected {
+        color: var(--variable);
+    }
+
+    .completed {
+        text-decoration: line-through;
+        color: var(--variable);
+    }
 }
