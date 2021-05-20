@@ -1,7 +1,8 @@
 /* Instruments */
 import './styles.scss';
 
-export { default } from './1-basic/5';
+export { default } from './1-basic/1';
+// export { default } from './2-react-hook-form/Wizard';
 
 /**
  * Почитать:

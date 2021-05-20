@@ -13,7 +13,7 @@ const Form = () => {
         },
     });
 
-    const submitForm = handleSubmit(values => {
+    const submitForm = handleSubmit((values) => {
         console.log(values);
     });
 

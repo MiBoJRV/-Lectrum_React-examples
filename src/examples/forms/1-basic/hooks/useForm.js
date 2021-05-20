@@ -1,16 +1,17 @@
 /* Core */
 import { useState } from 'react';
 
-export const useForm = initialState => {
+export const useForm = (initialState) => {
     const [form, setForm] = useState(initialState);
 
-    const updateForm = event => {
+    const updateForm = (event) => {
         event.persist();
+        const { name, value } = event.target;
 
-        setForm(prevForm => {
+        setForm((prevForm) => {
             return {
                 ...prevForm,
-                [event.target.name]: event.target.value,
+                [name]: value,
             };
         });
     };

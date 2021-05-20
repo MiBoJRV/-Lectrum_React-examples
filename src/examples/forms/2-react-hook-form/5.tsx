@@ -20,7 +20,7 @@ const Form = () => {
         },
     });
 
-    const submitForm = form.handleSubmit(values => {
+    const submitForm = form.handleSubmit((values) => {
         console.log(values);
 
         form.reset();

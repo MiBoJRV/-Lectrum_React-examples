@@ -7,8 +7,8 @@ const Form = () => {
         password: '',
     });
 
-    const updateForm = event => {
-        setForm(prevState => {
+    const updateForm = (event) => {
+        setForm((prevState) => {
             return {
                 ...prevState,
                 [event.target.name]: event.target.value,
@@ -35,7 +35,7 @@ const Form = () => {
                 value={form.email}
             />
             <input
-                defaultValue="xxx"
+                // defaultValue="xxx" // только для неконтролируемых элементов
                 minLength={5}
                 autoComplete="current-password"
                 name="password"

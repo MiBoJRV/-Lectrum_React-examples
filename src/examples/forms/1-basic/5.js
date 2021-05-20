@@ -13,7 +13,7 @@ const Form = () => {
         confirmPassword: '',
     });
 
-    const submitForm = async event => {
+    const submitForm = async (event) => {
         event.preventDefault();
         setFetching(true);
 
@@ -38,6 +38,7 @@ const Form = () => {
                     onChange={updateForm}
                     placeholder="Электропочта"
                     autoComplete="email"
+
                     value={form.email}
                 />
                 <input

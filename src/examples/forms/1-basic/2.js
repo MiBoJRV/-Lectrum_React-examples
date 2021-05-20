@@ -4,8 +4,8 @@ import { useState } from 'react';
 const Form = () => {
     const [name, setName] = useState('');
 
-    const updateName = event => {
-        setName(event.currentTarget.value);
+    const updateName = (event) => {
+        setName(event.target.value);
     };
 
     const submitForm = event => {

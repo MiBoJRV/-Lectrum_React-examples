@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 const Form = () => {
     const nameInputRef = useRef();
 
-    const submitForm = event => {
+    const submitForm = (event) => {
         event.preventDefault();
         console.log(`Форма отправлена: ${nameInputRef.current.value}`);
         nameInputRef.current.value = '';
