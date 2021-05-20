@@ -8,7 +8,7 @@ import { STATUS } from './status';
 export const useDeleteTodo = () => {
     const [status, setStatus] = useState(STATUS.IDLE);
 
-    const deleteTodo = useCallback(async id => {
+    const deleteTodo = useCallback(async (id) => {
         try {
             setStatus(STATUS.LOADING);
             await api.deleteTodo(id);

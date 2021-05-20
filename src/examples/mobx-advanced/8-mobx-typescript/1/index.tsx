@@ -9,6 +9,6 @@ const Wrapper: React.FC = () => {
             <Todo />
         </StoreProvider>
     )
-}
+};
 
 export default Wrapper;

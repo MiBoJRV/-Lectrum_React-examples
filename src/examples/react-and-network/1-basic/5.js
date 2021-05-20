@@ -14,15 +14,15 @@ const Example = () => {
     const [isFetching, setIsFetching] = useState(false);
 
     const createTodo = async () => {
-        document.documentElement.setAttribute('data-theme', 'light');
+        // document.documentElement.setAttribute('data-theme', 'light');
 
         if (newTodo.length < 3) {
             return null;
         }
 
-        setIsFetching(true);
-
         try {
+            setIsFetching(true);
+
             const todoResponse = await api.createTodo({
                 title: newTodo,
                 body: 'x'.repeat(10),
@@ -37,7 +37,7 @@ const Example = () => {
         }
     };
 
-    console.log(todos);
+    console.log('todos', todos);
 
     const deleteTodo = async todoId => {
         await api.deleteTodo(todoId);

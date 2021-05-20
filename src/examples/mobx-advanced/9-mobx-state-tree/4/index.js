@@ -14,6 +14,7 @@ const Todo = observer(() => {
             <li
                 className={item.completed ? 'completed': ''}
                 key={item.id}
+                // [Todo, Todo]
                 onClick = {() => store.todos[index].complete()}>
                 {item.todo}
             </li>

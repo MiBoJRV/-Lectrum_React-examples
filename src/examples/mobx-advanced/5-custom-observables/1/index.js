@@ -2,7 +2,7 @@
 import { observer } from 'mobx-react-lite';
 
 // Other
-import {clockStore} from './storages';
+import { clockStore } from './storages';
 import { useEffect, useState } from "react";
 
 /**
@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
  * Атомы могут использоваться для сигнализации MobX о том, что какой-то наблюдаемый источник данных был замечен или изменен,
  * и MobX будет сигнализировать об атоме всякий раз, когда он используется или больше не используется.
  * */
-
 const Clock = observer(() => {
     const [isTimeStopped, setTimeStopped] = useState(false);
 

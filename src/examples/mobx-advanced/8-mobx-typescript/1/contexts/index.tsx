@@ -12,4 +12,4 @@ export const StoreProvider: StoreComponent = ({children, store}): ReactElement =
     return (
         <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
     )
-}
+};

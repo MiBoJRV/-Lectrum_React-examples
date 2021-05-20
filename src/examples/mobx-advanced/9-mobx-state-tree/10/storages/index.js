@@ -18,7 +18,7 @@ const TodosStore = types
 
             self.todos.push(todoObj);
             // Dependency Injection
-            getEnv(self).logger.log('addTodo', todoObj)
+            getEnv(self).logger.log('addTodo', todoObj);
         }
     }));
 

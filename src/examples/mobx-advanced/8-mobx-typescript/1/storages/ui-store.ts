@@ -1,5 +1,6 @@
 // Core
 import { makeAutoObservable } from 'mobx';
+import {RootStore} from "./index";
 
 export enum Statuses {
     'IDLE'= 'IDLE',
@@ -17,7 +18,7 @@ export interface IUiStore {
 export class UiStore implements IUiStore {
     isLoading: Statuses = Statuses.IDLE;
 
-    constructor() {
+    constructor(rootStoreThis: RootStore) {
         makeAutoObservable(this);
     }
 

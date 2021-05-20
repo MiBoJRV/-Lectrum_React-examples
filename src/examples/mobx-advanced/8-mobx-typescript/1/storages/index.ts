@@ -1,9 +1,9 @@
 // Core
-import {makeAutoObservable} from 'mobx';
+import { makeAutoObservable } from 'mobx';
 
 // Other
-import {TodoStore, ITodoStore} from './todo-store';
-import {UiStore, IUiStore} from './ui-store';
+import { TodoStore, ITodoStore } from './todo-store';
+import { UiStore, IUiStore } from './ui-store';
 
 export class RootStore {
     ui: IUiStore;
@@ -11,7 +11,7 @@ export class RootStore {
 
     constructor() {
         makeAutoObservable(this);
-        this.ui = new UiStore();
+        this.ui = new UiStore(this);
         this.todo = new TodoStore();
     }
 };

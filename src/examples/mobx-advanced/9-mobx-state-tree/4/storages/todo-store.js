@@ -12,7 +12,6 @@ export const Todo = types
          * Экшены определённые на уровне модели будут оперировать с данными этой конкретной модели.
          * */
          complete() {
-             console.log('1')
             self.completed = true;
         },
     }));

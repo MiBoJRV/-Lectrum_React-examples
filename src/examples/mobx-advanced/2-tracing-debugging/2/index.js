@@ -7,13 +7,13 @@ import {autorun} from 'mobx';
 import {todoStore} from './storages';
 
 autorun((reaction) => {
-    reaction.trace()
+    reaction.trace();
     /**
      * Важно обратиться к свойству что бы трейс произошел правильно.
      * в противном случае MobX не будет знать за каким свойством следить.
      * */
     console.log(todoStore.title);
-})
+});
 
 const Todo = observer(() => {
     useEffect(() => {

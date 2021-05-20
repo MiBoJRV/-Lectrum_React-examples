@@ -43,6 +43,7 @@ export const todosStore = TodosStore.create({
 
 /**
  * Мидлевар
+ * mst-middlewares
  * */
 addMiddleware(todosStore, (call, next, abort) => {
     console.log('call', call);
@@ -50,4 +51,8 @@ addMiddleware(todosStore, (call, next, abort) => {
     console.log('abort', abort);
 
     next(call);
+
+    abort('some value');
+
+    return 'value';
 });

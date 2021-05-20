@@ -1,1 +1,1 @@
-export { default } from './mobx-advanced';
+export { default } from './react-and-network';

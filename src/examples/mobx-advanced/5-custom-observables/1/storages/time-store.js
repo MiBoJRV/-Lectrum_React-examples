@@ -14,7 +14,7 @@ class ClockStore {
          * Параметр 3: Колбек который запускается когда атом переходит из наблюдаемого состояния в ненаблюдаемое
          * */
         this.atom = createAtom(
-            "Clock",
+            'Clock',
             () => this.startTicking(),
             () => this.stopTicking()
         )
@@ -70,4 +70,4 @@ class ClockStore {
     }
 }
 
-export const clockStore = new ClockStore()
+export const clockStore = new ClockStore();

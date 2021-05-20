@@ -1,8 +1,0 @@
-.defaultInput input {
-    outline: none;
-    border: 1px solid grey;
-}
-
-.errorInput input {
-    border: 1px solid red;
-}

@@ -4,7 +4,7 @@ import { Todo } from './Todo';
 /* Instruments */
 import './styles.scss';
 
-export const TodoList = props => {
+export const TodoList = (props) => {
     let todosJSX = props.todos?.map(todo => {
         return <Todo key={todo.id} todo={todo} deleteTodo={props.deleteTodo} />;
     }) ?? <h2>Загрузка...</h2>;

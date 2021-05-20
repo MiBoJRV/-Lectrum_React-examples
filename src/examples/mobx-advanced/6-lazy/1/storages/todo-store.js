@@ -41,6 +41,8 @@ export class Todo {
 
     becomeUnobserved = () => {
         console.log('becomeUnobserved');
+
+        clearInterval(this.timerId);
     }
 };
 

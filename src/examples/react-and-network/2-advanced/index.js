@@ -10,7 +10,7 @@ import {
 
 /* Components */
 import { Layout } from './components';
-import { TodoListView, TodoByIdView } from './1';
+import { TodoListView, TodoByIdView } from './3';
 
 /* Instruments */
 import './styles.scss';

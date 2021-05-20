@@ -1,7 +1,7 @@
 /* Core */
 import { useState } from 'react';
 
-export const Todo = props => {
+export const Todo = (props) => {
     const [isFetching, setIsFetching] = useState(false);
 
     const deleteTodo = async () => {

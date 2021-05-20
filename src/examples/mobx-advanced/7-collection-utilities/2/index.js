@@ -15,7 +15,7 @@ const Todo = observer(() => {
     useEffect(() => {
         console.log('values', values(todo));
         console.log('keys', keys(todo));
-        console.log('entries', entries(todo));
+        console.log('entries', entries(todo)); // [['id', 1], ['todo', 'Закрепить работу с MobX']]
     }, []);
 
     return (
