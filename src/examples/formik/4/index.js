@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 
-import { Checkbox } from './Checkbox';
+import { Checkbox } from '../elements';
 
 const MyForm = () => {
     const initialValues = {

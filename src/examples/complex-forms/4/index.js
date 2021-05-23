@@ -1,0 +1,47 @@
+import data from './form.json';
+import { useFormik } from 'formik';
+
+const Input = (props) => {
+    return (
+      <label>
+        {props.label}
+        <input
+          value = { props.value }
+          placeholder = { props.placeholder }
+          required = { props.required }
+          type = { props.type }
+          name = { props.name }
+          onChange = { (event) => props.handleChange(props.name, event.target.value) }
+        />
+      </label>
+    );
+};
+
+const MyForm = () => {
+  const initialValues = {};
+  data.forEach(({ name }) => initialValues[name] = '');
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit (values) {
+      console.log(values);
+    }
+  });
+
+  const elJSX = data.map((item, index) => <Input
+      key = { index }
+      { ...item }
+      { ...formik.getFieldProps(item.name) }
+      handleChange = { formik.setFieldValue }
+    />
+  );
+
+  return (
+    <form onSubmit = { formik.handleSubmit }>
+        { elJSX }
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+export default MyForm;
