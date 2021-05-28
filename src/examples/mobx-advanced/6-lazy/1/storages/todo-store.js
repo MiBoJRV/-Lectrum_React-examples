@@ -31,7 +31,7 @@ export class Todo {
 
         this.timerId = setInterval(() => {
             console.log('nextFetch', this.nextFetch < Date.now())
-            if(!this.nextFetch || this.nextFetch < Date.now()) {
+            if (!this.nextFetch || this.nextFetch < Date.now()) {
                 this.getTodos();
 
                 this.nextFetch = Date.now() + 10 * 1000;

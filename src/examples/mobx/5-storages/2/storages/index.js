@@ -1,5 +1,5 @@
-import {Todo} from './todo-store';
-import {UiStore} from './ui-store';
+import { Todo } from './todo-store';
+import { UiStore } from './ui-store';
 
 export const store = new (class RootStore {
     constructor() {

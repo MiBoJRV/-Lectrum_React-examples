@@ -31,7 +31,7 @@ const MyForm = () => {
           {errors.name && touched.name && <div>{errors.name}</div>}
           <Field type="email" name="email" />
           {errors.email && touched.email && <div>{errors.email}</div>}
-          <button>Submit</button>
+          <button type='submit'>Submit</button>
         </form>
       )}
     </Formik>

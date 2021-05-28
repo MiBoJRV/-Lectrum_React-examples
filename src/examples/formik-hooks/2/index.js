@@ -10,7 +10,7 @@ const ButtonsGroup = (props) => {
   // setValue(5) → meta.value = 5
   console.log(meta);
 
-  const isSelected = v => (v === value ? 'selected' : '');
+  const isSelected = (v) => (v === value ? 'selected' : '');
 
   return (
     <div>

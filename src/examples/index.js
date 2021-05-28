@@ -1,1 +1,1 @@
-export { default } from './formik';
+export { default } from './redux';

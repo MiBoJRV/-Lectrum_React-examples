@@ -1,1 +1,2 @@
-import './9';
+export { default } from './1';
+

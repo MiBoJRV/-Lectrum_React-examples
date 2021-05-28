@@ -1,4 +1,4 @@
-import { Formik } from 'formik'
+import { Formik } from 'formik';
 
 const MyForm = () => {
     const initialValues = {
@@ -13,8 +13,7 @@ const MyForm = () => {
                 console.log(values);
             }}
         >
-            {props => {
-                console.log('props');
+            {(props) => {
                 console.log(props);
                 return (
                     <form onSubmit={props.handleSubmit}>

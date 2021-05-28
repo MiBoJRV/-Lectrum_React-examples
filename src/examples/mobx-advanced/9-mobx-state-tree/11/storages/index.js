@@ -52,7 +52,7 @@ addMiddleware(todosStore, (call, next, abort) => {
 
     next(call);
 
-    abort('some value');
+    // abort('some value');
 
     return 'value';
 });

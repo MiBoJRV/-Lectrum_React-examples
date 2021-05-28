@@ -17,6 +17,7 @@ const TodosStore = types
         const fetchTodos = flow(function*() {
             const response = yield fetch('https://jsonplaceholder.typicode.com/todos');
             const data = yield response.json();
+
             self.todos.push(...data);
         });
 

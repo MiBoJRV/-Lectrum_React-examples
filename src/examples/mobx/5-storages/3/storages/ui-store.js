@@ -6,6 +6,8 @@ export class UiStore {
 
     constructor(rootStore) {
         makeAutoObservable(this, { rootStore: false });
+
+        rootStore.setIsLoading = this.setIsLoading;
     }
 
     async setIsLoading(status) {

@@ -44,7 +44,7 @@ const Todo = observer(() => {
     return (
         <>
             <h1>Утилиты</h1>
-            <p>Todo: {get(todo, 'todo') || 'Тест задачи отсутствует'}</p>
+            <p>Todo: {get(todo, 'todo') || 'Текст задачи отсутствует'}</p>
             <p>Дедлайн: {has(todo, 'deadline') ? get(todo, 'deadline') : 'Задача безсрочная'}</p>
         </>
     )

@@ -1,6 +1,6 @@
 import { Field } from 'formik';
 
-export const Checkbox = props => {
+export const Checkbox = (props) => {
     return (
         <Field name={props.name}>
             {({ field, form }) => {
@@ -10,7 +10,7 @@ export const Checkbox = props => {
                     <label>
                         <input
                             type="checkbox"
-                            {...props}
+                            {...props} // name="roles" value="admin"
                             checked={field.value.includes(props.value)}
                             onChange={() => {
                                 if (field.value.includes(props.value)) {

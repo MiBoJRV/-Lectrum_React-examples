@@ -27,11 +27,11 @@ const MyForm = () => {
       }}
     >
       {({ errors, touched, handleSubmit }) => (
-        <form  onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className={cx(
             'defaultInput',
             {
-              defaultInput: errors.name && touched.name
+              error: errors.name && touched.name
             }
           )}>
             <Field type="text" name="name" />
@@ -40,7 +40,7 @@ const MyForm = () => {
           <div className={cx(
             'defaultInput',
             {
-              defaultInput: errors.email && touched.email
+              error: errors.email && touched.email
             }
           )}>
             <Field name="email" type="email" />

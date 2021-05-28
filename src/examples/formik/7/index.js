@@ -1,6 +1,6 @@
 import { Formik, Field } from 'formik';
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const validate = (values) => {
   return sleep(2000).then(() => {

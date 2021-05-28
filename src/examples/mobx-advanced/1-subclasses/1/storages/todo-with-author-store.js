@@ -11,7 +11,6 @@ import { Todo } from './todo-store';
  *
  * Рекомендуется отдать предпочтение композиции нежели наследованию.
  * */
-
 class TodoWithAuthor extends Todo {
     title = 'Текст задачи';
     author = '';

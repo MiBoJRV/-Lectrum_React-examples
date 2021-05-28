@@ -28,10 +28,10 @@ const MyForm = () => {
     }
   });
 
-  const elJSX = data.map((item, index) => <Input
+  const elJSX = data.map((filed, index) => <Input
       key = { index }
-      { ...item }
-      { ...formik.getFieldProps(item.name) }
+      { ...filed }
+      { ...formik.getFieldProps(filed.name) }
       handleChange = { formik.setFieldValue }
     />
   );

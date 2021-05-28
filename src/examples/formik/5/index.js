@@ -1,6 +1,6 @@
 import { Formik, Field } from 'formik';
 
-const validateName = value => {
+const validateName = (value) => {
     let error;
 
     if (value === 'admin') {
@@ -22,10 +22,8 @@ const MyForm = () => {
                 console.log(values);
             }}>
             {({ errors, touched, handleSubmit }) => {
-                console.log('errors');
-                console.log(errors);
-                console.log('touched');
-                console.log(touched);
+                console.log('errors', errors);
+                console.log('touched', touched);
                 return (
                     <form onSubmit={handleSubmit}>
                         <Field

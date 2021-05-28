@@ -4,7 +4,7 @@ import { Checkbox } from '../elements';
 
 const MyForm = () => {
     const initialValues = {
-        roles: ['admin'],
+        roles: ['customer'],
     };
 
     return (

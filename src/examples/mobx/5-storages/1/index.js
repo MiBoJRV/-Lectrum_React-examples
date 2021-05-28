@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
 // Other
-import {todoStore, uiStore} from './storages';
+import { todoStore, uiStore } from './storages';
 
 const Todo = observer(() => {
     useEffect(() => {

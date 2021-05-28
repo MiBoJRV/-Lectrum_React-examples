@@ -6,9 +6,12 @@ export class Todo {
 
     constructor(rootStore) {
         makeAutoObservable(this, { rootStore: false });
+
+        this.rootStore = rootStore;
     }
 
     setTitle(value) {
         this.title = value;
+        this.rootStore.setIsLoading();
     }
 };
