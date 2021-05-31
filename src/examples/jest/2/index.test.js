@@ -11,3 +11,7 @@ test('«Person» constructor produces an object with name property', () => {
         name,
     });
 });
+
+test('«Person» constructor produces an object with name property', () => {
+    expect(new Person(name)).toStrictEqual(new Person(name));
+});

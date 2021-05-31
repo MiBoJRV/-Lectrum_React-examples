@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const useCounterManager = (source) => {
     const [count, setCount] = useState(source);

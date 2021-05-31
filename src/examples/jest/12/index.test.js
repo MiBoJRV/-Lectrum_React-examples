@@ -6,6 +6,6 @@ test('«callFuncs» function should call every function passed as argument one t
 
     callFuncs(mock1, mock2);
 
-    expect(mock1).toHaveBeenCalled();
+    expect(mock1).toHaveBeenCalledTimes(1);
     expect(mock2).toHaveBeenCalledTimes(1);
 });

@@ -14,7 +14,7 @@ class User {
 //     expect(new User('Jack')).toMatchSnapshot();
 // });
 
-test('«User» constructor should match its snapshot', () => {
+test('«User» constructor should match its snapshot inline', () => {
     expect(new User('Jack')).toMatchSnapshot({
         created: expect.any(Date),
         id:      expect.any(String),

@@ -1,5 +1,7 @@
-import React from 'react';
+// Core
 import { render, fireEvent, getByTestId } from '@testing-library/react';
+
+// Components
 import { Counter } from './index';
 
 const init = (source) => {

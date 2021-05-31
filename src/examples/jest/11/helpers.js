@@ -1,1 +1,1 @@
-const getUid = () => Math.floor(Math.random() * 255);
+export const getUid = () => Math.floor(Math.random() * 255);

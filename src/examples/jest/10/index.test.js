@@ -9,4 +9,5 @@ class User {
 
 test('«User» constructor should match its snapshot inline', () => {
     expect(new User('Jack')).toMatchSnapshot();
+    // expect(Date).toHaveBeenCalledWith(1);
 });

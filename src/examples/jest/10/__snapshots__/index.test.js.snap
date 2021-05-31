@@ -2,7 +2,7 @@
 
 exports[`«User» constructor should match its snapshot inline 1`] = `
 User {
-  "created": 2021-03-12T18:46:00.253Z,
+  "created": mockConstructor {},
   "name": "Jack",
 }
 `;

@@ -1,7 +1,9 @@
-import React from 'react';
+// Core
 import { render, unmountComponentAtNode } from 'react-dom';
-import Enzyme, { shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+// Components
 import { Counter } from './index';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -16,7 +18,7 @@ const init = (source) => {
 
 describe('Counter component', () => {
     test('Counter should render without crashing', () => {
-        const div = document.createElement("div");
+        const div = document.createElement('div');
         render(<Counter source={0} />, div);
         unmountComponentAtNode(div);
     });

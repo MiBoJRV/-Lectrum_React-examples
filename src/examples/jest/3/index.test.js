@@ -9,6 +9,16 @@ const add = (a, b) => {
 };
 
 test('«add» function throws given a non-number arguments', () => {
+    // expect(add('1', 2)).toThrow();
     expect(() => add('1', 2)).toThrow();
     expect(() => add(3, {})).toThrow(errorMessage);
 });
+
+// NO OP
+// test('«add» function throws given a non-number arguments', () => {
+//     try {
+//         add('1', 2);
+//     } catch ({ name }) {
+//         expect(name).toBe('TypeError');
+//     }
+// });
