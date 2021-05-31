@@ -1,4 +1,4 @@
-const callFuncsExceptFirst = (...funcs) => 
+const callFuncsExceptFirst = (...funcs) =>
     funcs.forEach((func, index) => index !== 0 && func());
 
 const mock1 = jest.fn();

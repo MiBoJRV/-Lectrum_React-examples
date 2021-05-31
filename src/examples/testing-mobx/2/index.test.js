@@ -17,6 +17,7 @@ describe('TodoList component', () => {
     test('Initial render with 0 todos', () => {
         const store = new TodoStore();
         const { container } = init(store);
+
         const liElements = container.querySelectorAll('li');
 
         expect(liElements).toHaveLength(0);

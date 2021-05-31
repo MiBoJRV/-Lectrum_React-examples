@@ -20,7 +20,7 @@ describe('«api.getUsers»:', () => {
                 },
             });
         };
-        
+
         global.fetch = jest.fn(implementation);
     });
 

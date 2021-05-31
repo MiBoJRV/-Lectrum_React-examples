@@ -24,6 +24,7 @@ describe('Counter component', () => {
         const initialValue = Number(counter.textContent);
         expect(initialValue).toBe(source);
     });
+
     test('Increment function should increase value by 1', () => {
         const { counter, increment } = init(0);
         const prevCounter = Number(counter.textContent); // до клика

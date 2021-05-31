@@ -5,7 +5,6 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 // Other
 import { TodoList } from './components';
 import { TodoStore } from './store';
-import { fireEvent } from "@testing-library/react";
 
 Enzyme.configure({ adapter: new Adapter() });
 

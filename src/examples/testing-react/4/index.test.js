@@ -22,6 +22,7 @@ describe('Counter component', () => {
         render(<Counter source={0} />, div);
         unmountComponentAtNode(div);
     });
+
     test('Initial value should be received from property source', () => {
         const source = 0;
         const { wrapper } = init(source);

@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 import { api } from '../api';
 
 export const useUsers = () => {
-    const query = useQuery('users', api.getTodos);
+    const query = useQuery('users', api.getUsers);
 
     return query;
 }

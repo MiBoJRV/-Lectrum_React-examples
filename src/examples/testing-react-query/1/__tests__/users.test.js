@@ -23,7 +23,6 @@ const fakeData = [{
  * будут отправлть реальные запросы на сервер.
  * */
 const interceptor = nock('https://jsonplaceholder.typicode.com')
-    .persist()
     .get('/users')
     .reply(200, fakeData, {'Access-Control-Allow-Origin': '*'});
 

@@ -1,4 +1,4 @@
-const expectedReturn = 22;
+const expectedReturn = 1622482333483;
 const implementation = () => expectedReturn;
 
 describe('«getDate» function:', () => {
