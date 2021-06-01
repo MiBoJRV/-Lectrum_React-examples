@@ -1,6 +1,11 @@
+/**
+ * Переключение примеров происходит в папке
+ * init/rootSaga.js
+ *
+ * import { runExample } from '../examples/1';
+ * */
+
 // Core
-import React from 'react';
-import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
 // Instruments
@@ -9,13 +14,6 @@ import { store } from './init';
 
 // App
 import { Swapi } from './components/Swapi';
-
-// render(
-//     <Provider store = { store }>
-//         <Swapi />
-//     </Provider>,
-//     document.getElementById('root'),
-// );
 
 const Wrapper = () => {
     return (

@@ -1,5 +1,5 @@
 // Core
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Instruments
 import Styles from './styles.module.scss';
