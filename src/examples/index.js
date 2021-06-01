@@ -1,1 +1,1 @@
-export { default } from './redux';
+export { default } from './';
