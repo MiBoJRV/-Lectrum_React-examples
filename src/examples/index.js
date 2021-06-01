@@ -1,1 +1,1 @@
-export { default } from './redux-saga';
+export { default } from './redux-thunk';
