@@ -1,18 +1,18 @@
 import { planetTypes } from '../types/planets';
 
 const initialState = {
-  data: []
+    data: [],
 };
 
 export const planetsReducer = (state = initialState, action) => {
-  switch (action.type) {
+    switch (action.type) {
     case planetTypes.FILL_PLANETS:
-      return {
-          ...state,
-          data: action.payload
-      };
+        return {
+            ...state,
+            data: action.payload,
+        };
 
     default:
-      return state;
-  }
+        return state;
+    }
 };

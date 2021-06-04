@@ -17,8 +17,8 @@ const Example = () => {
 
     return (
         <>
-            <input ref={inputRef} type="text" />
-            <button onClick={focusOnClick}>Input focus</button>
+            <input ref = { inputRef } type = 'text' />
+            <button onClick = { focusOnClick }>Input focus</button>
         </>
     );
 };

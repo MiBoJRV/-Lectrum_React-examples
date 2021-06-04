@@ -5,9 +5,9 @@ import React from 'react';
 import { Planets } from '../components/planets';
 
 export const Home = () => {
-  return (
-    <>
-      <Planets />
-    </>
-  )
+    return (
+        <>
+            <Planets />
+        </>
+    );
 };

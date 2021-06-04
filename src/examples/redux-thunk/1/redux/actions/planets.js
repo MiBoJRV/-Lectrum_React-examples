@@ -8,10 +8,10 @@ import { api } from '../../api';
 
 const fillPlanets = (planets) => {
     return {
-        type: planetTypes.FILL_PLANETS,
+        type:    planetTypes.FILL_PLANETS,
         payload: planets,
-    }
-}
+    };
+};
 
 export const fetchPlanetsAsync = (page) => async (dispatch) => {
     try {
@@ -29,3 +29,4 @@ export const fetchPlanetsAsync = (page) => async (dispatch) => {
         dispatch(uiActions.stopFetching());
     }
 };
+

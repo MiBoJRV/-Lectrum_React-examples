@@ -2,7 +2,7 @@
 import { useDispatch } from 'react-redux';
 
 import {
-  fetchPlanetsAsync
+    fetchPlanetsAsync,
 } from '../redux/actions/planets';
 
 export const useFetchPlanets = () => {
@@ -11,3 +11,4 @@ export const useFetchPlanets = () => {
 
     return { load };
 };
+

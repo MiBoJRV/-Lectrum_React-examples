@@ -9,9 +9,9 @@ import axios from 'axios';
 const errorMessage = 'Error message';
 
 const getVehicle = () => ({
-    id: 'uuid-1',
-    name: 'Sand Crawler',
-    manufacturer: 'Corellia Mining Corporation',
+    id:              'uuid-1',
+    name:            'Sand Crawler',
+    manufacturer:    'Corellia Mining Corporation',
     cost_in_credits: 150000,
 });
 
@@ -21,14 +21,14 @@ const responseDataFail = {
 
 const fetchResponseFail400 = {
     status: 400,
-    json: jest.fn().mockImplementation(() => Promise.resolve(responseDataFail)),
+    json:   jest.fn().mockImplementation(() => Promise.resolve(responseDataFail)),
 };
 
 const responseDataSuccess = { data: { results: [getVehicle()] } };
 
 const fetchResponseSuccess = {
     status: 200,
-    json: jest
+    json:   jest
         .fn()
         .mockImplementation(() => Promise.resolve(responseDataSuccess)),
 };

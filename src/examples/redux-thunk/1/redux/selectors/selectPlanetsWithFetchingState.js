@@ -4,6 +4,7 @@ export const selectPlanetsWithFetchingState = (state) => {
 
     return {
         planets: data,
-        isFetching
-    }
+        isFetching,
+    };
 };
+

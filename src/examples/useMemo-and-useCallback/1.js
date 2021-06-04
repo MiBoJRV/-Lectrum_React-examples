@@ -7,11 +7,12 @@ const CalculateComponent = ({ a, b, text }) => {
     const [title, setTitle] = useState(text);
 
     const updateTitle = () => {
-        setTitle(prevTitle => prevTitle.toUpperCase());
+        setTitle((prevTitle) => prevTitle.toUpperCase());
     };
 
     const sum = (first, second) => {
         console.log('Sum');
+
         return first + second;
     };
 
@@ -21,15 +22,17 @@ const CalculateComponent = ({ a, b, text }) => {
 
     return (
         <>
-            <h1>{title}</h1>
-            <h2>{val}</h2>
-            <button onClick={updateTitle}>Update Title</button>
+            <h1>{ title }</h1>
+            <h2>{ val }</h2>
+            <button onClick = { updateTitle }>Update Title</button>
         </>
     );
 };
 
 const Example = () => {
-    return <CalculateComponent a={1} b={2} text="Sum" />;
+    return <CalculateComponent
+        a = { 1 } b = { 2 }
+        text = 'Sum' />;
 };
 
 export default Example;

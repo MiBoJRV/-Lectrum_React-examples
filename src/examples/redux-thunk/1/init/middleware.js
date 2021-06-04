@@ -4,9 +4,9 @@ import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
 export const logger = createLogger({
-    duration: true,
+    duration:  true,
     collapsed: true,
-    colors: {
+    colors:    {
         title: (action) => {
             return action.error ? 'firebrick' : 'deepskyblue';
         },
@@ -14,7 +14,7 @@ export const logger = createLogger({
         action:    () => '#149945',
         nextState: () => '#A47104',
         error:     () => '#ff0005',
-    }
+    },
 });
 
 const developmentEnvironment = process.env.NODE_ENV === 'development';

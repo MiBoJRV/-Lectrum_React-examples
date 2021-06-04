@@ -6,7 +6,7 @@ const Counter = () => {
 
     setValue(2); // ! Error
 
-    return <h1>{value}</h1>;
+    return <h1>{ value }</h1>;
 };
 
 export default Counter;

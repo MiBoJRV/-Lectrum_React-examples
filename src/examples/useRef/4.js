@@ -28,8 +28,8 @@ const Example = () => {
 
     return (
         <>
-            <button onClick={start}>Start Interval</button>
-            <button onClick={stop}>Stop Interval</button>
+            <button onClick = { start }>Start Interval</button>
+            <button onClick = { stop }>Stop Interval</button>
         </>
     );
 };
