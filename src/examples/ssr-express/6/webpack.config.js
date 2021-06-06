@@ -3,24 +3,28 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-/*-------------------------------------------------*/
-
 module.exports = {
     mode: 'development' === process.env.NODE_ENV ? 'development' : 'production',
     entry: [
-        './src/index.js',
+        './src/index.prod.js',
     ],
     output: {
-        path: path.resolve( __dirname, 'dist' ),
-        filename: 'build/[name].js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'js/[name].[fullhash:8].js',
+        chunkFilename: 'js/[id].[fullhash:8].js'
     },
 
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
-                use: [ 'babel-loader' ]
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
+                }
             },
             {
                 test: /\.scss$/,
@@ -31,22 +35,22 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'build/styles.css'
+            filename: 'css/styles.css'
         }),
         new HTMLWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve( __dirname, 'public/index.html' ),
+            template: path.resolve(__dirname, 'public/index.html'),
             minify: false,
+            inject: 'body',
         }),
-
-        new CopyWebpackPlugin( {
+        new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve( __dirname, 'public' ),
-                    to: path.resolve( __dirname, 'dist' )
+                    from: path.resolve(__dirname, 'public/assets'),
+                    to: path.resolve(__dirname, 'dist')
                 }
             ]
-        } ),
+        }),
     ],
 
     resolve: {

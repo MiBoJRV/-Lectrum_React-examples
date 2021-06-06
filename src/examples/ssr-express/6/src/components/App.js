@@ -2,17 +2,13 @@
 import React from 'react';
 import { Navigate, Route, Routes, Outlet, NavLink } from 'react-router-dom';
 
-// Components
-import { Todos } from './Todos';
-import { About } from './About';
-
 // Other
 import { routes } from '../configs/routes';
 
 // Styles
 import '../styles/mains.scss';
 
-export const App = () => {
+export const App = (props) => {
     return (
         <section className='wrapper'>
             <nav className='navigation'>
@@ -34,7 +30,7 @@ export const App = () => {
             <h1 className='header'>Начинаем погружение в SSR</h1>
 
             <Routes>
-                <Route path = {routes.root.path} element = { <Outlet/> } >
+                <Route path = {routes.root.path} element = { <Outlet /> } >
                     <Route path = {routes.root.path} element = { <routes.todos.component /> } />
                     <Route path = {routes.todos.path} element = { <routes.todos.component /> } />
                 </Route>

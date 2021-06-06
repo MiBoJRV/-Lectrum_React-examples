@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export const Todos = () => {
-    const [todos, setTodos] = useState(Todos.data || []);
+export const Todos = (props) => {
+    const [todos, setTodos] = useState(Todos.data);
 
     useEffect(() => {
-        (async () => {
-            const data = await Todos.fetchData();
+        if (typeof window !== 'undefined' && window.initial_state) {
+            setTodos(window.initial_state);
+        } else {
+            (async () => {
+                const data = await Todos.fetchData();
 
-            setTodos(data);
-        })();
+                setTodos(data);
+            })();
+        }
     }, []);
 
     return (
         <section className='container'>
             <h2>Страница задач</h2>
             <ul>
-                {todos.map((todo, index)=> <li key={index}>{todo.title}</li>)}
+                {todos?.map((todo, index)=> <li key={index}>{todo.title}</li>)}
             </ul>
         </section>
     );
@@ -27,5 +31,3 @@ Todos.fetchData = async () => {
 
     return response.data;
 };
-
-Todos.data = null;

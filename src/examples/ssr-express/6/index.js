@@ -1,6 +1,5 @@
 /**
- * Иллюстрируем проблему невозможности сделать запрос стандартными способами
- * при помощи useEffect
+ * webpack -c webpack.config.js && yarn dev:ssr
  * */
 const path = require('path');
 
