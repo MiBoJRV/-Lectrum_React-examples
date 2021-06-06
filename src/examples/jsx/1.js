@@ -2,7 +2,7 @@
 import { createElement } from 'react';
 import { render } from 'react-dom';
 
-const element1 = <h1 key={0}>Hi, I am a React element.</h1>;
+const element1 = <h1 key = { 0 }>Hi, I am a React element.</h1>;
 
 /**
  * Эти элементы эквивалентны. Разница только в синтаксисе.

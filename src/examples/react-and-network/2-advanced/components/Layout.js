@@ -11,7 +11,7 @@ export const Layout = () => {
             <nav>
                 <h3>Панель</h3>
                 <hr />
-                <NavLink to="/">Все задачи</NavLink>
+                <NavLink to = '/'>Все задачи</NavLink>
                 <Stats />
             </nav>
             <section>
@@ -26,8 +26,8 @@ const Stats = () => {
 
     return (
         <div>
-            Всего задач:{' '}
-            {fetchTodosStatus === STATUS.LOADING ? '...' : todos?.length}
+            Всего задач:{ ' ' }
+            { fetchTodosStatus === STATUS.LOADING ? '...' : todos?.length }
         </div>
     );
 };

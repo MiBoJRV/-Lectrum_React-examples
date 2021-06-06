@@ -4,7 +4,7 @@ import { computed } from 'mobx';
 import { useEffect } from 'react';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 const Todo = observer(() => {
     useEffect(() => {
@@ -24,23 +24,23 @@ const Todo = observer(() => {
 
             return (
                 <li
-                    className={ isSelected === item.id ? 'selected': ''}
-                    onClick={ () => todoStore.setSelectedId(item.id) }
-                    key={item.id}>
-                    {item.todo}
+                    className = { isSelected === item.id ? 'selected' : '' }
+                    onClick = { () => todoStore.setSelectedId(item.id) }
+                    key = { item.id }>
+                    { item.todo }
                 </li>
-            )
-        }
+            );
+        },
     );
 
     return (
         <>
             <h1>Автор</h1>
             <ul>
-                {todosJSX}
+                { todosJSX }
             </ul>
         </>
-    )
+    );
 });
 
 export default Todo;

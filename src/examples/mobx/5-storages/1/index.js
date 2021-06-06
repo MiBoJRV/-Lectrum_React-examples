@@ -7,17 +7,17 @@ import { todoStore, uiStore } from './storages';
 
 const Todo = observer(() => {
     useEffect(() => {
-            setTimeout(() => {
-                uiStore.setStatus(true);
-            }, 2000);
+        setTimeout(() => {
+            uiStore.setStatus(true);
+        }, 2000);
 
-            setTimeout(() => {
-                todoStore.setTitle('Изменённый текст задачи');
-            }, 3000);
+        setTimeout(() => {
+            todoStore.setTitle('Изменённый текст задачи');
+        }, 3000);
 
-            setTimeout(() => {
-                uiStore.setStatus(false);
-            }, 4000);
+        setTimeout(() => {
+            uiStore.setStatus(false);
+        }, 4000);
     }, []);
 
     return (
@@ -26,7 +26,7 @@ const Todo = observer(() => {
             { uiStore.isLoading && <p>Загружаю список задач...</p> }
             { !uiStore.isLoading && <p>{ todoStore.title }</p> }
         </>
-    )
+    );
 });
 
 export default Todo;

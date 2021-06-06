@@ -1,4 +1,3 @@
-// Запуск примера — node src/examples/ssr-express/1
 // Core
 const express = require('express');
 const fs = require('fs');

@@ -1,16 +1,16 @@
 const initialState = {
-  message: ''
+    message: '',
 };
 
 export const errorReducer = (state = initialState, action) => {
-  switch (action.type) {
+    switch (action.type) {
     case 'MIDDLEWARE_ERROR':
-      return {
-        ...state,
-        message: action.payload
-      };
-    
+        return {
+            ...state,
+            message: action.payload,
+        };
+
     default:
-      return state;
-  }
+        return state;
+    }
 };

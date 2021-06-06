@@ -10,13 +10,13 @@ export const TodoList = observer(({ store }) => {
     return (
         <div>
             <ul>
-                {store.todos.map((todo, idx) => (
-                    <TodoView todo={todo} key={idx} />
-                ))}
+                { store.todos.map((todo, idx) => (
+                    <TodoView todo = { todo } key = { idx } />
+                )) }
             </ul>
-            {store.pendingRequests > 0 ? <p>Загрузка...</p> : null}
+            { store.pendingRequests > 0 ? <p>Загрузка...</p> : null }
             <div>
-                <button onClick={onNewTodo}>Новая задача</button>
+                <button onClick = { onNewTodo }>Новая задача</button>
             </div>
         </div>
     );

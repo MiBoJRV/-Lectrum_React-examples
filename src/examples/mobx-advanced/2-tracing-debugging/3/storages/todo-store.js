@@ -8,13 +8,13 @@ export class Todo {
         makeAutoObservable(this);
     }
 
-    get upperCasedTitle () {
+    get upperCasedTitle() {
         return this.title.toUpperCase();
     }
 
     setTitle(value) {
         this.title = value;
     }
-};
+}
 
 export const todoStore = new Todo();

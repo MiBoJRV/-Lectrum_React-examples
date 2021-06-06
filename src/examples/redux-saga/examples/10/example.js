@@ -7,7 +7,9 @@
  */
 
 // Core
-import { takeLatest, put, call, apply, delay } from 'redux-saga/effects';
+import {
+    takeLatest, put, call, apply, delay,
+} from 'redux-saga/effects';
 
 // Instruments
 import { types } from '../../bus/swapi/types';

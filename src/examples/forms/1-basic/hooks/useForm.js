@@ -11,7 +11,7 @@ export const useForm = (initialState) => {
         setForm((prevForm) => {
             return {
                 ...prevForm,
-                [name]: value,
+                [ name ]: value,
             };
         });
     };

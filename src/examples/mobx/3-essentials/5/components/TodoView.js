@@ -14,15 +14,14 @@ export const TodoView = observer(({ todo }) => {
     };
 
     return (
-        <li onDoubleClick={onRename}>
+        <li onDoubleClick = { onRename }>
             <input
-                type='checkbox'
-                checked={todo.completed}
-                onChange={onToggleCompleted}
-            />
-            {todo.task}
-            {todo.assignee ? <small>{todo.assignee.name}</small> : null}
-            <RenderCount title='TodoView' />
+                type = 'checkbox'
+                checked = { todo.completed }
+                onChange = { onToggleCompleted } />
+            { todo.task }
+            { todo.assignee ? <small>{ todo.assignee.name }</small> : null }
+            <RenderCount title = 'TodoView' />
         </li>
     );
 });

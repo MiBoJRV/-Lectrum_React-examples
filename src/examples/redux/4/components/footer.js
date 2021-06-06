@@ -5,12 +5,12 @@ import React from 'react';
 import { useTheme } from '../hooks/useTheme';
 
 export const Footer = () => {
-  const { current } = useTheme();
+    const { current } = useTheme();
 
-  return (
-    <footer>
-      <h1>Footer</h1>
-      <h2>Current theme is { current }</h2>
-    </footer>
-  )
+    return (
+        <footer>
+            <h1>Footer</h1>
+            <h2>Current theme is { current }</h2>
+        </footer>
+    );
 };

@@ -5,12 +5,12 @@ import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
 // Other
-import {store} from './storages';
+import { store } from './storages';
 
 const Todo = observer(() => {
     useEffect(() => {
         (async () => {
-            autorun( () => {
+            autorun(() => {
                 console.log(store.ui.isLoading);
                 trace(); // помогает продебажить компонент
             });
@@ -23,7 +23,7 @@ const Todo = observer(() => {
 
             await wait(1000);
             await store.ui.setIsLoading(false);
-        })()
+        })();
     }, []);
 
     return (
@@ -32,7 +32,7 @@ const Todo = observer(() => {
             { store.ui.isLoading && <p>Загружаю список задач...</p> }
             { !store.ui.isLoading && <p>{ store.todo.title }</p> }
         </>
-    )
+    );
 });
 
 export default Todo;

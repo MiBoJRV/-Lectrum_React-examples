@@ -2,7 +2,7 @@
 import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
-import {store} from './storages';
+import { store } from './storages';
 
 const Todo = observer(() => {
     useEffect(() => {
@@ -12,29 +12,29 @@ const Todo = observer(() => {
     const todosJSX = store.todos.map((item, index) => {
         return (
             <li
-                className={item.completed ? 'completed': ''}
-                key={item.id}
+                className = { item.completed ? 'completed' : '' }
+                key = { item.id }
                 // [Todo, Todo]
-                onClick = {() => store.todos[index].complete()}>
-                {item.todo}
+                onClick = { () => store.todos[ index ].complete() }>
+                { item.todo }
             </li>
-        )
+        );
     });
-    const authorsJSX = store.authors.map((item) => <li key={item.id}>{item.name}</li>);
+    const authorsJSX = store.authors.map((item) => <li key = { item.id }>{ item.name }</li>);
 
     return (
         <>
             <h1>MST</h1>
             <ol>
-                {todosJSX}
+                { todosJSX }
             </ol>
-            <hr/>
+            <hr />
             <h2>Авторы</h2>
             <ol>
-                {authorsJSX}
+                { authorsJSX }
             </ol>
         </>
-    )
+    );
 });
 
 export default Todo;

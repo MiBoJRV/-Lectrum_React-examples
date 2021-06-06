@@ -13,13 +13,13 @@ const Counter = () => {
 
     return (
         <>
-            <h1>Count 1: {count1}</h1>
-            <button onClick={() => setCount1(count1 + 1)}>
+            <h1>Count 1: { count1 }</h1>
+            <button onClick = { () => setCount1(count1 + 1) }>
                 Increment Counter 1
             </button>
 
-            <h1>Count 1: {count2}</h1>
-            <button onClick={() => setCount2(count2 + 1)}>
+            <h1>Count 1: { count2 }</h1>
+            <button onClick = { () => setCount2(count2 + 1) }>
                 Increment Counter 2
             </button>
         </>

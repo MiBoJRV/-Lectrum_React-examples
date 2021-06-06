@@ -1,15 +1,17 @@
 // Core
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import {
+    render, screen, fireEvent, waitFor,
+} from '@testing-library/react';
 
 // Components
-import { Form } from '../';
+import { Form } from '..';
 
 const init = (func = jest.fn()) => {
-    const { container, rerender } = render(<Form handleFormSubmit={ func } />);
+    const { container, rerender } = render(<Form handleFormSubmit = { func } />);
 
     return {
         container,
-        rerender
+        rerender,
     };
 };
 
@@ -53,21 +55,21 @@ describe('Form component', () => {
 
         fireEvent.input(email, {
             target: {
-                value: emailValue
-            }
+                value: emailValue,
+            },
         });
 
         fireEvent.input(password, {
             target: {
-                value: passwordValue
-            }
+                value: passwordValue,
+            },
         });
 
         fireEvent.submit(submitBtn);
 
         await waitFor(() => {
             expect(mockSave).toHaveBeenNthCalledWith(1, {
-                email: emailValue,
+                email:    emailValue,
                 password: passwordValue,
             });
         });

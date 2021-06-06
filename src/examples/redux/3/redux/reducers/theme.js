@@ -1,7 +1,7 @@
 const initialState = {
-  current: 'default'
+    current: 'default',
 };
 
 export const themeReducer = (state = initialState) => {
-  return state;
+    return state;
 };

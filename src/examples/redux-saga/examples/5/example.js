@@ -9,7 +9,9 @@
  */
 
 // Core
-import { take, put, call, apply, fork } from 'redux-saga/effects';
+import {
+    take, put, call, apply, fork,
+} from 'redux-saga/effects';
 
 // Instruments
 import { types } from '../../bus/swapi/types';

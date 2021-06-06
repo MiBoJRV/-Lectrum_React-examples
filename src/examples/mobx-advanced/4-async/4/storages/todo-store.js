@@ -8,7 +8,7 @@ export class Todo {
         makeAutoObservable(this);
     }
 
-    async getTodos () {
+    async getTodos() {
         const response = await fetch('https://jsonplaceholder.typicode.com/todos');
         const data = await response.json();
 
@@ -16,6 +16,6 @@ export class Todo {
             this.todos = data;
         });
     }
-};
+}
 
 export const todoStore = new Todo();

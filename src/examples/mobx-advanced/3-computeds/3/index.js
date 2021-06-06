@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 /**
  * Ещё одним из возможных вариантов решения данной задачи можно считать
@@ -18,23 +18,23 @@ const Todo = observer(() => {
         (item) => {
             return (
                 <li
-                    className={ item.isSelected ? 'selected': ''}
-                    onClick={ () => todoStore.setSelected(item.id) }
-                    key={item.id}>
-                    {item.todo}
+                    className = { item.isSelected ? 'selected' : '' }
+                    onClick = { () => todoStore.setSelected(item.id) }
+                    key = { item.id }>
+                    { item.todo }
                 </li>
-            )
-        }
+            );
+        },
     );
 
     return (
         <>
             <h1>Автор</h1>
             <ul>
-                {todosJSX}
+                { todosJSX }
             </ul>
         </>
-    )
+    );
 });
 
 export default Todo;

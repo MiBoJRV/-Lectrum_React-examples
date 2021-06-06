@@ -27,12 +27,12 @@ const element3 = createElement(
     {
         style: {
             backgroundColor: 'rebeccapurple',
-            marginTop: 15,
-            width: 100,
-            height: 100,
-            borderRadius: '50%',
-            userSelect: 'none',
-            cursor: 'pointer',
+            marginTop:       15,
+            width:           100,
+            height:          100,
+            borderRadius:    '50%',
+            userSelect:      'none',
+            cursor:          'pointer',
         },
         key: 2,
     },

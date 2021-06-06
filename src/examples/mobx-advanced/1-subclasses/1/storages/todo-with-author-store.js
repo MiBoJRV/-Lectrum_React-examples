@@ -17,7 +17,7 @@ class TodoWithAuthor extends Todo {
     deadline = Date.now() + 86400000; // поле которое не аннотировано в суперклассе может быть использовано в сабклассе
 
     // Вычисляемые поля могут быть определены
-    get formattedDate () {
+    get formattedDate() {
         return new Date(this.deadline).toLocaleDateString();
     }
 
@@ -25,8 +25,8 @@ class TodoWithAuthor extends Todo {
         super();
         makeObservable(this, {
             // title: observable, // Ошибка, это свойство уже определено в суперклассе
-            deadline: observable,
-            author: observable,
+            deadline:  observable,
+            author:    observable,
             setAuthor: action,
         });
     }
@@ -34,6 +34,6 @@ class TodoWithAuthor extends Todo {
     setAuthor(author) {
         this.author = author;
     }
-};
+}
 
 export const todoWithAuthorStore = new TodoWithAuthor();

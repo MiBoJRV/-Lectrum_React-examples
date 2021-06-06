@@ -15,20 +15,18 @@ export const TodoListView = () => {
     return (
         <>
             <TodoList
-                isFetched={fetchTodosQ.isFetched}
-                isLoading={fetchTodosQ.isLoading}
-                isFetching={fetchTodosQ.isFetching}
-                todos={fetchTodosQ.data}
-                status={fetchTodosQ.status}
-                error={fetchTodosQ.error}
-                deleteTodo={deleteTodoM.mutateAsync}
-            />
+                isFetched = { fetchTodosQ.isFetched }
+                isLoading = { fetchTodosQ.isLoading }
+                isFetching = { fetchTodosQ.isFetching }
+                todos = { fetchTodosQ.data }
+                status = { fetchTodosQ.status }
+                error = { fetchTodosQ.error }
+                deleteTodo = { deleteTodoM.mutateAsync } />
 
             <ManageTodoForm
-                title="Создать задачу"
-                status={createTodoM.status}
-                onSubmit={createTodoM.mutateAsync}
-            />
+                title = 'Создать задачу'
+                status = { createTodoM.status }
+                onSubmit = { createTodoM.mutateAsync } />
         </>
     );
 };
@@ -46,14 +44,15 @@ export const TodoByIdView = () => {
 
     return (
         <>
-            <TodoView status={fetchTodoStatus} error={error} todo={todo} />
+            <TodoView
+                status = { fetchTodoStatus } error = { error }
+                todo = { todo } />
 
             <ManageTodoForm
-                title="Обновить задачу"
-                status={updateTodoStatus}
-                initialValues={todo}
-                onSubmit={updateTodo}
-            />
+                title = 'Обновить задачу'
+                status = { updateTodoStatus }
+                initialValues = { todo }
+                onSubmit = { updateTodo } />
         </>
     );
 };

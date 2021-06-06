@@ -3,7 +3,7 @@ class TodoStore {
     progress = '';
 
     get completedTodosCount() {
-        return this.todos.filter(todo => todo.completed === true).length;
+        return this.todos.filter((todo) => todo.completed === true).length;
     }
 
     report() {
@@ -11,7 +11,7 @@ class TodoStore {
             this.progres = 'Нет тудушек';
 
             return this.progress;
-        };
+        }
 
         this.progress = `Прогресс всего/выполнено: ${this.completedTodosCount}/${this.todos.length}`;
 
@@ -20,7 +20,7 @@ class TodoStore {
 
     addTodo(task) {
         this.todos.push({
-            task: task,
+            task,
             completed: false,
         });
     }

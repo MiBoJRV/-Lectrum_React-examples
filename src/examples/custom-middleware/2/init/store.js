@@ -6,9 +6,9 @@ import { rootReducer } from './rootReducer';
 import {
     composeEnhancers,
     middleware,
- } from './middleware';
+} from './middleware';
 
 export const store = createStore(
     rootReducer,
-    composeEnhancers(applyMiddleware(...middleware))
+    composeEnhancers(applyMiddleware(...middleware)),
 );

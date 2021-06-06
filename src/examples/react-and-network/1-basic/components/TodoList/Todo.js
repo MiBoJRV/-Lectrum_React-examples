@@ -12,15 +12,15 @@ export const Todo = (props) => {
     return (
         <li>
             <section>
-                <h3>{props.todo.title}</h3>
-                <p>{props.todo.body}</p>
+                <h3>{ props.todo.title }</h3>
+                <p>{ props.todo.body }</p>
             </section>
 
-            {props.deleteTodo && (
-                <button disabled={isFetching} onClick={deleteTodo}>
+            { props.deleteTodo && (
+                <button disabled = { isFetching } onClick = { deleteTodo }>
                     X
                 </button>
-            )}
+            ) }
         </li>
     );
 };

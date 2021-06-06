@@ -13,7 +13,7 @@ const App = () => {
         <Provider store = { store }>
             <Home />
         </Provider>
-    )
+    );
 };
 
 export default App;

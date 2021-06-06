@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 /**
  * Данный пример будет работать и без вычисляемых полей.
@@ -28,23 +28,23 @@ const Todo = observer(() => {
         (item) => {
             return (
                 <li
-                    className={todoStore.selectedId === item.id ? 'selected': ''}
-                    onClick={() => { todoStore.setSelectedId(item.id) }}
-                    key={item.id}>
-                    {item.todo}
+                    className = { todoStore.selectedId === item.id ? 'selected' : '' }
+                    onClick = { () => { todoStore.setSelectedId(item.id); } }
+                    key = { item.id }>
+                    { item.todo }
                 </li>
-            )
-        }
+            );
+        },
     );
 
     return (
         <>
             <h1>Автор</h1>
             <ul>
-                {todosJSX}
+                { todosJSX }
             </ul>
         </>
-    )
+    );
 });
 
 export default Todo;

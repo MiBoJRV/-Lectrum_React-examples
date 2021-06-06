@@ -29,9 +29,9 @@ const Page = () => {
 
     return (
         <>
-            <h1>{context.title}</h1>
+            <h1>{ context.title }</h1>
             <p>
-                Page: <code>{context.page}</code>
+                Page: <code>{ context.page }</code>
             </p>
         </>
     );
@@ -39,7 +39,7 @@ const Page = () => {
 
 const Wrapper = () => {
     return (
-        <Context.Provider value={data}>
+        <Context.Provider value = { data }>
             <Library />
         </Context.Provider>
     );

@@ -9,7 +9,7 @@ import { TodoStore } from './store';
 Enzyme.configure({ adapter: new Adapter() });
 
 const init = (store) => {
-    const wrapper = mount(<TodoList store={ store } />);
+    const wrapper = mount(<TodoList store = { store } />);
 
     return wrapper;
 };

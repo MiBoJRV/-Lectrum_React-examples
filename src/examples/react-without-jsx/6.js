@@ -9,7 +9,7 @@ const callback = () => {
 };
 
 render(
-    element, 
-    document.getElementById('root'), 
+    element,
+    document.getElementById('root'),
     callback,
 );

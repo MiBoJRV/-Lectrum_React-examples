@@ -9,19 +9,19 @@ import { types } from 'mobx-state-tree';
  * */
 const Todo = types
     .model('Todo', {
-        id: Date.now(),
-        todo: types.string,
-        completed: false // автоматически определяется тип и устанавливается дефолтное значение
+        id:        Date.now(),
+        todo:      types.string,
+        completed: false, // автоматически определяется тип и устанавливается дефолтное значение
     });
 
 const TodosStore = types
     .model('TodosStore', {
-        todos: types.array(Todo)
+        todos: types.array(Todo),
     })
     .actions((self) => ({
         addTodo(todo) {
             self.todos.push({ id: Date.now(), todo });
-        }
+        },
     }));
 
 /**
@@ -30,7 +30,7 @@ const TodosStore = types
 export const todosStore = TodosStore.create({
     todos: [
         {
-            todo: 'Посмотреть под микроскопом на MST'
-        }
-    ]
+            todo: 'Посмотреть под микроскопом на MST',
+        },
+    ],
 });

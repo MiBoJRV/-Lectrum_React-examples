@@ -1,19 +1,19 @@
 const initialState = {
-  current: 'default'
+    current: 'default',
 };
 
 export const themeReducer = (state = initialState, action) => {
-  switch (action.type) {
+    switch (action.type) {
     case 'CHANGE_THEME_TO_DEFAULT':
-      return {
-        current: 'default'
-      };
+        return {
+            current: 'default',
+        };
     case 'CHANGE_THEME_TO_DARK':
-      return {
-        current: 'dark'
-      };
+        return {
+            current: 'dark',
+        };
 
     default:
-      return state;
-  }
+        return state;
+    }
 };

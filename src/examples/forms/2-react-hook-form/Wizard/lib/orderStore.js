@@ -6,10 +6,10 @@ import { options } from './config';
 
 export const initialState = {
     firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    product: options[0].value,
+    lastName:  '',
+    email:     '',
+    phone:     '',
+    product:   options[ 0 ].value,
 };
 
 class OrderStore {

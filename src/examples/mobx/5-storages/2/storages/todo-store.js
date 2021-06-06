@@ -11,4 +11,4 @@ export class Todo {
     setTitle(value) {
         this.title = value;
     }
-};
+}

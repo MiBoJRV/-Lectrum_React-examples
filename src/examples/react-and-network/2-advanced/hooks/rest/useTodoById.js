@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { api } from '../../../api';
 import { STATUS } from './status';
 
-export const useTodoById = todoId => {
+export const useTodoById = (todoId) => {
     const navigate = useNavigate();
 
     const [todo, setTodo] = useState(null);
@@ -21,6 +21,7 @@ export const useTodoById = todoId => {
 
             if (!todoById) {
                 navigate('/', { replace: true });
+
                 return null;
             }
 

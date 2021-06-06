@@ -10,16 +10,15 @@ export const TodoView = observer(({ todo }) => {
     };
 
     return (
-        <li onDoubleClick={onRename}>
+        <li onDoubleClick = { onRename }>
             <input
-                type='checkbox'
-                checked={todo.completed}
-                onChange={onToggleCompleted}
-            />
-            {todo.task}
-            {todo.assignee ? (
-                <small> Исполнитель: {todo.assignee.name}</small>
-            ) : null}
+                type = 'checkbox'
+                checked = { todo.completed }
+                onChange = { onToggleCompleted } />
+            { todo.task }
+            { todo.assignee ? (
+                <small> Исполнитель: { todo.assignee.name }</small>
+            ) : null }
         </li>
     );
 });

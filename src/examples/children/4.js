@@ -19,8 +19,8 @@ const Parent = () => {
         <Child>
             <p>Lorem</p>
             <p>ipsum</p>
-            <p children="dolor" />
-            <p children="sit amet!" />
+            <p children = 'dolor' />
+            <p children = 'sit amet!' />
         </Child>
     );
 };

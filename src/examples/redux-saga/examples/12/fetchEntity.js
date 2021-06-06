@@ -1,5 +1,7 @@
 // Core
-import { put, call, apply, delay } from 'redux-saga/effects';
+import {
+    put, call, apply, delay,
+} from 'redux-saga/effects';
 
 // Instruments
 import { swapiActions } from '../../bus/swapi/actions';

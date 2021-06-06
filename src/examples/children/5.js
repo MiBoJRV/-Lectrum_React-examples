@@ -1,13 +1,13 @@
 /* Core */
 import { Children } from 'react';
 
-const Child = props => {
+const Child = (props) => {
     const childrenCount = Children.count(props.children);
 
     return (
         <>
-            <h1>Component have {childrenCount} children:</h1>
-            {props.children}
+            <h1>Component have { childrenCount } children:</h1>
+            { props.children }
         </>
     );
 };

@@ -4,8 +4,8 @@ import { render } from 'react-dom';
 
 // Prior Fragment release
 const element1 = [
-    <h1 key="0">Welcome!</h1>,
-    <p key="1">Lorem ipsum dolor sit amet!</p>,
+    <h1 key = '0'>Welcome!</h1>,
+    <p key = '1'>Lorem ipsum dolor sit amet!</p>,
 ];
 
 const element2 = (
@@ -24,7 +24,7 @@ const element3 = (
 
 render(
     <>
-        {element1} {element2} {element3}
+        { element1 } { element2 } { element3 }
     </>,
     document.getElementById('root'),
 );

@@ -12,12 +12,12 @@ export const TodoListView = () => {
     const createTodoM = hooks.useCreateTodo();
     const deleteTodoM = hooks.useDeleteTodo();
 
-    const createTodoAsync = async values => {
+    const createTodoAsync = async (values) => {
         await createTodoM.createTodo(values);
         await fetchTodosQ.refetch();
     };
 
-    const deleteTodoAsync = async id => {
+    const deleteTodoAsync = async (id) => {
         await deleteTodoM.deleteTodo(id);
         await fetchTodosQ.refetch();
     };
@@ -25,17 +25,15 @@ export const TodoListView = () => {
     return (
         <>
             <TodoList
-                todos={fetchTodosQ.todos}
-                status={fetchTodosQ.status}
-                error={fetchTodosQ.error}
-                deleteTodo={deleteTodoAsync}
-            />
+                todos = { fetchTodosQ.todos }
+                status = { fetchTodosQ.status }
+                error = { fetchTodosQ.error }
+                deleteTodo = { deleteTodoAsync } />
 
             <ManageTodoForm
-                title="Создать задачу"
-                status={createTodoM.status}
-                onSubmit={createTodoAsync}
-            />
+                title = 'Создать задачу'
+                status = { createTodoM.status }
+                onSubmit = { createTodoAsync } />
         </>
     );
 };
@@ -43,12 +41,14 @@ export const TodoListView = () => {
 export const TodoByIdView = () => {
     const { todoId } = useParams();
 
-    const { todo, status: fetchTodoStatus, error, refetch } = hooks.useTodoById(
+    const {
+        todo, status: fetchTodoStatus, error, refetch,
+    } = hooks.useTodoById(
         todoId,
     );
     const { updateTodo, status: updateTodoStatus } = hooks.useUpdateTodo();
 
-    const updateTodoAsync = async values => {
+    const updateTodoAsync = async (values) => {
         try {
             await updateTodo(values);
             await refetch();
@@ -59,14 +59,15 @@ export const TodoByIdView = () => {
 
     return (
         <>
-            <TodoView status={fetchTodoStatus} error={error} todo={todo} />
+            <TodoView
+                status = { fetchTodoStatus } error = { error }
+                todo = { todo } />
 
             <ManageTodoForm
-                title="Обновить задачу"
-                status={updateTodoStatus}
-                initialValues={todo}
-                onSubmit={updateTodoAsync}
-            />
+                title = 'Обновить задачу'
+                status = { updateTodoStatus }
+                initialValues = { todo }
+                onSubmit = { updateTodoAsync } />
         </>
     );
 };

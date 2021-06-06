@@ -3,17 +3,20 @@ import { makeAutoObservable } from 'mobx';
 import { computedFn } from 'mobx-utils';
 
 export class Todo {
-    todos = [{
-        id: Date.now(),
-        todo: 'Закрепить работу с MobX'
-    }];
+    todos = [
+        {
+            id:   Date.now(),
+            todo: 'Закрепить работу с MobX',
+        },
+    ];
+
     id = null;
 
     constructor() {
         makeAutoObservable(this);
     }
 
-    setSelectedId (id) {
+    setSelectedId(id) {
         this.id = id;
     }
 
@@ -24,9 +27,9 @@ export class Todo {
     addTodo(todo) {
         this.todos.push({
             id: Date.now(),
-            todo
+            todo,
         });
     }
-};
+}
 
 export const todoStore = new Todo();

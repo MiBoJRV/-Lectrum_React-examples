@@ -10,7 +10,7 @@ const element2 = isPizzaOpen && welcome;
 
 render(
     <>
-        {element1} {element2}
+        { element1 } { element2 }
     </>,
     document.getElementById('root'),
 );

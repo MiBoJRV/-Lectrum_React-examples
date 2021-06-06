@@ -24,22 +24,22 @@ import { types } from 'mobx-state-tree';
  * */
 const Todo = types
     .model('Todo', {
-        id: Date.now(),
-        todo: types.string,
-        completed: false,
+        id:          Date.now(),
+        todo:        types.string,
+        completed:   false,
         description: types.optional(types.string, ''),
-        deadline: types.optional(types.Date, new Date()),
-        item: types.optional(types.union(types.string, types.number), '')
+        deadline:    types.optional(types.Date, new Date()),
+        item:        types.optional(types.union(types.string, types.number), ''),
     });
 
 const TodosStore = types
     .model('TodosStore', {
-        todos: types.array(Todo)
+        todos: types.array(Todo),
     })
     .actions((self) => ({
         addTodo(todo) {
             self.todos.push({ id: Date.now(), todo, item: {} }); // item должен быть строкой или объектом
-        }
+        },
     }));
 
 export const todosStore = TodosStore.create({
@@ -47,6 +47,6 @@ export const todosStore = TodosStore.create({
         {
             todo: 'Посмотреть под микроскопом на MST',
             item: 0,
-        }
-    ]
+        },
+    ],
 });

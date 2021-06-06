@@ -9,7 +9,9 @@
  */
 
 // Core
-import { take, call, apply, put } from 'redux-saga/effects';
+import {
+    take, call, apply, put,
+} from 'redux-saga/effects';
 
 // Instruments
 import { types } from '../../bus/swapi/types';
@@ -21,7 +23,7 @@ export function* runExample() {
         const action = yield take(types.FETCH_PLANETS_ASYNC);
 
         yield put(swapiActions.setIsFetching(true));
-        const response = yield call(api.fetchPlanets, [ action.payload ]);
+        const response = yield call(api.fetchPlanets, [action.payload]);
         const data = yield apply(response, response.json);
 
         yield put(swapiActions.fillPlanets(data.results));

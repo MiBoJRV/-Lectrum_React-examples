@@ -5,5 +5,5 @@ export const api = Object.freeze({
         const data = await axios.get('https://jsonplaceholder.typicode.com/users');
 
         return data;
-    }
-})
+    },
+});

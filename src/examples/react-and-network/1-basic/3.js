@@ -18,7 +18,7 @@ const Example = () => {
         })();
     }, []);
 
-    return <TodoList todos={todos} />;
+    return <TodoList todos = { todos } />;
 };
 
 export default Example;

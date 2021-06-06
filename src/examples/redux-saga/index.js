@@ -20,7 +20,7 @@ const Wrapper = () => {
         <Provider store = { store }>
             <Swapi />
         </Provider>
-    )
+    );
 };
 
 export default Wrapper;

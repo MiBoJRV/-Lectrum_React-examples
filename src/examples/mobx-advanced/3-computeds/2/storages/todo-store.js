@@ -2,10 +2,13 @@
 import { makeAutoObservable } from 'mobx';
 
 export class Todo {
-    todos = [{
-        id: Date.now(),
-        todo: 'Закрепить работу с MobX'
-    }];
+    todos = [
+        {
+            id:   Date.now(),
+            todo: 'Закрепить работу с MobX',
+        },
+    ];
+
     selectedId = null;
 
     constructor() {
@@ -19,9 +22,9 @@ export class Todo {
     addTodo(todo) {
         this.todos.push({
             id: Date.now(),
-            todo
+            todo,
         });
     }
-};
+}
 
 export const todoStore = new Todo();

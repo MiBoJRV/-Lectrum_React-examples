@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { getDependencyTree } from 'mobx';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 console.log(getDependencyTree(todoStore, 'upperCasedTitle'));
 
@@ -19,7 +19,7 @@ const Todo = observer(() => {
             <p>{ todoStore.title }</p>
             <p>{ todoStore.upperCasedTitle }</p>
         </>
-    )
+    );
 });
 
 export default Todo;

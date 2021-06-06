@@ -1,9 +1,9 @@
 // Core
-import {makeAutoObservable} from 'mobx';
+import { makeAutoObservable } from 'mobx';
 
 // Other
-import {Todo} from './todo-store';
-import {UiStore} from './ui-store';
+import { Todo } from './todo-store';
+import { UiStore } from './ui-store';
 
 class RootStore {
     meta = 'Some Ver';
@@ -13,6 +13,6 @@ class RootStore {
         this.ui = new UiStore(this);
         this.todo = new Todo(this);
     }
-};
+}
 
 export const store = new RootStore();

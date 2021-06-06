@@ -6,7 +6,7 @@ import { runExample } from '../examples/1';
 
 export function* rootSaga() {
     try {
-        yield all([ runExample() ]);
+        yield all([runExample()]);
     } catch (error) {
         console.log('→ error caught', error);
     }

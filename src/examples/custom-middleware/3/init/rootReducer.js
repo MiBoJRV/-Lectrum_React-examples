@@ -7,5 +7,5 @@ import { errorReducer as error } from './errorReducer';
 
 export const rootReducer = combineReducers({
     theme,
-    error
+    error,
 });

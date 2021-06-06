@@ -8,13 +8,14 @@ const Form = () => {
         setName(event.target.value);
     };
 
-    const submitForm = event => {
+    const submitForm = (event) => {
         event.preventDefault();
 
         const minChars = 3;
 
         if (name.length < minChars) {
             alert(`Минимальная длина поля «Имя» — ${minChars} символа`);
+
             return null;
         }
         console.log(`Форма отправлена: ${name}`);
@@ -24,14 +25,13 @@ const Form = () => {
     console.log('🖥 Рендер.');
 
     return (
-        <form onSubmit={submitForm}>
+        <form onSubmit = { submitForm }>
             <input
-                type="text"
-                placeholder="Ваше имя..."
-                value={name}
-                onChange={updateName}
-            />
-            <button type="submit">Отправить</button>
+                type = 'text'
+                placeholder = 'Ваше имя...'
+                value = { name }
+                onChange = { updateName } />
+            <button type = 'submit'>Отправить</button>
         </form>
     );
 };

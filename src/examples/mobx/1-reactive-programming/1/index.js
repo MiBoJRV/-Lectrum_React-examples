@@ -30,9 +30,9 @@ const App = () => {
         <section>
             <h2>Observable</h2>
             <ul>
-                {observables.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
+                { observables.map((item, index) => (
+                    <li key = { index }>{ item }</li>
+                )) }
             </ul>
         </section>
     );

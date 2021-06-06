@@ -3,22 +3,22 @@ const Child = (props) => {
 
     return (
         <h1>
-            Hi, {firstName} {lastName}!
+            Hi, { firstName } { lastName }!
         </h1>
     );
 };
 
 const profile = {
     firstName: 'Hermione',
-    lastName: 'Granger',
-    age: 20,
+    lastName:  'Granger',
+    age:       20,
 };
 
 const Parent = () => {
     return (
         <>
-            <Child {...profile} />
-            <Child firstName={profile.firstName} lastName={profile.lastName} />
+            <Child { ...profile } />
+            <Child firstName = { profile.firstName } lastName = { profile.lastName } />
         </>
     );
 };

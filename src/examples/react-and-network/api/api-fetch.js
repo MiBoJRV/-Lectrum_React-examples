@@ -24,7 +24,7 @@ export const api = {
     },
     async createTodo(newTodo) {
         const response = await fetch(`${API_URL}/todos`, {
-            method: 'POST',
+            method:  'POST',
             headers: {
                 'Content-Type': 'application/json', // ! Обязательно !
             },
@@ -41,7 +41,7 @@ export const api = {
         const { id, created, ...todoPayload } = newTodo;
 
         const response = await fetch(`${API_URL}/todos/${id}`, {
-            method: 'PUT',
+            method:  'PUT',
             headers: {
                 'Content-Type': 'application/json', // ! Обязательно !
             },

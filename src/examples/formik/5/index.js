@@ -17,27 +17,27 @@ const MyForm = () => {
 
     return (
         <Formik
-            initialValues={initialValues}
-            onSubmit={values => {
+            initialValues = { initialValues }
+            onSubmit = { (values) => {
                 console.log(values);
-            }}>
-            {({ errors, touched, handleSubmit }) => {
+            } }>
+            { ({ errors, touched, handleSubmit }) => {
                 console.log('errors', errors);
                 console.log('touched', touched);
+
                 return (
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit = { handleSubmit }>
                         <Field
-                            type="text"
-                            validate={validateName}
-                            name="name"
-                        />
-                        {errors.name && touched.name && (
-                            <div>{errors.name}</div>
-                        )}
-                        <button type="submit">Submit</button>
+                            type = 'text'
+                            validate = { validateName }
+                            name = 'name' />
+                        { errors.name && touched.name && (
+                            <div>{ errors.name }</div>
+                        ) }
+                        <button type = 'submit'>Submit</button>
                     </form>
                 );
-            }}
+            } }
         </Formik>
     );
 };

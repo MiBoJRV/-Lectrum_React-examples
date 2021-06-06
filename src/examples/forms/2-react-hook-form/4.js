@@ -11,12 +11,12 @@ import { options, schema } from './config';
 
 const Form = () => {
     const form = useForm({
-        mode: 'onTouched',
-        resolver: yupResolver(schema),
+        mode:          'onTouched',
+        resolver:      yupResolver(schema),
         defaultValues: {
-            email: '',
+            email:    '',
             password: '',
-            account: 'google',
+            account:  'google',
         },
     });
 
@@ -35,33 +35,30 @@ const Form = () => {
     console.log('🖥 Рендер.');
 
     return (
-        <form onSubmit={submitForm}>
+        <form onSubmit = { submitForm }>
             <h1>Логин</h1>
 
             <Input
-                label="Электропочта"
-                error={form.formState.errors.email}
-                type="email"
-                autoComplete="email"
-                register={form.register('email')}
-            />
+                label = 'Электропочта'
+                error = { form.formState.errors.email }
+                type = 'email'
+                autoComplete = 'email'
+                register = { form.register('email') } />
 
             <Input
-                label="Пароль"
-                error={form.formState.errors.password}
-                type="password"
-                autoComplete="current-password"
-                register={form.register('password')}
-            />
+                label = 'Пароль'
+                error = { form.formState.errors.password }
+                type = 'password'
+                autoComplete = 'current-password'
+                register = { form.register('password') } />
 
             <Select
-                label="Аккаунт"
-                error={form.formState.errors.account}
-                register={form.register('account')}
-                options={options}
-            />
+                label = 'Аккаунт'
+                error = { form.formState.errors.account }
+                register = { form.register('account') }
+                options = { options } />
 
-            <button type="submit">Войти</button>
+            <button type = 'submit'>Войти</button>
         </form>
     );
 };

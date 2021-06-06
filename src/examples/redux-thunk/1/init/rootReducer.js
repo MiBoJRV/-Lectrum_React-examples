@@ -7,5 +7,5 @@ import { uiReducer as ui } from '../redux/reducers/ui';
 
 export const rootReducer = combineReducers({
     planets,
-    ui
+    ui,
 });

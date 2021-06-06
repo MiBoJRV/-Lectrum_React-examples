@@ -6,7 +6,7 @@ import { TodoList } from './components';
 import { TodoStore } from './store';
 
 const init = (store) => {
-    const { container } = render(<TodoList store={ store } />);
+    const { container } = render(<TodoList store = { store } />);
 
     return {
         container,
@@ -40,7 +40,7 @@ describe('TodoList component', () => {
         const liElements = container.querySelectorAll('li');
 
         expect(liElements).toHaveLength(1);
-        expect(liElements[0].textContent).toBe(todo);
+        expect(liElements[ 0 ].textContent).toBe(todo);
     });
 
     test('should add 2 todo and render 2 li element with specified text', () => {
@@ -53,8 +53,8 @@ describe('TodoList component', () => {
         const liElements = container.querySelectorAll('li');
 
         expect(liElements).toHaveLength(2);
-        expect(liElements[0].textContent).toBe(todo);
-        expect(liElements[1].textContent).toBe(todo1);
+        expect(liElements[ 0 ].textContent).toBe(todo);
+        expect(liElements[ 1 ].textContent).toBe(todo1);
     });
 
     test('should add 1 todo by button click', () => {

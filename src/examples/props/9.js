@@ -13,18 +13,18 @@ const Parent = (props) => {
 
     return (
         <h1>
-            Name: {firstName} {lastName}!
+            Name: { firstName } { lastName }!
         </h1>
     );
 };
 
 const profile = {
     firstName: 'Hermione',
-    lastName: 'Granger',
+    lastName:  'Granger',
 };
 
 const Wrapper = () => {
-    return <Parent profile={profile} />;
+    return <Parent profile = { profile } />;
 };
 
 export default Wrapper;

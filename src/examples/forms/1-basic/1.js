@@ -17,9 +17,11 @@ const Form = () => {
     console.log('🖥 Рендер.');
 
     return (
-        <form onSubmit={submitForm}>
-            <input type="text" placeholder="Ваше имя..." ref={nameInputRef} />
-            <button type="submit">Отправить</button>
+        <form onSubmit = { submitForm }>
+            <input
+                type = 'text' placeholder = 'Ваше имя...'
+                ref = { nameInputRef } />
+            <button type = 'submit'>Отправить</button>
         </form>
     );
 };

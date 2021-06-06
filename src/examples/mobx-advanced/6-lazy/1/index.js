@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 const Todo = observer(() => {
     useEffect(() => {
@@ -14,21 +14,21 @@ const Todo = observer(() => {
         (item) => {
             return (
                 <li
-                    key={item.id}>
-                    {item.title}
+                    key = { item.id }>
+                    { item.title }
                 </li>
-            )
-        }
+            );
+        },
     );
 
     return (
         <>
             <h1>Задачи</h1>
             <ol>
-                {todosJSX}
+                { todosJSX }
             </ol>
         </>
-    )
+    );
 });
 
 export default Todo;

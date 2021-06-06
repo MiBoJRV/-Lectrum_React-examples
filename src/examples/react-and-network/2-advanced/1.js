@@ -28,7 +28,7 @@ export const TodoListView = () => {
         }
     };
 
-    const createTodoAsync = async values => {
+    const createTodoAsync = async (values) => {
         try {
             setCreateTodoStatus(STATUS.LOADING);
             await api.createTodo(values);
@@ -40,7 +40,7 @@ export const TodoListView = () => {
         }
     };
 
-    const deleteTodoAsync = async id => {
+    const deleteTodoAsync = async (id) => {
         try {
             await api.deleteTodo(id);
             fetchTodosAsync();
@@ -56,17 +56,15 @@ export const TodoListView = () => {
     return (
         <>
             <TodoList
-                todos={todos}
-                status={fetchTodosStatus}
-                error={error}
-                deleteTodo={deleteTodoAsync}
-            />
+                todos = { todos }
+                status = { fetchTodosStatus }
+                error = { error }
+                deleteTodo = { deleteTodoAsync } />
 
             <ManageTodoForm
-                title="Создать задачу"
-                status={createTodoStatus}
-                onSubmit={createTodoAsync}
-            />
+                title = 'Создать задачу'
+                status = { createTodoStatus }
+                onSubmit = { createTodoAsync } />
         </>
     );
 };
@@ -107,7 +105,7 @@ export const TodoByIdView = () => {
         fetchTodoByIdAsync();
     }, []);
 
-    const updateTodoAsync = async values => {
+    const updateTodoAsync = async (values) => {
         try {
             setUpdateTodoStatus(STATUS.LOADING);
             await api.updateTodo(values);
@@ -121,14 +119,15 @@ export const TodoByIdView = () => {
 
     return (
         <>
-            <TodoView status={fetchTodoStatus} error={error} todo={todo} />
+            <TodoView
+                status = { fetchTodoStatus } error = { error }
+                todo = { todo } />
 
             <ManageTodoForm
-                title="Обновить задачу"
-                status={updateTodoStatus}
-                initialValues={todo}
-                onSubmit={updateTodoAsync}
-            />
+                title = 'Обновить задачу'
+                status = { updateTodoStatus }
+                initialValues = { todo }
+                onSubmit = { updateTodoAsync } />
         </>
     );
 };

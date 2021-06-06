@@ -17,7 +17,7 @@ const selectState = (state) => ({
 });
 
 export const Swapi = () => {
-    const [ page, setPage ] = useState(1);
+    const [page, setPage] = useState(1);
     const state = useSelector(selectState);
     const dispatch = useDispatch();
 
@@ -37,7 +37,7 @@ export const Swapi = () => {
                     className = { Styles.fetchAll }
                     disabled = { state.isFetching }
                     onClick = { getAll }>
-                    📄 Получить все {page}-е страницы
+                    📄 Получить все { page }-е страницы
                 </button>
                 <button
                     className = { Styles.cancelFetch }
@@ -52,22 +52,19 @@ export const Swapi = () => {
                     entities = { state.planets }
                     title = 'Планеты'
                     onClick = { (...props) => dispatch(swapiActions.fetchPlanetsAsync(...props))
-                    }
-                />
+                    } />
                 <Entity
                     disabled = { state.isFetching }
                     entities = { state.vehicles }
                     title = 'Техника'
                     onClick = { (...props) => dispatch(swapiActions.fetchVehiclesAsync(...props))
-                    }
-                />
+                    } />
                 <Entity
                     disabled = { state.isFetching }
                     entities = { state.people }
                     title = 'Люди'
                     onClick = { (...props) => dispatch(swapiActions.fetchPeopleAsync(...props))
-                    }
-                />
+                    } />
             </div>
         </section>
     );

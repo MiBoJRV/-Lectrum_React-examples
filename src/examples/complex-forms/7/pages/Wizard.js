@@ -5,32 +5,32 @@ import { Address } from '../components/Address';
 import { Submit } from '../components/Submit';
 
 const steps = [
-  { id: 'names' },
-  { id: 'address' },
-  { id: 'submit' }
+    { id: 'names' },
+    { id: 'address' },
+    { id: 'submit' },
 ];
 
 const initialValues = {
-  firstName: '',
-  lastName: '',
-  address: '',
+    firstName: '',
+    lastName:  '',
+    address:   '',
 };
 
 export const Wizard = () => {
-  const [ formData, setForm ] = useForm(initialValues);
-  const { step, navigation } = useStep({ initialStep: 0, steps });
-  const { id } = step;
+    const [formData, setForm] = useForm(initialValues);
+    const { step, navigation } = useStep({ initialStep: 0, steps });
+    const { id } = step;
 
-  const props = { formData, setForm, navigation };
+    const props = { formData, setForm, navigation };
 
-  switch (id) {
+    switch (id) {
     case 'names':
-      return <Names {...props} />;
+        return <Names { ...props } />;
     case 'address':
-      return <Address {...props} />;
+        return <Address { ...props } />;
     case 'submit':
-      return <Submit {...props} />;
+        return <Submit { ...props } />;
     default:
-      return null;
-  }
+        return null;
+    }
 };

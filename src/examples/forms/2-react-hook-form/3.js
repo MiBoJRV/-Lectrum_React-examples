@@ -10,11 +10,11 @@ import { options } from './config';
 
 const Form = () => {
     const form = useForm({
-        mode: 'onBlur',
+        mode:          'onBlur',
         defaultValues: {
-            email: '',
+            email:    '',
             password: '',
-            account: 'google',
+            account:  'google',
         },
     });
 
@@ -33,15 +33,15 @@ const Form = () => {
     console.log('🖥 Рендер.');
 
     return (
-        <form onSubmit={submitForm}>
+        <form onSubmit = { submitForm }>
             <h1>Логин</h1>
 
             <Input
-                label="Электропочта"
-                error={form.formState.errors.email}
-                type="email"
-                autoComplete="email"
-                register={form.register('email', {
+                label = 'Электропочта'
+                error = { form.formState.errors.email }
+                type = 'email'
+                autoComplete = 'email'
+                register = { form.register('email', {
                     required: '*',
                     validate: {
                         gmailOnly(email) {
@@ -50,31 +50,28 @@ const Form = () => {
                                 : true;
                         },
                     },
-                })}
-            />
+                }) } />
 
             <Input
-                label="Пароль"
-                error={form.formState.errors.password}
-                type="password"
-                autoComplete="current-password"
-                register={form.register('password', {
-                    required: '*',
+                label = 'Пароль'
+                error = { form.formState.errors.password }
+                type = 'password'
+                autoComplete = 'current-password'
+                register = { form.register('password', {
+                    required:  '*',
                     minLength: {
-                        value: 5,
+                        value:   5,
                         message: 'слишком короткий!',
                     },
-                })}
-            />
+                }) } />
 
             <Select
-                label="Аккаунт"
-                error={form.formState.errors.account}
-                register={form.register('account', { required: true })}
-                options={options}
-            />
+                label = 'Аккаунт'
+                error = { form.formState.errors.account }
+                register = { form.register('account', { required: true }) }
+                options = { options } />
 
-            <button type="submit">Войти</button>
+            <button type = 'submit'>Войти</button>
         </form>
     );
 };

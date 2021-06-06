@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { spy } from 'mobx';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 spy((event) => {
     console.log(event);
@@ -21,7 +21,7 @@ const Todo = observer(() => {
             <p>{ todoStore.title }</p>
             <p>{ todoStore.upperCasedTitle }</p>
         </>
-    )
+    );
 });
 
 export default Todo;

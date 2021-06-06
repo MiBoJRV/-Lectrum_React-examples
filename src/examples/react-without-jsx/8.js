@@ -39,7 +39,7 @@ const element2 = createElement(
     element1,
 );
 
-{/* <element2><element1/></element2>
-<div><h1></h1></div> */}
+{ /* <element2><element1/></element2>
+<div><h1></h1></div> */ }
 
 render(element2, document.getElementById('root'));

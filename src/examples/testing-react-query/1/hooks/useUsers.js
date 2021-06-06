@@ -8,4 +8,4 @@ export const useUsers = () => {
     const query = useQuery('users', api.getUsers);
 
     return query;
-}
+};

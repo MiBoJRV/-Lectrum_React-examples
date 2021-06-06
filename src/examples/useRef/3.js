@@ -8,7 +8,7 @@ const Example = () => {
     stringRef.current += ' world';
     console.log(stringRef.current);
 
-    return <h1>{stringRef.current}</h1>;
+    return <h1>{ stringRef.current }</h1>;
 };
 
 export default Example;

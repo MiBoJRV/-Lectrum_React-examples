@@ -8,7 +8,7 @@ import { STATUS } from './status';
 export const useUpdateTodo = () => {
     const [status, setStatus] = useState(STATUS.IDLE);
 
-    const updateTodo = useCallback(async values => {
+    const updateTodo = useCallback(async (values) => {
         try {
             setStatus(STATUS.LOADING);
 

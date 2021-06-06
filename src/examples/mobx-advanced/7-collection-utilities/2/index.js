@@ -1,10 +1,12 @@
 // Core
 import { observer } from 'mobx-react-lite';
-import { observable, values, keys, entries } from 'mobx';
+import {
+    observable, values, keys, entries,
+} from 'mobx';
 import { useEffect } from 'react';
 
 const todo = observable({
-    id: Date.now(),
+    id:   Date.now(),
     todo: 'Закрепить работу с MobX',
 });
 
@@ -22,7 +24,7 @@ const Todo = observer(() => {
         <>
             <h1>Информация в консоли ;)</h1>
         </>
-    )
+    );
 });
 
 export default Todo;

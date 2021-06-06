@@ -8,10 +8,10 @@ export const options = [
 ];
 
 export const schema = yup.object().shape({
-    email: yup.string().email().required('*'),
+    email:    yup.string().email().required('*'),
     password: yup.string().min(5, 'минимальная длина ${min}').required('*'),
-    account: yup.string().oneOf(
-        options.slice(0, 2).map(option => option.value),
+    account:  yup.string().oneOf(
+        options.slice(0, 2).map((option) => option.value),
         'только ${values}',
     ),
 });

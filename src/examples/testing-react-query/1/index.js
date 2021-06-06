@@ -13,7 +13,8 @@ export const UsersView = () => {
         <>
             <ul>
                 {
-                    Array.isArray(data) && data.map(({ id, name }) => <li key={id}>{name}</li>)
+                    Array.isArray(data)
+                        && data.map(({ id, name }) => <li key = { id }>{ name }</li>)
                 }
             </ul>
         </>
@@ -22,8 +23,8 @@ export const UsersView = () => {
 
 export const Wrapper = () => {
     return (
-        <QueryClientProvider client={queryClient}>
+        <QueryClientProvider client = { queryClient }>
             <UsersView />
         </QueryClientProvider>
-    )
-}
+    );
+};

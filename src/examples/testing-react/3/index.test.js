@@ -5,7 +5,7 @@ import { render, fireEvent, getByTestId } from '@testing-library/react';
 import { Counter } from './index';
 
 const init = (source) => {
-    const { container } = render(<Counter source={ source } />);
+    const { container } = render(<Counter source = { source } />);
     const counter = getByTestId(container, 'counterValue');
     const increment = getByTestId(container, 'increment');
     const decrement = getByTestId(container, 'decrement');
@@ -13,7 +13,7 @@ const init = (source) => {
     return {
         counter,
         increment,
-        decrement
+        decrement,
     };
 };
 

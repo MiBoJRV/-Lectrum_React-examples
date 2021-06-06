@@ -14,4 +14,4 @@ export class Todo {
         this.title = value;
         this.rootStore.setIsLoading();
     }
-};
+}

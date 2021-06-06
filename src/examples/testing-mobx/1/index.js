@@ -16,12 +16,12 @@ import { timerStore } from './store';
 const Timer = observer(() => {
     return (
         <>
-            <h1>Счётчик: {timerStore.secondsPassed}</h1>
-            <button onClick={() => timerStore.reset()}>
+            <h1>Счётчик: { timerStore.secondsPassed }</h1>
+            <button onClick = { () => timerStore.reset() }>
                 Сброс
             </button>
-            <hr/>
-            <p>Обновлено: {new Date().toLocaleTimeString()}</p>
+            <hr />
+            <p>Обновлено: { new Date().toLocaleTimeString() }</p>
         </>
     );
 });

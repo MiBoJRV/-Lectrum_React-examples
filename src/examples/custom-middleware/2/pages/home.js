@@ -5,7 +5,7 @@ import React from 'react';
 import { Theme } from '../bus/theme';
 
 export const Home = () => {
-  return (
-    <Theme/>
-  )
+    return (
+        <Theme />
+    );
 };

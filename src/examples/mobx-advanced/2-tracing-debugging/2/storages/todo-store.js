@@ -11,6 +11,6 @@ export class Todo {
     setTitle(value) {
         this.title = value;
     }
-};
+}
 
 export const todoStore = new Todo();

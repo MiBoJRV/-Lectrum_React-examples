@@ -6,7 +6,7 @@ class TodoStore extends EventEmitter {
     progress = '';
 
     get completedTodosCount() {
-        return this.todos.filter(todo => todo.completed === true).length;
+        return this.todos.filter((todo) => todo.completed === true).length;
     }
 
     update() {
@@ -18,7 +18,7 @@ class TodoStore extends EventEmitter {
             this.progres = 'Нет тудушек';
 
             return this.progress;
-        };
+        }
 
         this.progress = `Прогресс всего/выполнено: ${this.completedTodosCount}/${this.todos.length}`;
 
@@ -27,7 +27,7 @@ class TodoStore extends EventEmitter {
 
     addTodo(task) {
         this.todos.push({
-            task: task,
+            task,
             completed: false,
         });
 
@@ -35,7 +35,7 @@ class TodoStore extends EventEmitter {
     }
 
     completeTodo(todoIdx) {
-        this.todos[todoIdx].completed = true;
+        this.todos[ todoIdx ].completed = true;
 
         this.update();
     }

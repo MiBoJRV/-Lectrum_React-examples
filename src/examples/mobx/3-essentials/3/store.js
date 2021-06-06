@@ -7,9 +7,9 @@ class TimerStore {
     constructor() {
         makeAutoObservable(this, {}, {
             autoBind: true,
-            deep: true,
-            name: 'TimerStore',
-            proxy: true
+            deep:     true,
+            name:     'TimerStore',
+            proxy:    true,
         });
     }
 

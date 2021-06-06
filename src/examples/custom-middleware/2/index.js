@@ -12,7 +12,7 @@ const Wrapper = () => {
         <Provider store = { store }>
             <Home />
         </Provider>
-    )
+    );
 };
 
 export default Wrapper;

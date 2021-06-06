@@ -1,7 +1,6 @@
 import { Portal } from './components/portal';
 
 const Greeting = () => {
-
     return (
         <>
             <h1>Привет друзья!</h1>

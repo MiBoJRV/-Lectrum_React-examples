@@ -1,7 +1,9 @@
 // Becoming reactive
 
 /* Core */
-import { makeObservable, observable, computed, action, autorun } from 'mobx';
+import {
+    makeObservable, observable, computed, action, autorun,
+} from 'mobx';
 
 class ObservableTodoStore {
     todos = [];
@@ -14,7 +16,7 @@ class ObservableTodoStore {
              * But unlike spreadsheets, these values can not only be primitive values,
              * but also references, objects and arrays.
              */
-            todos: observable,
+            todos:           observable,
             pendingRequests: observable,
 
             /**
@@ -28,7 +30,7 @@ class ObservableTodoStore {
              * The golden rule is, always use computed if you want to create a value based on the current state.
              */
             completedTodosCount: computed,
-            report: computed,
+            report:              computed,
 
             /**
              * An action is any piece of code that changes the state. User events,
@@ -51,26 +53,26 @@ class ObservableTodoStore {
     }
 
     get completedTodosCount() {
-        return this.todos.filter(todo => todo.completed === true).length;
+        return this.todos.filter((todo) => todo.completed === true).length;
     }
 
     get report() {
         if (this.todos.length === 0) {
             return 'Нет тудушек';
-        };
+        }
 
         return `Прогресс всего/выполнено: ${this.completedTodosCount}/${this.todos.length}`;
     }
 
     addTodo(task) {
         this.todos.push({
-            task: task,
+            task,
             completed: false,
-            assignee: null,
+            assignee:  null,
         });
     }
 }
 
 const observableTodoStore = new ObservableTodoStore();
 
-export {observableTodoStore};
+export { observableTodoStore };

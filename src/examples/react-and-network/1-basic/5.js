@@ -25,7 +25,7 @@ const Example = () => {
 
             const todoResponse = await api.createTodo({
                 title: newTodo,
-                body: 'x'.repeat(10),
+                body:  'x'.repeat(10),
             });
             setTodos([todoResponse, ...todos]);
             setNewTodo('');
@@ -39,23 +39,22 @@ const Example = () => {
 
     console.log('todos', todos);
 
-    const deleteTodo = async todoId => {
+    const deleteTodo = async (todoId) => {
         await api.deleteTodo(todoId);
 
-        const nextTodos = todos.filter(todo => todo.id !== todoId);
+        const nextTodos = todos.filter((todo) => todo.id !== todoId);
 
         setTodos(nextTodos);
     };
 
     return (
         <TodoList
-            todos={todos}
-            deleteTodo={deleteTodo}
-            isFetching={isFetching}
-            newTodo={newTodo}
-            setNewTodo={setNewTodo}
-            createTodo={createTodo}
-        />
+            todos = { todos }
+            deleteTodo = { deleteTodo }
+            isFetching = { isFetching }
+            newTodo = { newTodo }
+            setNewTodo = { setNewTodo }
+            createTodo = { createTodo } />
     );
 };
 

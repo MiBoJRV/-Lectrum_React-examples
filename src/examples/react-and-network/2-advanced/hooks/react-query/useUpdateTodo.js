@@ -7,12 +7,12 @@ import { api } from '../../../api';
 export const useUpdateTodo = () => {
     const client = useQueryClient();
 
-    const mutation = useMutation(values => api.updateTodo(values), {
+    const mutation = useMutation((values) => api.updateTodo(values), {
         async onMutate(newTodo) {
             const cacheKey = ['todos', newTodo.id];
 
             const prevTodo = await client.getQueryData(cacheKey);
-            await client.setQueryData(cacheKey, oldTodo => ({
+            await client.setQueryData(cacheKey, (oldTodo) => ({
                 ...oldTodo,
                 ...newTodo,
             }));

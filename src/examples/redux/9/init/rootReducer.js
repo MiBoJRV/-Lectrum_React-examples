@@ -5,5 +5,5 @@ import { combineReducers } from 'redux';
 import { themeReducer as theme } from '../redux/reducers/theme';
 
 export const rootReducer = combineReducers({
-    theme
+    theme,
 });

@@ -15,15 +15,15 @@ export default () => {
     return (
         <Router>
             <nav>
-                <NavLink to="/order">Заказ</NavLink>&nbsp;
-                <NavLink to="/about">О магазине</NavLink>
+                <NavLink to = '/order'>Заказ</NavLink>&nbsp;
+                <NavLink to = '/about'>О магазине</NavLink>
             </nav>
             <Routes>
-                <Route path="/order/*" element={<Wizard />} />
+                <Route path = '/order/*' element = { <Wizard /> } />
 
-                <Route path="/about" element={<About />} />
+                <Route path = '/about' element = { <About /> } />
 
-                <Route path="*" element={<Navigate to="/order" />} />
+                <Route path = '*' element = { <Navigate to = '/order' /> } />
             </Routes>
         </Router>
     );

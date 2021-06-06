@@ -7,7 +7,7 @@ export const getValidationSchema = (data) => {
         if (validationRules) {
             const { min, max, type } = validationRules;
 
-            shape[name] = Yup[type]()
+            shape[ name ] = Yup[ type ]()
                 .min(min)
                 .max(max);
 
@@ -18,4 +18,4 @@ export const getValidationSchema = (data) => {
     }
 
     return Yup.object().shape(shape);
-}
+};

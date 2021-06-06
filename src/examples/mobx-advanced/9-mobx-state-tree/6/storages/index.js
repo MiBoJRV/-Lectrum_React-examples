@@ -8,12 +8,12 @@ import { Todo } from './todo-store';
 const RootStore = types
     .model('RootStore', {
         authors: types.optional(types.array(Author), []),
-        todos: types.optional(types.array(Todo), [])
+        todos:   types.optional(types.array(Todo), []),
     })
     .actions((self) => ({
         addTodo(todo) {
-            self.todos.push({ id: Date.now() + 't', todo });
-        }
+            self.todos.push({ id: `${Date.now()}t`, todo });
+        },
     }))
     /**
      * views — предоставляют возможность создавать вычисляемые свойства и
@@ -25,24 +25,28 @@ const RootStore = types
 
             return `${uncompleted.length}/${self.todos.length}`;
         },
-        getTodosWithDeadline () {
+        getTodosWithDeadline() {
             /**
              * Инкапсуляция логики может облегчить работу, так как вносить изменения прийдётся в одном месте.
              *
              * Попытка изменения модели из views приведёт к ошибке.
              * */
             return self.todos.filter(({ deadline }) => Boolean(deadline));
-        }
+        },
     }));
 
 export const store = RootStore.create({
-    authors: [ {
-        id: Date.now() + 'a',
-        name: 'Жюль Верн',
-        gender: 'm'
-    } ],
-    todos: [ {
-        id: Date.now() + 't',
-        todo: 'Посмотреть под микроскопом на MST'
-    } ]
+    authors: [
+        {
+            id:     `${Date.now()}a`,
+            name:   'Жюль Верн',
+            gender: 'm',
+        },
+    ],
+    todos: [
+        {
+            id:   `${Date.now()}t`,
+            todo: 'Посмотреть под микроскопом на MST',
+        },
+    ],
 });

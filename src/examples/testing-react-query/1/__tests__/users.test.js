@@ -8,15 +8,17 @@ import { useUsers } from '../hooks';
 
 const queryClient = new QueryClient();
 const wrapper = ({ children }) => (
-    <QueryClientProvider client={queryClient}>
-        {children}
+    <QueryClientProvider client = { queryClient }>
+        { children }
     </QueryClientProvider>
 );
 
-const fakeData = [{
-    id: 1,
-    name: 'John Doe'
-}];
+const fakeData = [
+    {
+        id:   1,
+        name: 'John Doe',
+    },
+];
 
 /**
  * Без импользования перехватчиков на подобие nock хуки использующие react-query
@@ -24,7 +26,7 @@ const fakeData = [{
  * */
 const interceptor = nock('https://jsonplaceholder.typicode.com')
     .get('/users')
-    .reply(200, fakeData, {'Access-Control-Allow-Origin': '*'});
+    .reply(200, fakeData, { 'Access-Control-Allow-Origin': '*' });
 
 describe('useUsers hook', () => {
     test('input with name email should exist', async () => {

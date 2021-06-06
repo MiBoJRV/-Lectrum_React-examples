@@ -7,7 +7,7 @@ import { api } from '../../../api';
 export const useDeleteTodo = () => {
     const client = useQueryClient();
 
-    const mutation = useMutation(todoId => api.deleteTodo(todoId), {
+    const mutation = useMutation((todoId) => api.deleteTodo(todoId), {
         onMutate(...params) {
             console.log('1. onMutate', params);
             console.log('🎬 delete todo mutation fired');

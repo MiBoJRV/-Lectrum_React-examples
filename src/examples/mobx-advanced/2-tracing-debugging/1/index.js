@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { trace } from 'mobx';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 const Todo = observer(() => {
     /**
@@ -21,7 +21,7 @@ const Todo = observer(() => {
             <h1>Автор</h1>
             <p>{ todoStore.title }</p>
         </>
-    )
+    );
 });
 
 export default Todo;

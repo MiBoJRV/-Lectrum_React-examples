@@ -3,7 +3,7 @@ import { getSnapshot, onSnapshot, applySnapshot } from 'mobx-state-tree';
 import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
-import {store} from './storages';
+import { store } from './storages';
 
 /**
  * Вызывает колбек функцию после каждого изменения хранилища
@@ -22,11 +22,13 @@ const Todo = observer(() => {
         setTimeout(() => {
             // сбросить состояние хранилища к тому что будет передано вторым аргументом
             applySnapshot(store, {
-                authors: [{
-                    id: Date.now() + 'a',
-                    name: 'Чак Норрис',
-                    gender: 'm'
-                }],
+                authors: [
+                    {
+                        id:     `${Date.now()}a`,
+                        name:   'Чак Норрис',
+                        gender: 'm',
+                    },
+                ],
             });
         }, 2000);
     }, []);
@@ -34,28 +36,28 @@ const Todo = observer(() => {
     const todosJSX = store.todos.map((item, index) => {
         return (
             <li
-                className={item.completed ? 'completed': ''}
-                key={item.id}
-                onClick = {() => store.todos[index].complete()}>
-                {item.todo}
+                className = { item.completed ? 'completed' : '' }
+                key = { item.id }
+                onClick = { () => store.todos[ index ].complete() }>
+                { item.todo }
             </li>
-        )
+        );
     });
-    const authorsJSX = store.authors.map((item) => <li key={item.id}>{item.name}</li>);
+    const authorsJSX = store.authors.map((item) => <li key = { item.id }>{ item.name }</li>);
 
     return (
         <>
             <h1>MST</h1>
             <ol>
-                {todosJSX}
+                { todosJSX }
             </ol>
-            <hr/>
+            <hr />
             <h2>Авторы</h2>
             <ol>
-                {authorsJSX}
+                { authorsJSX }
             </ol>
         </>
-    )
+    );
 });
 
 export default Todo;

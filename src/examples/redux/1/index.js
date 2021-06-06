@@ -10,7 +10,7 @@ const App = () => {
         <Provider store = { store }>
             <h1>Redux App</h1>
         </Provider>
-    )
+    );
 };
 
 export default App;

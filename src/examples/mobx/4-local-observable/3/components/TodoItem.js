@@ -8,5 +8,5 @@ import { observer } from 'mobx-react-lite';
 * observer работает лучще если передавать объекты по ссылкам
 */
 export const TodoItem = observer(({ todo }) => {
-    return <li>{todo.task}</li>;
+    return <li>{ todo.task }</li>;
 });

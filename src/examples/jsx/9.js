@@ -8,10 +8,10 @@ const items = [
     { id: '987', text: 'a stick' },
 ];
 
-const list1 = items.map(item => <li key={item.id}>{item.text}</li>);
-const list2 = items.map(item => <li key={item.id}>{item.text}</li>);
+const list1 = items.map((item) => <li key = { item.id }>{ item.text }</li>);
+const list2 = items.map((item) => <li key = { item.id }>{ item.text }</li>);
 
 render(
-    [<ul key={0}>{list1}</ul>, <ul key={1}>{list2}</ul>],
+    [<ul key = { 0 }>{ list1 }</ul>, <ul key = { 1 }>{ list2 }</ul>],
     document.getElementById('root'),
 );

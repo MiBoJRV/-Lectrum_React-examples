@@ -14,7 +14,7 @@ export const Start = () => {
     return (
         <section>
             <h1>Добро пожаловать</h1>
-            <button onClick={startOrder}>Собрать заказ &rarr;</button>
+            <button onClick = { startOrder }>Собрать заказ &rarr;</button>
         </section>
     );
 };

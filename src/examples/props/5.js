@@ -4,22 +4,22 @@ const Child = (props) => {
             ${props.firstName} ${props.lastName}`
         : 'Profile hidden';
 
-    return <h1>{profileJSX}</h1>;
+    return <h1>{ profileJSX }</h1>;
 };
 
 const profile = {
     firstName: 'Hermione',
-    lastName: 'Granger',
+    lastName:  'Granger',
 };
 
 const Parent = () => {
     return (
         <>
-            <Child visible {...profile} />
-            {/*<Child*/}
-            {/*   visible = { false }*/}
-            {/*   { ...profile }*/}
-            {/*/>*/}
+            <Child visible { ...profile } />
+            { /* <Child */ }
+            { /*   visible = { false } */ }
+            { /*   { ...profile } */ }
+            { /* /> */ }
         </>
     );
 };

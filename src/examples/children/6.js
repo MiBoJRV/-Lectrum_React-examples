@@ -1,7 +1,7 @@
 /* Core */
 import { Children } from 'react';
 
-const Child = props => {
+const Child = (props) => {
     console.log(props);
 
     return Children.only(props.children);

@@ -8,7 +8,7 @@ const Form = () => {
         formState: { errors },
     } = useForm({
         defaultValues: {
-            email: '',
+            email:    '',
             password: '',
         },
     });
@@ -20,26 +20,24 @@ const Form = () => {
     console.log('🖥 Рендер.');
 
     return (
-        <form onSubmit={submitForm}>
+        <form onSubmit = { submitForm }>
             <h1>Логин</h1>
 
             <input
-                type="email"
-                placeholder="Электропочта"
-                autoComplete="email"
-                {...register('email', { required: true })}
-            />
-            {errors.email && <span>Обязательно к заполнению</span>}
+                type = 'email'
+                placeholder = 'Электропочта'
+                autoComplete = 'email'
+                { ...register('email', { required: true }) } />
+            { errors.email && <span>Обязательно к заполнению</span> }
 
             <input
-                type="password"
-                placeholder="Пароль"
-                autoComplete="current-password"
-                {...register('password', { required: true })}
-            />
-            {errors.password && <span>Обязательно к заполнению</span>}
+                type = 'password'
+                placeholder = 'Пароль'
+                autoComplete = 'current-password'
+                { ...register('password', { required: true }) } />
+            { errors.password && <span>Обязательно к заполнению</span> }
 
-            <button type="submit">Войти</button>
+            <button type = 'submit'>Войти</button>
         </form>
     );
 };

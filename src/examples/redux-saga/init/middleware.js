@@ -20,7 +20,7 @@ const logger = createLogger({
 const sagaMiddleware = createSagaMiddleware();
 
 // 3
-const middleware = [ sagaMiddleware ];
+const middleware = [sagaMiddleware];
 const devtools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const composeEnhancers
     = process.env.NODE_ENV === 'development' && devtools ? devtools : compose;

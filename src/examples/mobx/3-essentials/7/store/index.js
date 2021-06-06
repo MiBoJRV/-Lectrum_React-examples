@@ -1,4 +1,6 @@
-import { action, autorun, computed, makeObservable, observable } from "mobx";
+import {
+    action, autorun, computed, makeObservable, observable,
+} from 'mobx';
 
 class TodoStore {
     todos = [];
@@ -6,32 +8,32 @@ class TodoStore {
 
     constructor() {
         makeObservable(this, {
-            todos: observable,
-            pendingRequests: observable,
+            todos:               observable,
+            pendingRequests:     observable,
             completedTodosCount: computed,
-            report: computed,
-            addTodo: action,
+            report:              computed,
+            addTodo:             action,
         });
         autorun(() => console.log(this.report));
     }
 
     get completedTodosCount() {
-        return this.todos.filter(todo => todo.completed === true).length;
+        return this.todos.filter((todo) => todo.completed === true).length;
     }
 
     get report() {
         if (this.todos.length === 0) {
             return 'Нет тудушек';
-        };
+        }
 
         return `Прогресс всего/выполнено: ${this.completedTodosCount}/${this.todos.length}`;
     }
 
     addTodo(task) {
         this.todos.push({
-            task: task,
+            task,
             completed: false,
-            assignee: null,
+            assignee:  null,
         });
     }
 }
@@ -41,6 +43,6 @@ export const todoStore = new TodoStore();
 
 todoStore.addTodo('Пройти материалы по MobX');
 todoStore.addTodo('Попробовать MobX на практике');
-todoStore.todos[0].assignee = peopleStore[0];
-todoStore.todos[1].assignee = peopleStore[1];
-peopleStore[0].name = 'Александр';
+todoStore.todos[ 0 ].assignee = peopleStore[ 0 ];
+todoStore.todos[ 1 ].assignee = peopleStore[ 1 ];
+peopleStore[ 0 ].name = 'Александр';

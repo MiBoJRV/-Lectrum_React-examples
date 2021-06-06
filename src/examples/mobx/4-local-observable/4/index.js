@@ -1,9 +1,9 @@
 // Core
 import { observer } from 'mobx-react-lite';
+import { useEffect } from 'react';
 import { TodoItem } from './components/TodoItem';
 
 import { store } from './store';
-import { useEffect } from 'react';
 
 const Todo = observer(() => {
     // Симуляция изменения заголовка задачи
@@ -22,8 +22,8 @@ const Todo = observer(() => {
         <>
             <section>
                 <h1>Задачи:</h1>
-                <TodoItem store={store} />
-                {/*<TodoItem store={{ title: store.title }} />*/}
+                <TodoItem store = { store } />
+                { /* <TodoItem store={{ title: store.title }} /> */ }
             </section>
         </>
     );

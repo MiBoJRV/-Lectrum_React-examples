@@ -8,7 +8,7 @@ const Clock = () => {
         console.log('useEffect execution');
 
         const timerId = setInterval(() => {
-            setSeconds(prevSeconds => prevSeconds + 1);
+            setSeconds((prevSeconds) => prevSeconds + 1);
             console.log(timerId, 'setInterval execution');
         }, 1000);
 
@@ -18,7 +18,7 @@ const Clock = () => {
         };
     }, []);
 
-    return <h1>Seconds passed: {seconds}</h1>;
+    return <h1>Seconds passed: { seconds }</h1>;
 };
 
 const Controller = () => {
@@ -26,11 +26,11 @@ const Controller = () => {
 
     return (
         <>
-            <button onClick={() => setClockVisible(!clockVisible)}>
-                {clockVisible ? 'Hide' : 'Show'} clock
+            <button onClick = { () => setClockVisible(!clockVisible) }>
+                { clockVisible ? 'Hide' : 'Show' } clock
             </button>
 
-            {clockVisible && <Clock />}
+            { clockVisible && <Clock /> }
         </>
     );
 };

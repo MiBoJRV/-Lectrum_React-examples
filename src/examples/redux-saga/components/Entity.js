@@ -5,12 +5,12 @@ import { useState } from 'react';
 import Styles from './styles.module.scss';
 
 export const Entity = (props) => {
-    const [ page, setPage ] = useState(1);
+    const [page, setPage] = useState(1);
 
     const entitiesJSX = props.entities.map((entity) => (
         <li key = { entity.name }>
             <span>
-                <span>Имя:</span> {entity.name}
+                <span>Имя:</span> { entity.name }
             </span>
         </li>
     ));
@@ -24,12 +24,12 @@ export const Entity = (props) => {
 
     return (
         <section>
-            <h2>{props.title}</h2>
+            <h2>{ props.title }</h2>
             <div>
                 <button
                     disabled = { props.disabled }
                     onClick = { () => props.onClick(page) }>
-                    Получить {page} страницу
+                    Получить { page } страницу
                 </button>
                 <button
                     disabled = { props.disabled }
@@ -44,7 +44,7 @@ export const Entity = (props) => {
                 <button onClick = { () => setPage(3) }>3</button>
                 <button onClick = { () => setPage(4) }>4</button>
             </div>
-            <ul>{entitiesJSX}</ul>
+            <ul>{ entitiesJSX }</ul>
         </section>
     );
 };

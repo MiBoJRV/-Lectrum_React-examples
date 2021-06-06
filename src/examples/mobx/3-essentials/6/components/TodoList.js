@@ -10,19 +10,19 @@ export const TodoList = observer(({ store }) => {
 
     return (
         <div>
-            {store.report}
+            { store.report }
             <ul>
-                {store.todos.map((todo, idx) => (
-                    <TodoView todo={todo} key={idx} />
-                ))}
+                { store.todos.map((todo, idx) => (
+                    <TodoView todo = { todo } key = { idx } />
+                )) }
             </ul>
-            {store.pendingRequests > 0 ? <p>Загрузка...</p> : null}
+            { store.pendingRequests > 0 ? <p>Загрузка...</p> : null }
             <div>
-                <button onClick={onNewTodo}>Новая задача</button>
+                <button onClick = { onNewTodo }>Новая задача</button>
                 <small> (Двойной клик на туду для редактирования)</small>
             </div>
-            <div style={{marginTop: 10}}>
-                <input onKeyUp={(event) => (peopleStore[1].name = event.target.value)} />
+            <div style = { { marginTop: 10 } }>
+                <input onKeyUp = { (event) => peopleStore[ 1 ].name = event.target.value } />
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
 // Instruments
-import {todosStore} from './storages';
+import { todosStore } from './storages';
 
 /**
  * Реагирует на каждое изменение модели (без траназкционности)
@@ -30,16 +30,16 @@ const Todo = observer(() => {
         todosStore.addTodo('Разобраться с подключением MST к React приложению');
     }, []);
 
-    const todosJSX = todosStore.todos.map((item) => <li key={item.id}>{item.todo}</li>);
+    const todosJSX = todosStore.todos.map((item) => <li key = { item.id }>{ item.todo }</li>);
 
     return (
         <>
             <h1>MST</h1>
             <ol>
-                {todosJSX}
+                { todosJSX }
             </ol>
         </>
-    )
+    );
 });
 
 export default Todo;

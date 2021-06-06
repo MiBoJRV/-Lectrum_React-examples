@@ -8,6 +8,6 @@ export const useCounterManager = (source) => {
     return {
         count,
         increment,
-        decrement
-    }
+        decrement,
+    };
 };

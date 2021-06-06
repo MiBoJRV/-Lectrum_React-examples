@@ -9,7 +9,7 @@ const Book = () => {
     return (
         <>
             <h1>A Book</h1>
-            {portal}
+            { portal }
         </>
     );
 };

@@ -1,7 +1,11 @@
 import React from 'react';
 
+import '../styles/mains.scss';
+
 export const App = () => {
     return (
-        <h1>Начинаем погружение в SSR</h1>
+        <section className='wrapper'>
+            <h1 className='header'>Начинаем погружение в SSR</h1>
+        </section>
     );
 };

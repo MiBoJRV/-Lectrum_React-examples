@@ -9,7 +9,7 @@ import { Counter } from './index';
 Enzyme.configure({ adapter: new Adapter() });
 
 const init = (source) => {
-    const wrapper = shallow(<Counter source={ source } />);
+    const wrapper = shallow(<Counter source = { source } />);
     const increment = wrapper.find('#increment');
     const decrement = wrapper.find('#decrement');
 
@@ -19,7 +19,7 @@ const init = (source) => {
 describe('Counter component', () => {
     test('Counter should render without crashing', () => {
         const div = document.createElement('div');
-        render(<Counter source={0} />, div);
+        render(<Counter source = { 0 } />, div);
         unmountComponentAtNode(div);
     });
     test('Initial value should be received from property source', () => {

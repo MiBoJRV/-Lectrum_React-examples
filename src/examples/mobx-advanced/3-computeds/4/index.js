@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 /**
  * Фукнцию computedFn из пакета mobx-utils можно использовать в определении выбранной задачи для автоматического запоминания IsSelected.
@@ -24,23 +24,23 @@ const Todo = observer(() => {
         (item) => {
             return (
                 <li
-                    className={todoStore.isSelected(item.id) ? 'selected': ''}
-                    onClick={() => { todoStore.setSelectedId(item.id) }}
-                    key={item.id}>
-                    {item.todo}
+                    className = { todoStore.isSelected(item.id) ? 'selected' : '' }
+                    onClick = { () => { todoStore.setSelectedId(item.id); } }
+                    key = { item.id }>
+                    { item.todo }
                 </li>
-            )
-        }
+            );
+        },
     );
 
     return (
         <>
             <h1>Автор</h1>
             <ul>
-                {todosJSX}
+                { todosJSX }
             </ul>
         </>
-    )
+    );
 });
 
 export default Todo;

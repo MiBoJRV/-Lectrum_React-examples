@@ -18,17 +18,17 @@ import { queryClient } from './hooks/react-query';
 
 const App = () => {
     return (
-        <QueryClientProvider client={queryClient}>
+        <QueryClientProvider client = { queryClient }>
             <Router>
                 <Routes>
                     <Layout>
-                        <Route path="/" element={<TodoListView />} />
-                        <Route path="/:todoId" element={<TodoByIdView />} />
-                        <Route path="*" element={<Navigate to="/" />} />
+                        <Route path = '/' element = { <TodoListView /> } />
+                        <Route path = '/:todoId' element = { <TodoByIdView /> } />
+                        <Route path = '*' element = { <Navigate to = '/' /> } />
                     </Layout>
                 </Routes>
             </Router>
-            {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+            { /* <ReactQueryDevtools initialIsOpen={false} /> */ }
         </QueryClientProvider>
     );
 };

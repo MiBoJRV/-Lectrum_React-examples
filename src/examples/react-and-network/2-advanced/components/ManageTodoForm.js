@@ -1,14 +1,13 @@
 /* Core */
 import { useState, useEffect } from 'react';
 
-export const ManageTodoForm = props => {
+export const ManageTodoForm = (props) => {
     const [values, setValues] = useState(props.initialValues);
     const [isFetching, setFetching] = useState(false);
 
-    const setValue = (field, value) =>
-        setValues(old => ({ ...old, [field]: value }));
+    const setValue = (field, value) => setValues((old) => ({ ...old, [ field ]: value }));
 
-    const submit = async e => {
+    const submit = async (e) => {
         e.preventDefault();
 
         try {
@@ -32,33 +31,31 @@ export const ManageTodoForm = props => {
     }
 
     return (
-        <form onSubmit={submit}>
-            <h3>{props.title}</h3>
+        <form onSubmit = { submit }>
+            <h3>{ props.title }</h3>
 
-            <fieldset disabled={isFetching}>
-                <label htmlFor="title">Заголовок</label>
+            <fieldset disabled = { isFetching }>
+                <label htmlFor = 'title'>Заголовок</label>
                 <input
-                    type="text"
-                    name="title"
-                    value={values.title}
-                    onChange={e => setValue('title', e.target.value)}
-                    required
-                />
+                    type = 'text'
+                    name = 'title'
+                    value = { values.title }
+                    onChange = { (e) => setValue('title', e.target.value) }
+                    required />
                 <br />
 
-                <label htmlFor="body">Описание</label>
+                <label htmlFor = 'body'>Описание</label>
                 <textarea
-                    type="text"
-                    name="body"
-                    value={values.body}
-                    onChange={e => setValue('body', e.target.value)}
-                    required
-                />
+                    type = 'text'
+                    name = 'body'
+                    value = { values.body }
+                    onChange = { (e) => setValue('body', e.target.value) }
+                    required />
                 <br />
 
                 <LoadingStatus />
 
-                <input type="submit" value="Отправить" />
+                <input type = 'submit' value = 'Отправить' />
             </fieldset>
         </form>
     );
@@ -66,23 +63,23 @@ export const ManageTodoForm = props => {
 
 const defaultFormValues = {
     title: '',
-    body: '',
+    body:  '',
 };
 
 ManageTodoForm.defaultProps = {
     initialValues: defaultFormValues,
 };
 
-const LoadingStatus = props => {
+const LoadingStatus = (props) => {
     return (
         <div>
-            {props.status === 'loading'
+            { props.status === 'loading'
                 ? 'Сохраняю...'
                 : props.status === 'error'
-                ? 'Ошибка!'
-                : props.status === 'success'
-                ? 'Готово!'
-                : null}
+                    ? 'Ошибка!'
+                    : props.status === 'success'
+                        ? 'Готово!'
+                        : null }
         </div>
     );
 };

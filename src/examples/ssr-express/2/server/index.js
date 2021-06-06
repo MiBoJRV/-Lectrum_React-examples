@@ -1,12 +1,12 @@
-// Запуск примера — node src/examples/ssr-express/2
 // Core
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
+import express  from 'express';
+import fs from 'fs';
+import path from 'path';
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 
-const { App } = require('../components/App');
+// Components
+import { App } from '../components/App';
 
 const app = express();
 

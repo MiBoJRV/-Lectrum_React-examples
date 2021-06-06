@@ -20,10 +20,10 @@ const Counter = () => {
 
     return (
         <>
-            <h1>{count}</h1>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <h1>{ count }</h1>
+            <button onClick = { () => setCount(count + 1) }>Increment</button>
 
-            <h2>{!userName ? 'Loading...' : userName}</h2>
+            <h2>{ !userName ? 'Loading...' : userName }</h2>
         </>
     );
 };

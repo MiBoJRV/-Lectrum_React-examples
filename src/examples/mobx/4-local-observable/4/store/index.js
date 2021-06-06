@@ -4,7 +4,7 @@ class Todo {
     title = 'Тестовая задача';
 
     constructor() {
-        makeAutoObservable(this)
+        makeAutoObservable(this);
     }
 }
 

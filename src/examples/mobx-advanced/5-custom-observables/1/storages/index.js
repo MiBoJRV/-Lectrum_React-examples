@@ -1,1 +1,1 @@
-export {clockStore} from './time-store';
+export { clockStore } from './time-store';

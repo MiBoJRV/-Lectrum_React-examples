@@ -1,10 +1,12 @@
 // Core
 import { observer } from 'mobx-react-lite';
-import { observable, get, set, remove, has, runInAction } from 'mobx';
+import {
+    observable, get, set, remove, has, runInAction,
+} from 'mobx';
 import { useEffect } from 'react';
 
 const todo = observable({
-    id: Date.now(),
+    id:   Date.now(),
     todo: 'Закрепить работу с MobX',
     // deadline: new Date().toLocaleDateString()
 });
@@ -44,10 +46,10 @@ const Todo = observer(() => {
     return (
         <>
             <h1>Утилиты</h1>
-            <p>Todo: {get(todo, 'todo') || 'Текст задачи отсутствует'}</p>
-            <p>Дедлайн: {has(todo, 'deadline') ? get(todo, 'deadline') : 'Задача безсрочная'}</p>
+            <p>Todo: { get(todo, 'todo') || 'Текст задачи отсутствует' }</p>
+            <p>Дедлайн: { has(todo, 'deadline') ? get(todo, 'deadline') : 'Задача безсрочная' }</p>
         </>
-    )
+    );
 });
 
 export default Todo;

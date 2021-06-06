@@ -17,7 +17,7 @@ import { ProductList, ProductView } from './components';
 const Products = ({ render }) => {
     return (
         <section>
-            {render([{ id: 1, name: 'React' }, { id: 2, name: 'TypeScript' }])}
+            { render([{ id: 1, name: 'React' }, { id: 2, name: 'TypeScript' }]) }
         </section>
     );
 };
@@ -25,15 +25,12 @@ const Products = ({ render }) => {
 const Wrapper = () => {
     return (
         <>
-            <Products render={ (products) => <ProductList products={products} /> } />
+            <Products render = { (products) => <ProductList products = { products } /> } />
             <hr />
-            <Products render={ (products) => <ProductView products={products} /> } />
+            <Products render = { (products) => <ProductView products = { products } /> } />
         </>
-    )
+    );
 };
 
 export default Wrapper;
-
-
-
 

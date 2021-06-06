@@ -1,5 +1,7 @@
 /* Core */
-import { Routes, Route, NavLink, Outlet, Navigate } from 'react-router-dom';
+import {
+    Routes, Route, NavLink, Outlet, Navigate,
+} from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -7,10 +9,10 @@ const Home = () => {
             <h1>Home</h1>
 
             <nav>
-                <NavLink end to="/">
+                <NavLink end to = '/'>
                     Home
                 </NavLink>
-                <NavLink to="/dashboard">Dashboard</NavLink>
+                <NavLink to = '/dashboard'>Dashboard</NavLink>
             </nav>
             <hr />
 
@@ -24,23 +26,23 @@ const Dashboard = () => {
         <div>
             <h1>Dashboard</h1>
             <nav>
-                <NavLink end to="..">
+                <NavLink end to = '..'>
                     Home
                 </NavLink>
-                <NavLink end to=".">
+                <NavLink end to = '.'>
                     Dashboard
                 </NavLink>
-                <NavLink to="invoices">Invoices</NavLink>
+                <NavLink to = 'invoices'>Invoices</NavLink>
             </nav>
             <hr />
 
             <Routes>
-                {/*
+                { /*
                     The «/» address is relative to parent route
                     but not the the website root address.
-                */}
-                <Route path="/" element={<h1>Dashboard Home</h1>} />
-                <Route path="invoices" element={<h1>Invoices</h1>} />
+                */ }
+                <Route path = '/' element = { <h1>Dashboard Home</h1> } />
+                <Route path = 'invoices' element = { <h1>Invoices</h1> } />
             </Routes>
         </div>
     );
@@ -49,12 +51,12 @@ const Dashboard = () => {
 const Example = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />}>
-                <Route path="/dashboard/*" element={<Dashboard />} />
+            <Route path = '/' element = { <Home /> }>
+                <Route path = '/dashboard/*' element = { <Dashboard /> } />
             </Route>
 
-            {/* Redirect if no route match found. */}
-            <Route path="*" element={<Navigate to="/" />} />
+            { /* Redirect if no route match found. */ }
+            <Route path = '*' element = { <Navigate to = '/' /> } />
         </Routes>
     );
 };

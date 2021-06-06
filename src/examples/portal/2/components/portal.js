@@ -8,10 +8,11 @@ export const Portal = ({ children, className = 'root-portal', el = 'div' }) => {
 
     useEffect(() => {
         document.body.appendChild(container);
+
         return () => {
             document.body.removeChild(container);
-        }
-    }, [])
+        };
+    }, []);
 
-    return createPortal(children, container)
-}
+    return createPortal(children, container);
+};

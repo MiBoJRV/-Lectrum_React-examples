@@ -13,9 +13,9 @@ const api = new Api();
 
 describe('«api.getUsers»:', () => {
     beforeEach(() => {
-        const implementation = (url /*, options */) => {
+        const implementation = (url /* , options */) => {
             return Promise.resolve({
-                json () {
+                json() {
                     return Promise.resolve(`A call to ${url} was successful`);
                 },
             });

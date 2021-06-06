@@ -1,2 +1,2 @@
-export {todoStore} from './todo-store';
-export {uiStore} from './ui-store';
+export { todoStore } from './todo-store';
+export { uiStore } from './ui-store';

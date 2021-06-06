@@ -10,7 +10,7 @@ const element = createElement('h1', null, [
 
 render(element, document.getElementById('root'));
 
-//////////////////////////////////////////////////
+/// ///////////////////////////////////////////////
 // V1
 // [
 //     <li key='A'>1</li>

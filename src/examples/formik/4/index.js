@@ -9,17 +9,17 @@ const MyForm = () => {
 
     return (
         <Formik
-            initialValues={initialValues}
-            onSubmit={values => {
+            initialValues = { initialValues }
+            onSubmit = { (values) => {
                 console.log(values);
-            }}>
-            {props => (
-                <form onSubmit={props.handleSubmit}>
-                    <Checkbox name="roles" value="admin" />
-                    <Checkbox name="roles" value="customer" />
-                    <button type="submit">Submit</button>
+            } }>
+            { (props) => (
+                <form onSubmit = { props.handleSubmit }>
+                    <Checkbox name = 'roles' value = 'admin' />
+                    <Checkbox name = 'roles' value = 'customer' />
+                    <button type = 'submit'>Submit</button>
                 </form>
-            )}
+            ) }
         </Formik>
     );
 };

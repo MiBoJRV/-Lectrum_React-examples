@@ -8,7 +8,7 @@ export class Todo {
         makeAutoObservable(this);
     }
 
-    getTodos () {
+    getTodos() {
         /**
          * [MobX] Since strict-mode is enabled,
          * changing (observed) observable values without using an action is not allowed.
@@ -20,6 +20,6 @@ export class Todo {
                 this.todos = data;
             });
     }
-};
+}
 
 export const todoStore = new Todo();

@@ -1,10 +1,10 @@
 // Core
 import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
-import {autorun} from 'mobx';
+import { autorun } from 'mobx';
 
 // Other
-import {todoStore} from './storages';
+import { todoStore } from './storages';
 
 autorun((reaction) => {
     reaction.trace();
@@ -25,7 +25,7 @@ const Todo = observer(() => {
             <h1>Автор</h1>
             <p>{ todoStore.title }</p>
         </>
-    )
+    );
 });
 
 export default Todo;

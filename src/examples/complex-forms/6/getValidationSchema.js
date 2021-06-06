@@ -8,14 +8,14 @@ export const getValidationSchema = (data) => {
             const { min, max, type } = validationRules;
 
             if (type === 'string') {
-                shape[name] = Yup[type]()
-                .min(min)
-                .max(max);
+                shape[ name ] = Yup[ type ]()
+                    .min(min)
+                    .max(max);
             } else if (type === 'email') {
-                shape[name] = Yup.string().email();
+                shape[ name ] = Yup.string().email();
             }
-
         }
     }
+
     return Yup.object().shape(shape);
-}
+};

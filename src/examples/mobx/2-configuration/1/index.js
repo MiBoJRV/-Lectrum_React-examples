@@ -13,16 +13,16 @@ import { configure } from 'mobx';
 * движока Hermes (https://hermesengine.dev/)
 * */
 configure({
-    useProxies: 'never' // always | never | ifavailable (эксперементальная фича)
+    useProxies: 'never', // always | never | ifavailable (эксперементальная фича)
 });
 
 const Todo = () => {
-    return <h1>Отключаем JS Proxy</h1>
+    return <h1>Отключаем JS Proxy</h1>;
 };
 
 export default Todo;
 
-////////////////////
+/// /////////////////
 // let numbers = [0, 1, 2];
 //
 // numbers = new Proxy(numbers, {

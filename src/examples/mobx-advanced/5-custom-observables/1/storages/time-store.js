@@ -16,8 +16,8 @@ class ClockStore {
         this.atom = createAtom(
             'Clock',
             () => this.startTicking(),
-            () => this.stopTicking()
-        )
+            () => this.stopTicking(),
+        );
     }
 
     getTime() {
@@ -31,16 +31,16 @@ class ClockStore {
             const time = this.currentDateTime;
 
             return `${time.toLocaleDateString()} ${time.toLocaleTimeString()}`;
-        } else {
-            /**
+        }
+
+        /**
              * Если метод вызвался но от этого метода никто не зависит,
              * в таком случае onBecomeObserved не будет вызываться.
              *
              * Такие ситуации так же нужно обрабатывать. То как обрабатывать, ложиться на плечи разработчика,
              * можно выбросить ошибку, вернуть какое-то дефолтное значение или вовсе null.
              * */
-            return null;
-        }
+        return null;
     }
 
     tick() {

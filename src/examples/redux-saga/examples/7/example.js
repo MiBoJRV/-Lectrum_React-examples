@@ -3,7 +3,9 @@
  */
 
 // Core
-import { take, fork, cancel, all } from 'redux-saga/effects';
+import {
+    take, fork, cancel, all,
+} from 'redux-saga/effects';
 
 // Instruments
 import { types } from '../../bus/swapi/types';
@@ -51,5 +53,5 @@ export function* watchFetchAll() { // worker
 }
 
 export function* runExample() { // watcher
-    yield all([ watchFetchPlanetsAsync(), watchCancelFetch(), watchFetchAll() ]);
+    yield all([watchFetchPlanetsAsync(), watchCancelFetch(), watchFetchAll()]);
 }
