@@ -1,6 +1,9 @@
 // Core
 import React from 'react';
-import { Navigate, Route, Routes, Outlet, NavLink } from 'react-router-dom';
+import {
+    Navigate, Route,
+    Routes, Outlet,
+} from 'react-router-dom';
 
 // Other
 import { routes } from '../configs/routes';
@@ -8,23 +11,21 @@ import { routes } from '../configs/routes';
 // Styles
 import '../styles/mains.scss';
 
-export const App = (props) => {
+export const App = () => {
     return (
         <section className='wrapper'>
             <nav className='navigation'>
-                <NavLink
+                <a
                     className='link'
-                    activeClassName='active'
-                    to={routes.todos.path} >
+                    href={routes.todos.path}>
                     Задачи
-                </NavLink>
+                </a>
 
-                <NavLink
+                <a
                     className='link'
-                    activeClassName='active'
-                    to={routes.about.path} >
+                    href={routes.about.path}>
                     О компании
-                </NavLink>
+                </a>
             </nav>
 
             <h1 className='header'>Начинаем погружение в SSR</h1>

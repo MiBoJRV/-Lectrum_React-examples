@@ -2,18 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export const Todos = (props) => {
-    const [todos, setTodos] = useState(Todos.data);
+    const [todos, setTodos] = useState(Todos.data || window.initial_state);
 
     useEffect(() => {
-        if (typeof window !== 'undefined' && window.initial_state) {
-            setTodos(window.initial_state);
-        } else {
+        if (!Array.isArray(todos)) {
             (async () => {
                 const data = await Todos.fetchData();
 
                 setTodos(data);
             })();
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

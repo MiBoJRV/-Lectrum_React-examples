@@ -40,7 +40,7 @@ app.use('*', async (req, res) => {
     });
 
     const appHTML = ReactDOMServer.renderToString(
-        <StaticRouter location={ req.originalUrl }>
+        <StaticRouter location={ req.originalUrl } context={componentData}>
             <App />
         </StaticRouter>
     );
