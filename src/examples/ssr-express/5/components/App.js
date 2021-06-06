@@ -2,10 +2,6 @@
 import React from 'react';
 import { Navigate, Route, Routes, Outlet, NavLink } from 'react-router-dom';
 
-// Components
-import { Todos } from './Todos';
-import { About } from './About';
-
 // Other
 import { routes } from '../configs/routes';
 
