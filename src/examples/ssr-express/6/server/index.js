@@ -2,7 +2,7 @@
 import express  from 'express';
 import fs from 'fs';
 import path from 'path';
-import { execSync } from "child_process";
+// import { execSync } from "child_process";
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
@@ -18,7 +18,7 @@ const app = express();
 
 const distPath = `${path.resolve()}/src/examples/ssr-express/6/dist`;
 
-execSync(`cd ${path.resolve()}/src/examples/ssr-express/6 && NODE_ENV=production webpack build -c webpack.config.js`);
+// execSync(`cd ${path.resolve()}/src/examples/ssr-express/6 && NODE_ENV=production webpack build -c webpack.config.js`);
 
 app.get(/\.(js|css|map|ico|png|json)$/, express.static(path.resolve(__dirname, distPath)));
 
