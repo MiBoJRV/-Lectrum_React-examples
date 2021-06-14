@@ -1,1 +1,1 @@
-export { default } from './redux-thunk';
+export { default } from './typescript';
