@@ -7,13 +7,9 @@ import {
 } from './components';
 
 /**
- * Можно явно указывать какой элемент мы хотим отрендерить.
+ * Библиотека stylis, которая используется под капотом в styled-components поддерживает scss-like синтаксис.
  *
- * Для этого необходимо использовать prop — as.
- * Не забывайте что вам так же может потребоваться добавить нужные аттрибуты,
- * для того что бы элемент был валидным. Как в случае с 'a' тегом.
- *
- * В пропс 'a' так же можно передать и пользовательские компоненты.
+ * Обратите внимание на компонент Title в котором реализовано анимированное подчёркивание.
  * */
 const LoginForm = () => {
     const [error, setError] = useState(false);
@@ -30,12 +26,12 @@ const LoginForm = () => {
 
     return (
         <Form>
-            <Title>Логин</Title>
+            <Title>Lectrum</Title>
             <Input placeholder='Имя пользователя' error={error} onChange={handleChange} />
             <Input placeholder='Пароль' type='password' />
             <div>
                 <SubmitButton type='submit'>Войти</SubmitButton>
-                <ResetButton as='a' href='https://lectrum.io/course/react-redux' target='_blank'>Зарегистрироваться</ResetButton>
+                <ResetButton type='reset'>Сбросить</ResetButton>
             </div>
         </Form>
     )
