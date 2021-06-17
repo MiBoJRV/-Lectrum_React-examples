@@ -1,1 +1,1 @@
-export { default } from './2-advanced/1';
+export { default } from './1-basics/1';

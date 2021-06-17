@@ -3,6 +3,14 @@ import { ThemeProvider } from 'styled-components';
 import { Text } from './components/Text';
 import { useChangeTheme } from './hooks/useChangeTheme';
 
+/**
+ * Библиотека styled-components из коробки поддерживает темизацию.
+ *
+ * Для этого нужно:
+ * 1. Обернуть корневой компонент или компонент который требуется темизировать.
+ * 2. Передать в пропс 'theme' оъект с набором свойств и значений.
+ * 3. Использовать войства из переданного объекта при создании стилизированных компонентов.
+ * */
 const Article = () => {
     const { theme, themeNum, setThemeNum } = useChangeTheme();
 
