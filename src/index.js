@@ -1,18 +1,20 @@
-/* Core */
-import { render } from 'react-dom';
+// /* Core */
+// import { render } from 'react-dom';
 
-/* Components */
-import Example from './examples';
-import { DarkModeToggle } from './theme/DarkModeToggle';
+// /* Components */
+// import Example from './examples';
+// import { DarkModeToggle } from './theme/DarkModeToggle';
 
-/* Instruments */
-// необходимо отключить для демонстрации примеров из директории styled-components
-import './theme/main.scss';
+// /* Instruments */
+// // необходимо отключить для демонстрации примеров из директории styled-components
+// import './theme/main.scss';
 
-render(
-    <>
-        <Example />
-        <DarkModeToggle />
-    </>,
-    document.getElementById('root'),
-);
+// render(
+//     <>
+//         <Example />
+//         <DarkModeToggle />
+//     </>,
+//     document.getElementById('root'),
+// );
+
+import './examples/react-without-jsx';

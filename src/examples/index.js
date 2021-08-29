@@ -1,1 +1,1 @@
-export { default } from './mobx';
+export { default } from './children';
